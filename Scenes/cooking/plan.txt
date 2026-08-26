@@ -1,0 +1,59 @@
+Venba prep bench style
+Multiple Station Tabs (switch with UI tabs)
+Parallel timers, unlock parallels over time
+Simmer, bake and sear in real time off screen while prepping more
+
+1. Deduction: 
+> Venba style tattered recipe restoration puzzle
+> Small interesting puzzle for new recipes
+
+2. Ingredient preparation: 
+> Precision slicing
+> Angle based pouring
+> Manual crushing
+
+3. Heat management:
+> NO UI/Progress bars
+> Visual/Audio? cues instead (flexible)
+
+4. Multi-tasking & station switching
+> Cycle between stations with UI tabs
+> Balance passive and active cooking timers
+
+5. Precision plating:
+> Drag and drop into arrangements
+> Alignment, temperature, garnish accuracy determine final rating
+
+Ripping off potionomics:
+max ingredient limit, ex:
+2/8 - 1 serving
+4/8 - 2 servings
+8/8 - 4 servings
+
+Maximum amount of ingredient slots in pot:
+large items take more
+small items ex. spices, flavourings take fractional
+higher = better taste/tier/stars
+more balanced = better multipliers
+positive/negative traits from special ingredients (chili, peppercorns)
+
+traits system:
+calculated off quality of dish
+traits from texture?
+each positive trait increases filling amount by 5%
+each negative trait decreases filling amount by 5%
+
+core balancing minigame:
+each ingredient has hidden flavor attributes/will be able to predict (expected flavour) once fully discovered
+only once placed in the pot does it start releasing flavours into the pot
+the pot UI will display the current flavour and the expected final flavour
+each ingredient will take different times to fully release the flavor
+each ingredient will have its own cooking bar, and once past the safe "cooked" zone it will start releasing the "burnt" flavour
+stirring will average out all expected flavours in the pot currently and speed up cooking on ingredients that still hold flavour
+you can take out ingredients to stop it from releasing any more flavour in exchange for a smaller portion size
+
+
+ingredient combos (WIP):
+negating traits?
+bad traits cancel out?
+from specific cooking methods
