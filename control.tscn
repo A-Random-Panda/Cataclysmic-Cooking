@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bq3huk364skd3"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_0fbet"]
+
+[node name="Control" type="Control" unique_id=1317444386]
+layout_mode = 3
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 100.0
+offset_top = 100.0
+offset_right = -100.0
+offset_bottom = -100.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=1236460558]
+material = SubResource("CanvasItemMaterial_0fbet")
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.11000001
+anchor_top = -0.22100002
+anchor_right = 1.102
+anchor_bottom = 1.2320001
+offset_left = 656.72003
+offset_top = 403.008
+offset_right = 656.896
+offset_bottom = 403.06396
+
+[node name="Label" type="Label" parent="Panel" unique_id=415932261]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 446.5
+offset_top = 308.0
+offset_right = -446.5
+offset_bottom = -308.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Why so small"
