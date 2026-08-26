@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://bjep32otfq42q"]
+
+[ext_resource type="Script" uid="uid://b8v7ifkqwb4ou" path="res://option_menu.gd" id="1_ggsak"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_el25l"]
+bg_color = Color(0.18000486, 0.1800049, 0.1800048, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ggsak"]
+bg_color = Color(0.37413925, 0.37413928, 0.37413922, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cq70r"]
+bg_color = Color(0.19793725, 0.19793722, 0.19793722, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_offset = Vector2(0, 2)
+
+[node name="OptionMenu" type="Control" unique_id=185768639]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ggsak")
+
+[node name="Button" type="Button" parent="." unique_id=4444302]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -287.5
+offset_top = -204.0
+offset_right = 287.5
+offset_bottom = 204.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_el25l")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ggsak")
+theme_override_styles/hover = SubResource("StyleBoxFlat_cq70r")
+text = "Options"
+
+[connection signal="pressed" from="Button" to="." method="_on_options_pressed"]
