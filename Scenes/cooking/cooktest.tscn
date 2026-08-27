@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dwgdp44jtwlba"]
+
+[ext_resource type="PackedScene" uid="uid://fg3jl4n2a15" path="res://scenes/cooking/carrot_ingredient.tscn" id="1_gqu6d"]
+[ext_resource type="PackedScene" uid="uid://bmm1lelw7khd1" path="res://scenes/cooking/pot.tscn" id="4_noq73"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hh1gf"]
+size = Vector2(1151, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q67r1"]
+size = Vector2(27, 671)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5man4"]
+size = Vector2(21, 674)
+
+[node name="CookTest" type="Control" unique_id=1069424040]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=936899213]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=947951676]
+position = Vector2(576.5, 649.5)
+shape = SubResource("RectangleShape2D_hh1gf")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1839630568]
+position = Vector2(3.5, 325.5)
+shape = SubResource("RectangleShape2D_q67r1")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=793205368]
+position = Vector2(1161.5, 327)
+shape = SubResource("RectangleShape2D_5man4")
+
+[node name="CarrotIngredient" parent="." unique_id=415818536 instance=ExtResource("1_gqu6d")]
+
+[node name="Pot" parent="." unique_id=188086898 instance=ExtResource("4_noq73")]

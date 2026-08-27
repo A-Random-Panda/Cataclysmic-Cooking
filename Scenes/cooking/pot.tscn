@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bmm1lelw7khd1"]
+
+[ext_resource type="Script" uid="uid://c525fkhdvxii" path="res://scenes/cooking/scripts/rigid_body_2d.gd" id="1_ayh8p"]
+[ext_resource type="Texture2D" uid="uid://byawq6k0j7tr2" path="res://scenes/cooking/assets/cooking_pot_front.png" id="2_hd3rk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bjlpf"]
+size = Vector2(391, 296)
+
+[node name="Pot" type="Node2D" unique_id=415818536]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=454755837]
+position = Vector2(233, 48)
+input_pickable = true
+contact_monitor = true
+max_contacts_reported = 5
+script = ExtResource("1_ayh8p")
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=361629709]
+position = Vector2(162.56808, 162.56808)
+scale = Vector2(0.09737889, 0.09737889)
+texture = ExtResource("2_hd3rk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=281123249]
+position = Vector2(164.5, 198)
+shape = SubResource("RectangleShape2D_bjlpf")
