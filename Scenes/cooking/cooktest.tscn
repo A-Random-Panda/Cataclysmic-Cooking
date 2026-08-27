@@ -12,6 +12,9 @@ size = Vector2(27, 671)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5man4"]
 size = Vector2(21, 674)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t4ru5"]
+size = Vector2(1151, 39)
+
 [node name="CookTest" type="Node2D" unique_id=113342332]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=936899213]
@@ -28,11 +31,12 @@ shape = SubResource("RectangleShape2D_q67r1")
 position = Vector2(1161.5, 327)
 shape = SubResource("RectangleShape2D_5man4")
 
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=822549176]
+position = Vector2(581, -6)
+shape = SubResource("RectangleShape2D_t4ru5")
+
 [node name="CarrotIngredient" parent="." unique_id=415818536 instance=ExtResource("1_gqu6d")]
 position = Vector2(169, 97)
-
-[node name="CarrotIngredient2" parent="." unique_id=1586639511 instance=ExtResource("1_gqu6d")]
-position = Vector2(121, 82)
 
 [node name="Pot" parent="." unique_id=188086898 instance=ExtResource("4_noq73")]
 position = Vector2(161, 68)
