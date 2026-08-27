@@ -33,8 +33,8 @@ func _physics_process(delta: float) -> void:
 	
 		linear_velocity = Vector2(X_THROW_STRENGTH * unscaled_velocity.x, Y_THROW_STRENGTH * unscaled_velocity.y)
 
-func _mouse_enter() -> void:
+func _on_select_box_mouse_entered() -> void:
 	mouse_on = true
 
-func _mouse_exit() -> void:
+func _on_select_box_mouse_exited() -> void:
 	mouse_on = false

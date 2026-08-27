@@ -32,4 +32,8 @@ shape = SubResource("RectangleShape2D_5man4")
 
 [node name="CarrotIngredient" parent="." unique_id=415818536 instance=ExtResource("1_gqu6d")]
 
+[node name="CarrotIngredient2" parent="." unique_id=1586639511 instance=ExtResource("1_gqu6d")]
+
 [node name="Pot" parent="." unique_id=188086898 instance=ExtResource("4_noq73")]
+
+[node name="CarrotIngredient3" parent="." unique_id=1076255981 instance=ExtResource("1_gqu6d")]
