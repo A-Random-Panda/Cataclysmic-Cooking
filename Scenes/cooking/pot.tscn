@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bmm1lelw7khd1"]
 
-[ext_resource type="Script" uid="uid://c525fkhdvxii" path="res://scenes/cooking/scripts/rigid_body_2d.gd" id="1_ayh8p"]
+[ext_resource type="Script" uid="uid://c525fkhdvxii" path="res://scenes/cooking/scripts/item_physics.gd" id="1_ayh8p"]
 [ext_resource type="Texture2D" uid="uid://byawq6k0j7tr2" path="res://scenes/cooking/assets/cooking_pot_front.png" id="2_hd3rk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bjlpf"]

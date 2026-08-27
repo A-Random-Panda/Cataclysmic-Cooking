@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://fg3jl4n2a15"]
 
-[ext_resource type="Script" uid="uid://c525fkhdvxii" path="res://scenes/cooking/scripts/rigid_body_2d.gd" id="1_t66bm"]
+[ext_resource type="Script" uid="uid://c525fkhdvxii" path="res://scenes/cooking/scripts/item_physics.gd" id="1_t66bm"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_fe2nx"]
 load_path = "res://.godot/imported/carrot.png-987d3424ff84eb3076cd9b8416dabc92.ctex"
