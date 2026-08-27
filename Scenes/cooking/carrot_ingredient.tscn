@@ -3,26 +3,27 @@
 [ext_resource type="Script" uid="uid://c525fkhdvxii" path="res://scenes/cooking/scripts/item_physics.gd" id="1_t66bm"]
 [ext_resource type="Texture2D" uid="uid://dynump5svy2j6" path="res://scenes/cooking/assets/carrot.png" id="2_nwyor"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_nwyor"]
+bounce = 0.2
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_53td1"]
 size = Vector2(47.5, 59)
 
 [node name="CarrotIngredient" type="RigidBody2D" unique_id=1404512415]
+physics_material_override = SubResource("PhysicsMaterial_nwyor")
+continuous_cd = 1
 script = ExtResource("1_t66bm")
 
 [node name="Sprite" type="Sprite2D" parent="." unique_id=361629709]
-position = Vector2(233, 48)
 scale = Vector2(0.017999938, 0.017999938)
 texture = ExtResource("2_nwyor")
 
 [node name="SelectBox" type="Area2D" parent="." unique_id=520884433]
-position = Vector2(233, 48)
 
 [node name="SelectBoxCollision" type="CollisionShape2D" parent="SelectBox" unique_id=281123249]
-position = Vector2(1.25, 0)
 shape = SubResource("RectangleShape2D_53td1")
 
 [node name="Hitbox" type="CollisionPolygon2D" parent="." unique_id=82306487]
-position = Vector2(233, 48)
 polygon = PackedVector2Array(0, -13, -21, 26, -18, 30, 14, -1, 14, -11, 24, -15, 22, -26, 9, -30, 7, -15)
 
 [connection signal="mouse_entered" from="SelectBox" to="." method="_on_select_box_mouse_entered"]
