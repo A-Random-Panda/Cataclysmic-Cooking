@@ -1,7 +1,8 @@
 extends Node
 
-var inventory: Inventory = Inventory.new()
+var inventory: Inventory = preload("res://ui/inventory/inventory.tres")
 
+"""
 class InventoryItem:
 	static var instantiated_items: Array[String] = []
 	var num: int
@@ -50,7 +51,7 @@ class Inventory:
 			inventory_items.append(inventory_item)
 		
 		print(inventory_items)
-	
+"""
 
 
 
@@ -64,5 +65,5 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass

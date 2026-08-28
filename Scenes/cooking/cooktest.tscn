@@ -45,6 +45,7 @@ position = Vector2(588, 266)
 
 [node name="CarrotIngredient" parent="." unique_id=542592762 instance=ExtResource("3_gqu6d")]
 position = Vector2(133, 264)
+DISPLAY_NAME = "Carro"
 
 [node name="InventoryBox" type="Area2D" parent="." unique_id=1985527101]
 script = ExtResource("3_noq73")
@@ -55,15 +56,15 @@ shape = SubResource("RectangleShape2D_gqu6d")
 debug_color = Color(0.9592579, 0.05681254, 0.4922163, 0.41960785)
 
 [node name="CarrotIngredient2" parent="." unique_id=1110576810 instance=ExtResource("3_gqu6d")]
-position = Vector2(190, 81)
+position = Vector2(211, 83)
 
 [node name="CarrotIngredient3" parent="." unique_id=869902846 instance=ExtResource("3_gqu6d")]
 position = Vector2(89, 84)
 
 [node name="CarrotIngredient4" parent="." unique_id=2110172938 instance=ExtResource("3_gqu6d")]
-position = Vector2(142, 135)
+position = Vector2(115, 173)
 
 [node name="CarrotIngredient5" parent="." unique_id=1996698573 instance=ExtResource("3_gqu6d")]
-position = Vector2(267, 150)
+position = Vector2(205, 164)
 
 [connection signal="body_entered" from="InventoryBox" to="InventoryBox" method="_on_body_entered"]
