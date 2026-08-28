@@ -8,6 +8,8 @@ extends RigidBody2D
 
 @export var CLAMP_CIRCLE_SHAVE: float = 0.8
 
+var hidden_from_inventory: bool = false
+
 var mouse_on: bool = false
 var dragging: bool = false
 var drag_offset: Vector2 = Vector2.ZERO

@@ -16,11 +16,16 @@ func _init(display_name: String = "", item_object: PackedScene = null, _num: int
 func add(add_num: int = 1):
 	self.num += add_num
 
-
-func spawn(x_pos: float, y_pos: float):
-	pass
-
-
+func spawn(pos: Vector2) -> Item:
+	if num > 0:
+		num -= 1
+		var node: Item = ITEM_OBJECT.instantiate()
+		node.position = pos
+		return node
+	else:
+		push_error("Number of ", DISPLAY_NAME, " is <= 0")
+		return null
+	
 static func is_instantiated(name: String) -> bool:
 	return name in instantiated_items
 
