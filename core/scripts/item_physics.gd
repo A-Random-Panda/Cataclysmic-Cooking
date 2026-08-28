@@ -1,4 +1,7 @@
+class_name Item
 extends RigidBody2D
+
+@export var DISPLAY_NAME: String = "Item"
 
 @export var X_THROW_STRENGTH: float = 1
 @export var Y_THROW_STRENGTH: float = 1

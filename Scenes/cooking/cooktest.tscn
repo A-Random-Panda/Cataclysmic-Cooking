@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dwgdp44jtwlba"]
 
-[ext_resource type="PackedScene" uid="uid://fg3jl4n2a15" path="res://scenes/cooking/carrot_ingredient.tscn" id="1_gqu6d"]
-[ext_resource type="PackedScene" uid="uid://xhlmxpypw5jh" path="res://scenes/cooking/onion_ingredient.tscn" id="3_gqu6d"]
+[ext_resource type="PackedScene" uid="uid://xhlmxpypw5jh" path="res://scenes/cooking/carrot_ingredient.tscn" id="3_gqu6d"]
+[ext_resource type="Script" uid="uid://bcb32xi4e8xot" path="res://scenes/cooking/scripts/inventory_box.gd" id="3_noq73"]
 [ext_resource type="PackedScene" uid="uid://bmm1lelw7khd1" path="res://scenes/cooking/pot.tscn" id="4_noq73"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hh1gf"]
@@ -15,6 +15,9 @@ size = Vector2(21, 674)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t4ru5"]
 size = Vector2(1151, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gqu6d"]
+size = Vector2(199.5, 672)
 
 [node name="CookTest" type="Node2D" unique_id=113342332]
 
@@ -36,17 +39,31 @@ shape = SubResource("RectangleShape2D_5man4")
 position = Vector2(581, -6)
 shape = SubResource("RectangleShape2D_t4ru5")
 
-[node name="CarrotIngredient" parent="." unique_id=415818536 instance=ExtResource("1_gqu6d")]
-visible = false
-position = Vector2(169, 97)
-
 [node name="Pot" parent="." unique_id=188086898 instance=ExtResource("4_noq73")]
 z_index = 1
 position = Vector2(588, 266)
 
-[node name="CarrotIngredient2" parent="." unique_id=1404512415 instance=ExtResource("1_gqu6d")]
-visible = false
-position = Vector2(301, 172)
-
-[node name="OnionIngredient" parent="." unique_id=542592762 instance=ExtResource("3_gqu6d")]
+[node name="CarrotIngredient" parent="." unique_id=542592762 instance=ExtResource("3_gqu6d")]
 position = Vector2(133, 264)
+
+[node name="InventoryBox" type="Area2D" parent="." unique_id=1985527101]
+script = ExtResource("3_noq73")
+
+[node name="Hitbox" type="CollisionShape2D" parent="InventoryBox" unique_id=1856579290]
+position = Vector2(1068.75, 328)
+shape = SubResource("RectangleShape2D_gqu6d")
+debug_color = Color(0.9592579, 0.05681254, 0.4922163, 0.41960785)
+
+[node name="CarrotIngredient2" parent="." unique_id=1110576810 instance=ExtResource("3_gqu6d")]
+position = Vector2(190, 81)
+
+[node name="CarrotIngredient3" parent="." unique_id=869902846 instance=ExtResource("3_gqu6d")]
+position = Vector2(89, 84)
+
+[node name="CarrotIngredient4" parent="." unique_id=2110172938 instance=ExtResource("3_gqu6d")]
+position = Vector2(142, 135)
+
+[node name="CarrotIngredient5" parent="." unique_id=1996698573 instance=ExtResource("3_gqu6d")]
+position = Vector2(267, 150)
+
+[connection signal="body_entered" from="InventoryBox" to="InventoryBox" method="_on_body_entered"]
