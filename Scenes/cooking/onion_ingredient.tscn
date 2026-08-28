@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://xhlmxpypw5jh"]
+
+[ext_resource type="PackedScene" uid="uid://b21l736r1j6na" path="res://core/physics_item.tscn" id="1_uagui"]
+[ext_resource type="Texture2D" uid="uid://dynump5svy2j6" path="res://scenes/cooking/assets/carrot.png" id="2_hxgep"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hxgep"]
+size = Vector2(52, 61)
+
+[node name="OnionIngredient" unique_id=542592762 instance=ExtResource("1_uagui")]
+
+[node name="Sprite" parent="." index="0" unique_id=778355898]
+texture = ExtResource("2_hxgep")
+
+[node name="SelectBoxCollision" parent="SelectBox" parent_id_path=PackedInt32Array(1745033056) index="0" unique_id=549529629]
+shape = SubResource("RectangleShape2D_hxgep")
+
+[node name="Hitbox" parent="." index="2" unique_id=2025160295]
+polygon = PackedVector2Array(-20, 26, 0, -13, 8, -14, 9, -28, 21, -27, 24, -15, 14, -11, 14, -1, -17, 29)

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://b21l736r1j6na"]
+
+[ext_resource type="Script" uid="uid://c525fkhdvxii" path="res://core/scripts/item_physics.gd" id="1_a1rcc"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_uh3a7"]
+bounce = 0.2
+
+[node name="PhysicsItem" type="RigidBody2D" unique_id=542592762]
+physics_material_override = SubResource("PhysicsMaterial_uh3a7")
+continuous_cd = 1
+script = ExtResource("1_a1rcc")
+
+[node name="Sprite" type="Sprite2D" parent="." unique_id=778355898]
+scale = Vector2(0.017999938, 0.017999938)
+
+[node name="SelectBox" type="Area2D" parent="." unique_id=1745033056]
+
+[node name="SelectBoxCollision" type="CollisionShape2D" parent="SelectBox" unique_id=549529629]
+
+[node name="Hitbox" type="CollisionPolygon2D" parent="." unique_id=2025160295]
+
+[connection signal="mouse_entered" from="SelectBox" to="." method="_on_select_box_mouse_entered"]
+[connection signal="mouse_exited" from="SelectBox" to="." method="_on_select_box_mouse_exited"]

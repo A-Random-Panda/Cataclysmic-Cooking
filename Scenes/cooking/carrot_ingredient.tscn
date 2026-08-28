@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://fg3jl4n2a15"]
 
-[ext_resource type="Script" uid="uid://c525fkhdvxii" path="res://scenes/cooking/scripts/item_physics.gd" id="1_t66bm"]
+[ext_resource type="Script" uid="uid://c525fkhdvxii" path="res://core/scripts/item_physics.gd" id="1_t66bm"]
 [ext_resource type="Texture2D" uid="uid://dynump5svy2j6" path="res://scenes/cooking/assets/carrot.png" id="2_nwyor"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_nwyor"]

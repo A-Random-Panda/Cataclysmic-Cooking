@@ -1,23 +1,18 @@
 [gd_scene format=3 uid="uid://bmm1lelw7khd1"]
 
+[ext_resource type="Texture2D" uid="uid://ddcbx03nowuat" path="res://scenes/cooking/assets/cooking_pot_back.png" id="2_bjlpf"]
 [ext_resource type="Texture2D" uid="uid://byawq6k0j7tr2" path="res://scenes/cooking/assets/cooking_pot_front.png" id="2_hd3rk"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bjlpf"]
-size = Vector2(391, 296)
+[node name="Pot" type="StaticBody2D" unique_id=1891136901]
 
-[node name="Pot" type="Node2D" unique_id=415818536]
-
-[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=454755837]
-position = Vector2(233, 48)
-input_pickable = true
-contact_monitor = true
-max_contacts_reported = 5
-
-[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=361629709]
-position = Vector2(162.56808, 162.56808)
-scale = Vector2(0.09737889, 0.09737889)
+[node name="ShellSprite" type="Sprite2D" parent="." unique_id=361629709]
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_hd3rk")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=281123249]
-position = Vector2(164.5, 198)
-shape = SubResource("RectangleShape2D_bjlpf")
+[node name="InnerSprite" type="Sprite2D" parent="." unique_id=1727415918]
+modulate = Color(1, 1, 1, 0.5019608)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_bjlpf")
+
+[node name="Hitbox" type="CollisionPolygon2D" parent="." unique_id=1411436652]
+polygon = PackedVector2Array(-138, -107, -143, -51, -193, 72, -183, 177, 179, 178, 196, 81, 146, -63, 144, -107, 128, -109, 136, -47, 176, 81, 165, 160, -167, 160, -174, 74, -129, -44, -122, -110)

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dwgdp44jtwlba"]
 
 [ext_resource type="PackedScene" uid="uid://fg3jl4n2a15" path="res://scenes/cooking/carrot_ingredient.tscn" id="1_gqu6d"]
+[ext_resource type="PackedScene" uid="uid://xhlmxpypw5jh" path="res://scenes/cooking/onion_ingredient.tscn" id="3_gqu6d"]
 [ext_resource type="PackedScene" uid="uid://bmm1lelw7khd1" path="res://scenes/cooking/pot.tscn" id="4_noq73"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hh1gf"]
@@ -36,7 +37,16 @@ position = Vector2(581, -6)
 shape = SubResource("RectangleShape2D_t4ru5")
 
 [node name="CarrotIngredient" parent="." unique_id=415818536 instance=ExtResource("1_gqu6d")]
+visible = false
 position = Vector2(169, 97)
 
 [node name="Pot" parent="." unique_id=188086898 instance=ExtResource("4_noq73")]
-position = Vector2(161, 68)
+z_index = 1
+position = Vector2(588, 266)
+
+[node name="CarrotIngredient2" parent="." unique_id=1404512415 instance=ExtResource("1_gqu6d")]
+visible = false
+position = Vector2(301, 172)
+
+[node name="OnionIngredient" parent="." unique_id=542592762 instance=ExtResource("3_gqu6d")]
+position = Vector2(133, 264)
