@@ -18,7 +18,7 @@ var dragging := false
 var drag_offset := Vector2.ZERO
 var last_mouse_position := Vector2.ZERO
 
-var clamp_vector := Vector2.ZERO
+var CLAMP_VECTOR := Vector2.ZERO
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -26,7 +26,7 @@ func _ready() -> void:
 	var clamp_radius: float = 0
 	for vector: Vector2 in $Hitbox.polygon:
 		clamp_radius = max(clamp_radius, vector.distance_to(Vector2.ZERO)) * CLAMP_CIRCLE_SHAVE
-	clamp_vector = Vector2(clamp_radius, clamp_radius)
+	CLAMP_VECTOR = Vector2(clamp_radius, clamp_radius)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -42,7 +42,7 @@ func _physics_process(delta: float) -> void:
 		
 		# Position clamping
 		var target_position: Vector2 = get_global_mouse_position() + drag_offset
-		target_position = target_position.clamp(Vector2.ZERO + clamp_vector, get_viewport_rect().size - clamp_vector)
+		target_position = target_position.clamp(Vector2.ZERO + CLAMP_VECTOR, get_viewport_rect().size - CLAMP_VECTOR)
 		set_global_position(target_position)
 
 	elif dragging:

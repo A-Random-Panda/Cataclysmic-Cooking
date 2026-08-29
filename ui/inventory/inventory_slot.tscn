@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://butshbxcrsh2d"]
+
+[node name="InventorySlot" type="Panel" unique_id=1379160107]
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(40, 40)
+anchors_preset = -1
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Background" type="ColorRect" parent="." unique_id=2005524616]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
