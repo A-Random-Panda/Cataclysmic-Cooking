@@ -63,7 +63,6 @@ func _physics_process(delta: float) -> void:
 		var unscaled_velocity := (get_global_mouse_position() - last_mouse_position) / delta
 		var scaled_velocity := Vector2(X_THROW_STRENGTH * unscaled_velocity.x, Y_THROW_STRENGTH * unscaled_velocity.y)
 		linear_velocity = scaled_velocity.limit_length(MAX_VELOCITY)
-		print(linear_velocity)
 
 func _on_select_box_mouse_entered() -> void:
 	mouse_on = true

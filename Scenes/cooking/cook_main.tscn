@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dp5u37adf0bdx"]
+
+[ext_resource type="Texture2D" uid="uid://bg77hektjy1cs" path="res://scenes/cooking/assets/kitchen_background.png" id="1_u1oaf"]
+[ext_resource type="PackedScene" uid="uid://phxcv0tcqpuc" path="res://ui/inventory/inventory.tscn" id="2_yfxtg"]
+
+[node name="CookMain" type="Control" unique_id=1028049208]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2105560752]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("1_u1oaf")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Inventory" parent="." unique_id=845775253 instance=ExtResource("2_yfxtg")]
