@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddcbx03nowuat"
-path="res://.godot/imported/cooking_pot_back.png-418ff55fba4ea4fbf433c66de9502fc5.ctex"
+uid="uid://bjsvy5uxkkq7d"
+path="res://.godot/imported/pepper_sprite.png-06183dc6fe539cb89ffe2cee96a5e3da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/cooking/assets/cooking_pot_back.png"
-dest_files=["res://.godot/imported/cooking_pot_back.png-418ff55fba4ea4fbf433c66de9502fc5.ctex"]
+source_file="res://Scenes/cooking/assets/pepper_sprite.png"
+dest_files=["res://.godot/imported/pepper_sprite.png-06183dc6fe539cb89ffe2cee96a5e3da.ctex"]
 
 [params]
 

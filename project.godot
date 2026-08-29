@@ -26,7 +26,11 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
+enabled=PackedStringArray()
+
+[global_group]
+
+crop_ingredients=""
 
 [input]
 

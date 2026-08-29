@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddcbx03nowuat"
-path="res://.godot/imported/cooking_pot_back.png-418ff55fba4ea4fbf433c66de9502fc5.ctex"
+uid="uid://cmx20as2cnpce"
+path="res://.godot/imported/image-removebg-preview(1).png-706fe86149b26d722f16cfc737914327.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/cooking/assets/cooking_pot_back.png"
-dest_files=["res://.godot/imported/cooking_pot_back.png-418ff55fba4ea4fbf433c66de9502fc5.ctex"]
+source_file="res://Scenes/farming/image-removebg-preview(1).png"
+dest_files=["res://.godot/imported/image-removebg-preview(1).png-706fe86149b26d722f16cfc737914327.ctex"]
 
 [params]
 

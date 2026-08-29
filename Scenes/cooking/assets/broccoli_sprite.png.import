@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddcbx03nowuat"
-path="res://.godot/imported/cooking_pot_back.png-418ff55fba4ea4fbf433c66de9502fc5.ctex"
+uid="uid://8cm2cjccgfx4"
+path="res://.godot/imported/broccoli_sprite.png-c279f150419487a4f800357f1a2c7605.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/cooking/assets/cooking_pot_back.png"
-dest_files=["res://.godot/imported/cooking_pot_back.png-418ff55fba4ea4fbf433c66de9502fc5.ctex"]
+source_file="res://Scenes/cooking/assets/broccoli_sprite.png"
+dest_files=["res://.godot/imported/broccoli_sprite.png-c279f150419487a4f800357f1a2c7605.ctex"]
 
 [params]
 

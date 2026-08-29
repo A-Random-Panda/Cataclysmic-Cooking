@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddcbx03nowuat"
-path="res://.godot/imported/cooking_pot_back.png-418ff55fba4ea4fbf433c66de9502fc5.ctex"
+uid="uid://b4ls5p4ejr0s3"
+path="res://.godot/imported/onion_sprite.png-b52a6f9c58fc389b127a95e3fdfb4c00.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/cooking/assets/cooking_pot_back.png"
-dest_files=["res://.godot/imported/cooking_pot_back.png-418ff55fba4ea4fbf433c66de9502fc5.ctex"]
+source_file="res://Scenes/cooking/assets/onion_sprite.png"
+dest_files=["res://.godot/imported/onion_sprite.png-b52a6f9c58fc389b127a95e3fdfb4c00.ctex"]
 
 [params]
 

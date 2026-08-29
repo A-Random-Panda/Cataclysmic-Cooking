@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddcbx03nowuat"
-path="res://.godot/imported/cooking_pot_back.png-418ff55fba4ea4fbf433c66de9502fc5.ctex"
+uid="uid://m8qiyxiqtxae"
+path="res://.godot/imported/beetroot_sprite.png-fdce3040297c3e681cd8849d49843d40.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/cooking/assets/cooking_pot_back.png"
-dest_files=["res://.godot/imported/cooking_pot_back.png-418ff55fba4ea4fbf433c66de9502fc5.ctex"]
+source_file="res://Scenes/cooking/assets/beetroot_sprite.png"
+dest_files=["res://.godot/imported/beetroot_sprite.png-fdce3040297c3e681cd8849d49843d40.ctex"]
 
 [params]
 

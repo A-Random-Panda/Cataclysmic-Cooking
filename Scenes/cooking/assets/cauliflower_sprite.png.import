@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddcbx03nowuat"
-path="res://.godot/imported/cooking_pot_back.png-418ff55fba4ea4fbf433c66de9502fc5.ctex"
+uid="uid://iuiv662ccpx1"
+path="res://.godot/imported/cauliflower_sprite.png-02b2908a2f77c5fdfa41b02d665dc959.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/cooking/assets/cooking_pot_back.png"
-dest_files=["res://.godot/imported/cooking_pot_back.png-418ff55fba4ea4fbf433c66de9502fc5.ctex"]
+source_file="res://Scenes/cooking/assets/cauliflower_sprite.png"
+dest_files=["res://.godot/imported/cauliflower_sprite.png-02b2908a2f77c5fdfa41b02d665dc959.ctex"]
 
 [params]
 

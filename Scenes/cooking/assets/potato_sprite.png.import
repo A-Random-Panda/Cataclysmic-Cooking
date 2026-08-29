@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddcbx03nowuat"
-path="res://.godot/imported/cooking_pot_back.png-418ff55fba4ea4fbf433c66de9502fc5.ctex"
+uid="uid://dohncp76gabcl"
+path="res://.godot/imported/potato_sprite.png-8272e78c45945398ca0fc0d7f98a5622.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/cooking/assets/cooking_pot_back.png"
-dest_files=["res://.godot/imported/cooking_pot_back.png-418ff55fba4ea4fbf433c66de9502fc5.ctex"]
+source_file="res://Scenes/cooking/assets/potato_sprite.png"
+dest_files=["res://.godot/imported/potato_sprite.png-8272e78c45945398ca0fc0d7f98a5622.ctex"]
 
 [params]
 
