@@ -8,6 +8,8 @@ extends RigidBody2D
 
 @export var CLAMP_CIRCLE_SHAVE: float = 0.8
 
+const SINGLE_PICKUP := true
+
 var in_inventory := false
 
 var mouse_on := false
@@ -29,8 +31,15 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	if !dragging and mouse_on and Input.is_action_pressed("left_click"):
-		drag_offset = global_position - get_global_mouse_position()
-		dragging = true
+		# Single drag logic
+		if SINGLE_PICKUP:
+			if !GlobalUI.is_dragging:
+				drag_offset = global_position - get_global_mouse_position()
+				dragging = true
+				GlobalUI.is_dragging = true
+		else:
+			drag_offset = global_position - get_global_mouse_position()
+			dragging = true
 
 	if dragging and Input.is_action_pressed("left_click"):
 		last_mouse_position = get_global_mouse_position()
@@ -44,6 +53,7 @@ func _physics_process(delta: float) -> void:
 	elif dragging:
 		freeze = false
 		dragging = false
+		GlobalUI.is_dragging = false
 		
 		if in_inventory:
 			InventoryArea.add_to_inventory(self)
