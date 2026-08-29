@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://bfik6ljsgaa5q"]
+
+[ext_resource type="PackedScene" uid="uid://qdudcsygcbqa" path="res://Scenes/farming/crop.tscn" id="1_hsha5"]
+[ext_resource type="Script" uid="uid://bcb32xi4e8xot" path="res://Scenes/cooking/scripts/inventory_box.gd" id="2_rwwjx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t36pt"]
+size = Vector2(199.5, 672)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rwwjx"]
+size = Vector2(1151, 945)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xa5ga"]
+size = Vector2(1045, 1865)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2tlc6"]
+size = Vector2(596, 1747)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_inwb8"]
+size = Vector2(1151, 331.5)
+
+[node name="farmtest" type="Node2D" unique_id=166008072]
+
+[node name="InventoryBox" type="Area2D" parent="." unique_id=35377485]
+script = ExtResource("2_rwwjx")
+
+[node name="Hitbox" type="CollisionShape2D" parent="InventoryBox" unique_id=2059515049]
+position = Vector2(1068.75, 328)
+shape = SubResource("RectangleShape2D_t36pt")
+debug_color = Color(0.9592579, 0.05681254, 0.4922163, 0.41960785)
+
+[node name="Button" type="Button" parent="InventoryBox" unique_id=1054694017]
+offset_left = 1034.0
+offset_top = 42.0
+offset_right = 1107.0
+offset_bottom = 74.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1323973937]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1976850615]
+position = Vector2(576.5, 1102.5)
+shape = SubResource("RectangleShape2D_rwwjx")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1899930326]
+position = Vector2(-505.5, 523.5)
+shape = SubResource("RectangleShape2D_xa5ga")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=460994538]
+position = Vector2(1449, 551.5)
+shape = SubResource("RectangleShape2D_2tlc6")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=195835576]
+position = Vector2(581, -152.25)
+shape = SubResource("RectangleShape2D_inwb8")
+
+[node name="Crop" parent="." unique_id=207928349 instance=ExtResource("1_hsha5")]
+position = Vector2(280, 476)
+
+[connection signal="body_entered" from="InventoryBox" to="InventoryBox" method="_on_body_entered"]
+[connection signal="body_exited" from="InventoryBox" to="InventoryBox" method="_on_body_exited"]
+[connection signal="pressed" from="InventoryBox/Button" to="InventoryBox" method="_on_button_pressed"]

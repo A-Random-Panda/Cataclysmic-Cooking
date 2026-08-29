@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://butshbxcrsh2d"]
+
+[ext_resource type="Script" uid="uid://t8b8f35dp4op" path="res://ui/scripts/inventory_slot.gd" id="1_hwg0l"]
+[ext_resource type="Texture2D" uid="uid://bqb4pgokku5qx" path="res://ui/assets/slot_background.png" id="1_nktrt"]
+
+[node name="InventorySlot" type="Panel" unique_id=1379160107]
+modulate = Color(1, 1, 1, 0.5019608)
+self_modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(50, 50)
+anchors_preset = -1
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 1
+script = ExtResource("1_hwg0l")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1004209702]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_nktrt")
+expand_mode = 3
+
+[node name="Texture" type="TextureRect" parent="." unique_id=267994149]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Count" type="RichTextLabel" parent="." unique_id=31743444]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -22.0
+offset_top = -22.0
+offset_right = 9.0
+offset_bottom = 9.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+autowrap_mode = 0
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

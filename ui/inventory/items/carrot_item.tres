@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryItem" format=3 uid="uid://dkjud8p3su8rs"]
+
+[ext_resource type="PackedScene" uid="uid://xhlmxpypw5jh" path="res://scenes/cooking/ingredients/carrot_ingredient.tscn" id="1_ml8is"]
+[ext_resource type="Texture2D" uid="uid://dynump5svy2j6" path="res://scenes/cooking/assets/carrot.png" id="2_duesh"]
+[ext_resource type="Script" uid="uid://bp1c3qi27sobr" path="res://ui/scripts/inventory_item.gd" id="3_xgmvu"]
+
+[resource]
+script = ExtResource("3_xgmvu")
+DISPLAY_NAME = "Carrot"
+ITEM_TEXTURE = ExtResource("2_duesh")
+ITEM_OBJECT = ExtResource("1_ml8is")
+START_COUNT = 26
+metadata/_custom_type_script = "uid://bp1c3qi27sobr"

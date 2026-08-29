@@ -1,19 +1,24 @@
 class_name Item
 extends RigidBody2D
 
-@export var DISPLAY_NAME: String = "Item"
+@export var DISPLAY_NAME := "Item"
 
 @export var X_THROW_STRENGTH: float = 1
 @export var Y_THROW_STRENGTH: float = 1
+@export var MAX_VELOCITY: float = 10000
 
 @export var CLAMP_CIRCLE_SHAVE: float = 0.8
 
-var mouse_on: bool = false
-var dragging: bool = false
-var drag_offset: Vector2 = Vector2.ZERO
-var last_mouse_position: Vector2 = Vector2.ZERO
+const SINGLE_PICKUP := true
 
-var clamp_vector: Vector2 = Vector2.ZERO
+var in_inventory := false
+
+var mouse_on := false
+var dragging := false
+var drag_offset := Vector2.ZERO
+var last_mouse_position := Vector2.ZERO
+
+var CLAMP_VECTOR := Vector2.ZERO
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -21,14 +26,21 @@ func _ready() -> void:
 	var clamp_radius: float = 0
 	for vector: Vector2 in $Hitbox.polygon:
 		clamp_radius = max(clamp_radius, vector.distance_to(Vector2.ZERO)) * CLAMP_CIRCLE_SHAVE
-	clamp_vector = Vector2(clamp_radius, clamp_radius)
+	CLAMP_VECTOR = Vector2(clamp_radius, clamp_radius)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	if !dragging and mouse_on and Input.is_action_pressed("left_click"):
-		drag_offset = global_position - get_global_mouse_position()
-		dragging = true
+		# Single drag logic
+		if SINGLE_PICKUP:
+			if !GlobalUI.is_dragging:
+				drag_offset = global_position - get_global_mouse_position()
+				dragging = true
+				GlobalUI.is_dragging = true
+		else:
+			drag_offset = global_position - get_global_mouse_position()
+			dragging = true
 
 	if dragging and Input.is_action_pressed("left_click"):
 		last_mouse_position = get_global_mouse_position()
@@ -36,16 +48,21 @@ func _physics_process(delta: float) -> void:
 		
 		# Position clamping
 		var target_position: Vector2 = get_global_mouse_position() + drag_offset
-		target_position = target_position.clamp(Vector2.ZERO + clamp_vector, get_viewport_rect().size - clamp_vector)
+		target_position = target_position.clamp(Vector2.ZERO + CLAMP_VECTOR, get_viewport_rect().size - CLAMP_VECTOR)
 		set_global_position(target_position)
 
 	elif dragging:
 		freeze = false
 		dragging = false
-	
-		var unscaled_velocity = (get_global_mouse_position() - last_mouse_position) / delta
-	
-		linear_velocity = Vector2(X_THROW_STRENGTH * unscaled_velocity.x, Y_THROW_STRENGTH * unscaled_velocity.y)
+		GlobalUI.is_dragging = false
+		
+		if in_inventory:
+			InventoryArea.add_to_inventory(self)
+		
+		# Apply velocity
+		var unscaled_velocity := (get_global_mouse_position() - last_mouse_position) / delta
+		var scaled_velocity := Vector2(X_THROW_STRENGTH * unscaled_velocity.x, Y_THROW_STRENGTH * unscaled_velocity.y)
+		linear_velocity = scaled_velocity.limit_length(MAX_VELOCITY)
 
 func _on_select_box_mouse_entered() -> void:
 	mouse_on = true

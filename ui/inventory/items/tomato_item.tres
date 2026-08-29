@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryItem" format=3 uid="uid://dx2g0fsn0xp81"]
+
+[ext_resource type="PackedScene" uid="uid://bpufbwe0w24o0" path="res://scenes/cooking/ingredients/tomato_ingredient.tscn" id="1_sqhvf"]
+[ext_resource type="Texture2D" uid="uid://bv60vf40bf45o" path="res://scenes/cooking/farming/tomato_sprite.png" id="2_mofux"]
+[ext_resource type="Script" uid="uid://bp1c3qi27sobr" path="res://ui/scripts/inventory_item.gd" id="3_5ndsc"]
+
+[resource]
+script = ExtResource("3_5ndsc")
+DISPLAY_NAME = "Tomato"
+ITEM_TEXTURE = ExtResource("2_mofux")
+ITEM_OBJECT = ExtResource("1_sqhvf")
+START_COUNT = 58
+metadata/_custom_type_script = "uid://bp1c3qi27sobr"

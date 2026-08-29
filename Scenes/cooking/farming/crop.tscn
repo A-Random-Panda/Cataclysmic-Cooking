@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://qdudcsygcbqa"]
+
+[ext_resource type="Script" uid="uid://b1sggjrnlyrfo" path="res://Scenes/farming/crop.gd" id="1_5ycy1"]
+[ext_resource type="Script" uid="uid://cocj6powq7ff0" path="res://Scenes/farming/crop_growth.gd" id="1_mkxf4"]
+[ext_resource type="PackedScene" uid="uid://xhlmxpypw5jh" path="res://Scenes/cooking/carrot_ingredient.tscn" id="2_jswpq"]
+[ext_resource type="Texture2D" uid="uid://cmx20as2cnpce" path="res://Scenes/farming/image-removebg-preview(1).png" id="3_jswpq"]
+
+[node name="Crop" type="Node2D" unique_id=207928349]
+script = ExtResource("1_5ycy1")
+growth_time = 1
+
+[node name="GrowthNode" type="Node2D" parent="." unique_id=127525429]
+position = Vector2(-29.125015, -14.75)
+rotation = -0.46425757
+script = ExtResource("1_mkxf4")
+growing_crop = ExtResource("2_jswpq")
+
+[node name="CarrotIngredient" parent="GrowthNode" unique_id=542592762 instance=ExtResource("2_jswpq")]
+position = Vector2(-7.5734577, 14.650667)
+rotation = -0.23212878
+
+[node name="GrowthNode3" type="Node2D" parent="." unique_id=629333018]
+position = Vector2(20.17, -14.75)
+rotation = -0.46425757
+script = ExtResource("1_mkxf4")
+growing_crop = ExtResource("2_jswpq")
+
+[node name="CarrotIngredient" parent="GrowthNode3" unique_id=2069049504 instance=ExtResource("2_jswpq")]
+position = Vector2(-7.5734577, 14.650667)
+rotation = -0.23212878
+
+[node name="GrowthNode2" type="Node2D" parent="." unique_id=2077033652]
+position = Vector2(-7.07, -14.75)
+rotation = -0.46425757
+script = ExtResource("1_mkxf4")
+growing_crop = ExtResource("2_jswpq")
+
+[node name="CarrotIngredient" parent="GrowthNode2" unique_id=1637400766 instance=ExtResource("2_jswpq")]
+position = Vector2(-7.5734577, 14.650667)
+rotation = -0.23212878
+
+[node name="ImageRemovebgPreview(1)" type="Sprite2D" parent="." unique_id=2071693946]
+position = Vector2(-1.1250153, 35.25006)
+scale = Vector2(0.23196387, 0.22500005)
+texture = ExtResource("3_jswpq")

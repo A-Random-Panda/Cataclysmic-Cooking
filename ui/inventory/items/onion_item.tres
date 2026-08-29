@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="InventoryItem" format=3 uid="uid://cw1fde1owyb5m"]
+
+[ext_resource type="PackedScene" uid="uid://dhjnt2s47fib6" path="res://scenes/cooking/ingredients/onion_ingredient.tscn" id="1_en3rt"]
+[ext_resource type="Texture2D" uid="uid://b4ls5p4ejr0s3" path="res://scenes/cooking/assets/onion_sprite.png" id="2_yrjxt"]
+[ext_resource type="Script" uid="uid://bp1c3qi27sobr" path="res://ui/scripts/inventory_item.gd" id="3_v6v7l"]
+
+[resource]
+script = ExtResource("3_v6v7l")
+DISPLAY_NAME = "Onion"
+ITEM_TEXTURE = ExtResource("2_yrjxt")
+ITEM_OBJECT = ExtResource("1_en3rt")
+START_COUNT = 12
+metadata/_custom_type_script = "uid://bp1c3qi27sobr"
