@@ -23,9 +23,3 @@ func _on_area_exited(area: Area2D) -> void:
 	var node: Node2D = area.get_parent()
 	if node is Item:
 		node.in_inventory = false
-
-
-func _on_button_pressed() -> void:
-	var node: Item = GlobalUI.inventory.inventory_items[0].spawn(get_global_mouse_position())
-	add_sibling(node)
-	# node.hidden_from_inventory = true

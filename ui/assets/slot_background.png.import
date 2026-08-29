@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://e6pyaq7fv3bm"
-path="res://.godot/imported/strawberry_sprite.png-b28d4c897fa553331bbc99609eec006d.ctex"
+uid="uid://bqb4pgokku5qx"
+path="res://.godot/imported/slot_background.png-a03ff8e3f4132415d93af18ed75048f5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/cooking/assets/strawberry_sprite.png"
-dest_files=["res://.godot/imported/strawberry_sprite.png-b28d4c897fa553331bbc99609eec006d.ctex"]
+source_file="res://ui/assets/slot_background.png"
+dest_files=["res://.godot/imported/slot_background.png-a03ff8e3f4132415d93af18ed75048f5.ctex"]
 
 [params]
 

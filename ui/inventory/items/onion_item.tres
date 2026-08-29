@@ -6,7 +6,7 @@
 
 [resource]
 script = ExtResource("3_v6v7l")
-DISPLAY_NAME = "OnionItem"
+DISPLAY_NAME = "Onion"
 ITEM_TEXTURE = ExtResource("2_yrjxt")
 ITEM_OBJECT = ExtResource("1_en3rt")
 START_COUNT = 12
