@@ -28,7 +28,6 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	print(in_inventory)
 	if !dragging and mouse_on and Input.is_action_pressed("left_click"):
 		drag_offset = global_position - get_global_mouse_position()
 		dragging = true
