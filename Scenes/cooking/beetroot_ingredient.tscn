@@ -6,7 +6,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iiga5"]
 size = Vector2(20, 32)
 
-[node name="PhysicsItem" unique_id=542592762 instance=ExtResource("1_oy2yu")]
+[node name="BeetrootItem" unique_id=542592762 instance=ExtResource("1_oy2yu")]
+DISPLAY_NAME = "BeetrootItem"
 
 [node name="Sprite" parent="." index="0" unique_id=778355898]
 texture = ExtResource("2_lhbbs")

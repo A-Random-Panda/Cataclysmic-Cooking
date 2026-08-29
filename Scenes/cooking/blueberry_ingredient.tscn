@@ -6,7 +6,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tatuo"]
 size = Vector2(6, 6)
 
-[node name="PhysicsItem" unique_id=542592762 instance=ExtResource("1_6od3m")]
+[node name="BlueberryItem" unique_id=542592762 instance=ExtResource("1_6od3m")]
+DISPLAY_NAME = "BlueberryItem"
 
 [node name="Sprite" parent="." index="0" unique_id=778355898]
 texture = ExtResource("2_5hlu6")

@@ -6,7 +6,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8vs6p"]
 size = Vector2(30, 31)
 
-[node name="PhysicsItem" unique_id=542592762 instance=ExtResource("1_kjqm1")]
+[node name="CarrotItem" unique_id=542592762 instance=ExtResource("1_kjqm1")]
+DISPLAY_NAME = "CarrotItem"
 
 [node name="Sprite" parent="." index="0" unique_id=778355898]
 texture = ExtResource("2_3m427")
