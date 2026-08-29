@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://na5h8s5gx7f6"]
+
+[ext_resource type="PackedScene" uid="uid://b21l736r1j6na" path="res://core/physics_item.tscn" id="1_pfhn3"]
+[ext_resource type="Texture2D" uid="uid://hvoiskrus6ke" path="res://Scenes/cooking/assets/melon_sprite.png" id="2_npbd0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jbl2c"]
+size = Vector2(17, 20)
+
+[node name="PhysicsItem" unique_id=542592762 instance=ExtResource("1_pfhn3")]
+
+[node name="Sprite" parent="." index="0" unique_id=778355898]
+texture = ExtResource("2_npbd0")
+
+[node name="SelectBoxCollision" parent="SelectBox" parent_id_path=PackedInt32Array(1745033056) index="0" unique_id=549529629]
+shape = SubResource("RectangleShape2D_jbl2c")
+
+[node name="Hitbox" parent="." index="2" unique_id=2025160295]
+polygon = PackedVector2Array(4, -9, 2, -9, 2, -5, -2, -5, -5, -2, -6, 3, -4, 7, 0, 9, 3, 9, 6, 5, 6, 0, 5, -3, 3, -5)

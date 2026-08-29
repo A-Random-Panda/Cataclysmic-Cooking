@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bx6kjl5rqo61e"]
+
+[ext_resource type="PackedScene" uid="uid://b21l736r1j6na" path="res://core/physics_item.tscn" id="1_6od3m"]
+[ext_resource type="Texture2D" uid="uid://c710r8aycliql" path="res://Scenes/cooking/assets/blueberry_sprite.png" id="2_5hlu6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tatuo"]
+size = Vector2(6, 6)
+
+[node name="PhysicsItem" unique_id=542592762 instance=ExtResource("1_6od3m")]
+
+[node name="Sprite" parent="." index="0" unique_id=778355898]
+texture = ExtResource("2_5hlu6")
+
+[node name="SelectBoxCollision" parent="SelectBox" parent_id_path=PackedInt32Array(1745033056) index="0" unique_id=549529629]
+shape = SubResource("RectangleShape2D_tatuo")
+
+[node name="Hitbox" parent="." index="2" unique_id=2025160295]
+polygon = PackedVector2Array(1, -3, -1, -3, -3, -1, -3, 2, 0, 3, 3, 3, 3, -1)

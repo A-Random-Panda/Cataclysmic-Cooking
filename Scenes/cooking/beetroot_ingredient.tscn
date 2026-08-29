@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://qucr160g4q2j"]
+
+[ext_resource type="PackedScene" uid="uid://b21l736r1j6na" path="res://core/physics_item.tscn" id="1_oy2yu"]
+[ext_resource type="Texture2D" uid="uid://m8qiyxiqtxae" path="res://Scenes/cooking/assets/beetroot_sprite.png" id="2_lhbbs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iiga5"]
+size = Vector2(20, 32)
+
+[node name="PhysicsItem" unique_id=542592762 instance=ExtResource("1_oy2yu")]
+
+[node name="Sprite" parent="." index="0" unique_id=778355898]
+texture = ExtResource("2_lhbbs")
+
+[node name="SelectBoxCollision" parent="SelectBox" parent_id_path=PackedInt32Array(1745033056) index="0" unique_id=549529629]
+shape = SubResource("RectangleShape2D_iiga5")
+
+[node name="Hitbox" parent="." index="2" unique_id=2025160295]
+polygon = PackedVector2Array(-1, -4, -5, -5, -7, 2, 2, 14, 8, 3, 5, -2, 3, -3, 7, -11, -2, -15)
