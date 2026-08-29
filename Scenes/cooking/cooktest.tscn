@@ -1,22 +1,8 @@
 [gd_scene format=3 uid="uid://dwgdp44jtwlba"]
 
-[ext_resource type="PackedScene" uid="uid://xhlmxpypw5jh" path="res://Scenes/cooking/carrot_ingredient.tscn" id="3_gqu6d"]
-[ext_resource type="Script" uid="uid://bcb32xi4e8xot" path="res://Scenes/cooking/scripts/inventory_box.gd" id="3_noq73"]
-[ext_resource type="PackedScene" uid="uid://bpufbwe0w24o0" path="res://Scenes/cooking/tomato_ingredient.tscn" id="4_48orj"]
-[ext_resource type="PackedScene" uid="uid://bmm1lelw7khd1" path="res://Scenes/cooking/pot.tscn" id="4_noq73"]
-[ext_resource type="PackedScene" uid="uid://ba7vcqoblhd8c" path="res://Scenes/cooking/potato_ingredient.tscn" id="5_6laja"]
-[ext_resource type="PackedScene" uid="uid://qucr160g4q2j" path="res://Scenes/cooking/beetroot_ingredient.tscn" id="6_tj407"]
-[ext_resource type="PackedScene" uid="uid://bx6kjl5rqo61e" path="res://Scenes/cooking/blueberry_ingredient.tscn" id="7_id1u4"]
-[ext_resource type="PackedScene" uid="uid://dgnk4na00rxeu" path="res://Scenes/cooking/broccoli_ingredient.tscn" id="8_svh5d"]
-[ext_resource type="PackedScene" uid="uid://bef2nuahm14gc" path="res://Scenes/cooking/cabbage_ingredient.tscn" id="9_diw4o"]
-[ext_resource type="PackedScene" uid="uid://cti3crpg03pby" path="res://Scenes/cooking/carrot_but_better_ingredient.tscn" id="10_kdsky"]
-[ext_resource type="PackedScene" uid="uid://bjlhd3pkadk1e" path="res://Scenes/cooking/cauliflower_ingredient.tscn" id="11_xh3g8"]
-[ext_resource type="PackedScene" uid="uid://dsdip44wuyubc" path="res://Scenes/cooking/leek_ingredient.tscn" id="12_ofkya"]
-[ext_resource type="PackedScene" uid="uid://na5h8s5gx7f6" path="res://Scenes/cooking/melon_ingredient.tscn" id="13_573w2"]
-[ext_resource type="PackedScene" uid="uid://dhjnt2s47fib6" path="res://Scenes/cooking/onion_ingredient.tscn" id="14_t465v"]
-[ext_resource type="PackedScene" uid="uid://bgo0te2tvrk08" path="res://Scenes/cooking/pepper_ingredient.tscn" id="15_8xrkp"]
-[ext_resource type="PackedScene" uid="uid://dqq3h53djdokc" path="res://Scenes/cooking/raspberry_ingredient.tscn" id="16_25sdx"]
-[ext_resource type="PackedScene" uid="uid://buod885jm51kr" path="res://Scenes/cooking/strawberry_ingredient.tscn" id="17_khlt1"]
+[ext_resource type="PackedScene" uid="uid://xhlmxpypw5jh" path="res://scenes/cooking/carrot_ingredient.tscn" id="3_gqu6d"]
+[ext_resource type="Script" uid="uid://bcb32xi4e8xot" path="res://scenes/cooking/scripts/inventory_box.gd" id="3_noq73"]
+[ext_resource type="PackedScene" uid="uid://bmm1lelw7khd1" path="res://scenes/cooking/pot.tscn" id="4_noq73"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hh1gf"]
 size = Vector2(1151, 39)
@@ -29,6 +15,9 @@ size = Vector2(21, 674)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t4ru5"]
 size = Vector2(1151, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gqu6d"]
+size = Vector2(199.5, 672)
 
 [node name="CookTest" type="Node2D" unique_id=113342332]
 
@@ -54,64 +43,23 @@ shape = SubResource("RectangleShape2D_t4ru5")
 z_index = 1
 position = Vector2(588, 266)
 
+[node name="InventoryBox" type="Area2D" parent="." unique_id=1985527101]
+script = ExtResource("3_noq73")
+
+[node name="Hitbox" type="CollisionShape2D" parent="InventoryBox" unique_id=1856579290]
+position = Vector2(1068.75, 328)
+shape = SubResource("RectangleShape2D_gqu6d")
+debug_color = Color(0.9592579, 0.05681254, 0.4922163, 0.41960785)
+
+[node name="Button" type="Button" parent="InventoryBox" unique_id=537957210]
+offset_left = 1034.0
+offset_top = 42.0
+offset_right = 1107.0
+offset_bottom = 74.0
+
 [node name="CarrotIngredient" parent="." unique_id=542592762 instance=ExtResource("3_gqu6d")]
 position = Vector2(133, 264)
-
-<<<<<<< HEAD
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=452948522]
-
-[node name="InventoryUI" parent="CanvasLayer" unique_id=1670197735 instance=ExtResource("3_noq73")]
-anchor_right = 0.0
-anchor_bottom = 0.0
-offset_left = 1006.0
-offset_top = 325.0
-offset_right = 1006.0
-offset_bottom = 325.0
-mouse_filter = 1
-=======
-[node name="TomatoItem" parent="." unique_id=487140631 instance=ExtResource("4_48orj")]
-position = Vector2(92, 106)
-
-[node name="PotatoItem" parent="." unique_id=1373306171 instance=ExtResource("5_6laja")]
-position = Vector2(123, 98)
-
-[node name="BeetrootItem" parent="." unique_id=388708372 instance=ExtResource("6_tj407")]
-position = Vector2(219, 140)
-
-[node name="BlueberryItem" parent="." unique_id=2058721609 instance=ExtResource("7_id1u4")]
-position = Vector2(203, 127)
-
-[node name="BrocolliItem" parent="." unique_id=193445792 instance=ExtResource("8_svh5d")]
-position = Vector2(176, 135)
-
-[node name="CabbageItem" parent="." unique_id=235357363 instance=ExtResource("9_diw4o")]
-position = Vector2(150, 134)
-
-[node name="CoolerCarrotItem" parent="." unique_id=1639367939 instance=ExtResource("10_kdsky")]
-position = Vector2(119, 137)
-
-[node name="CauliflowerItem" parent="." unique_id=1038421080 instance=ExtResource("11_xh3g8")]
-position = Vector2(91, 132)
-
-[node name="LeekItem" parent="." unique_id=720359443 instance=ExtResource("12_ofkya")]
-position = Vector2(227, 101)
-
-[node name="MelonItem" parent="." unique_id=973115891 instance=ExtResource("13_573w2")]
-position = Vector2(211, 111)
-
-[node name="OnionItem" parent="." unique_id=2048476375 instance=ExtResource("14_t465v")]
-position = Vector2(191, 105)
-
-[node name="PepperItem" parent="." unique_id=2034770525 instance=ExtResource("15_8xrkp")]
-position = Vector2(167, 103)
-
-[node name="RaspberryItem" parent="." unique_id=1407647916 instance=ExtResource("16_25sdx")]
-position = Vector2(194, 128)
-
-[node name="StrawberryItem" parent="." unique_id=1525218391 instance=ExtResource("17_khlt1")]
-position = Vector2(148, 112)
 
 [connection signal="body_entered" from="InventoryBox" to="InventoryBox" method="_on_body_entered"]
 [connection signal="body_exited" from="InventoryBox" to="InventoryBox" method="_on_body_exited"]
 [connection signal="pressed" from="InventoryBox/Button" to="InventoryBox" method="_on_button_pressed"]
->>>>>>> cf8890dce9fa9a2c6ed83a8efa6dc2ab2e6f7840
