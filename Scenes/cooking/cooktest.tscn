@@ -62,6 +62,4 @@ position = Vector2(133, 264)
 
 [connection signal="area_entered" from="InventoryBox" to="InventoryBox" method="_on_area_entered"]
 [connection signal="area_exited" from="InventoryBox" to="InventoryBox" method="_on_area_exited"]
-[connection signal="body_entered" from="InventoryBox" to="InventoryBox" method="_on_body_entered"]
-[connection signal="body_exited" from="InventoryBox" to="InventoryBox" method="_on_body_exited"]
 [connection signal="pressed" from="InventoryBox/Button" to="InventoryBox" method="_on_button_pressed"]
