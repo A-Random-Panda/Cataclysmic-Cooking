@@ -7,6 +7,7 @@ var inventory_items: Array[InventoryItem]
 func _init() -> void:
 	for file_name in DirAccess.get_files_at(ITEMS_PATH):
 		var item: InventoryItem = load(ITEMS_PATH.path_join(file_name))
+		item.num = item.START_COUNT
 		var display_name := item.DISPLAY_NAME
 		
 		# Throws debug error if display name already exists
@@ -29,4 +30,3 @@ func add_node(item: Node2D):
 		inventory_items.append(inventory_item)
 		push_warning("Unregistered item ", inventory_item.DISPLAY_NAME, " added to inventory - will not have a texture!")
 	
-	print(inventory_items)

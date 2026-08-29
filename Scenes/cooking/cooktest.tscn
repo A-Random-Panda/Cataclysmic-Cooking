@@ -60,18 +60,6 @@ offset_bottom = 74.0
 [node name="CarrotIngredient" parent="." unique_id=542592762 instance=ExtResource("3_gqu6d")]
 position = Vector2(133, 264)
 
-[node name="CarrotIngredient2" parent="." unique_id=1110576810 instance=ExtResource("3_gqu6d")]
-position = Vector2(211, 83)
-
-[node name="CarrotIngredient3" parent="." unique_id=869902846 instance=ExtResource("3_gqu6d")]
-position = Vector2(89, 84)
-
-[node name="CarrotIngredient4" parent="." unique_id=2110172938 instance=ExtResource("3_gqu6d")]
-position = Vector2(115, 173)
-
-[node name="CarrotIngredient5" parent="." unique_id=1996698573 instance=ExtResource("3_gqu6d")]
-position = Vector2(205, 164)
-
 [connection signal="body_entered" from="InventoryBox" to="InventoryBox" method="_on_body_entered"]
 [connection signal="body_exited" from="InventoryBox" to="InventoryBox" method="_on_body_exited"]
 [connection signal="pressed" from="InventoryBox/Button" to="InventoryBox" method="_on_button_pressed"]

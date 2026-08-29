@@ -9,4 +9,5 @@ script = ExtResource("3_xgmvu")
 DISPLAY_NAME = "Carrot"
 ITEM_TEXTURE = ExtResource("2_duesh")
 ITEM_OBJECT = ExtResource("1_ml8is")
+START_COUNT = 24
 metadata/_custom_type_script = "uid://bp1c3qi27sobr"
