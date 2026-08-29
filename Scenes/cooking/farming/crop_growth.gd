@@ -1,4 +1,5 @@
 extends Node2D
+
 var GROWTH_TIME
 var growth = 0
 var scale_init = []
@@ -15,15 +16,20 @@ var crop
 var grown = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	
 	GROWTH_TIME = find_parent("Crop").growth_time
 	ingredient = find_child("*Ingredient") 
 	ingredient.freeze = true
 	init_pos = position
+	print(position)
 	sprite = find_child("*Sprite")
 	selectbox = find_child("*SelectBox")
 	hitbox = find_child("Hitbox")
 	scale_init = [find_child("*Sprite").scale.x,find_child("*SelectBox").scale.x,find_child("*Hitbox").scale.x]
 	offset = ingredient.position
+	
+	
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

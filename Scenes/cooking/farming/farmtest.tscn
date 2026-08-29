@@ -20,15 +20,15 @@ size = Vector2(1151, 331.5)
 
 [node name="farmtest" type="Node2D" unique_id=166008072]
 
-[node name="InventoryBox" type="Area2D" parent="." unique_id=1893740609]
+[node name="InventoryBox" type="Area2D" parent="." unique_id=35377485]
 script = ExtResource("2_rwwjx")
 
-[node name="Hitbox" type="CollisionShape2D" parent="InventoryBox" unique_id=746460305]
+[node name="Hitbox" type="CollisionShape2D" parent="InventoryBox" unique_id=2059515049]
 position = Vector2(1068.75, 328)
 shape = SubResource("RectangleShape2D_t36pt")
 debug_color = Color(0.9592579, 0.05681254, 0.4922163, 0.41960785)
 
-[node name="Button" type="Button" parent="InventoryBox" unique_id=1478501385]
+[node name="Button" type="Button" parent="InventoryBox" unique_id=1054694017]
 offset_left = 1034.0
 offset_top = 42.0
 offset_right = 1107.0
@@ -55,6 +55,6 @@ shape = SubResource("RectangleShape2D_inwb8")
 [node name="Crop" parent="." unique_id=207928349 instance=ExtResource("1_hsha5")]
 position = Vector2(280, 476)
 
-[connection signal="area_entered" from="InventoryBox" to="InventoryBox" method="_on_area_entered"]
-[connection signal="area_exited" from="InventoryBox" to="InventoryBox" method="_on_area_exited"]
+[connection signal="body_entered" from="InventoryBox" to="InventoryBox" method="_on_body_entered"]
+[connection signal="body_exited" from="InventoryBox" to="InventoryBox" method="_on_body_exited"]
 [connection signal="pressed" from="InventoryBox/Button" to="InventoryBox" method="_on_button_pressed"]
