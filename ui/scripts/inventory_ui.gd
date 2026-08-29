@@ -1,6 +1,8 @@
 extends Control
 
 const SLOTS_IN_ROW = 3
+var SLOT: PackedScene = load("res://ui/inventory/inventory_slot.tscn")
+@onready var SLOT_CONTAINER: GridContainer = $RightPanel/MarginContainer/ScrollContainer/GridContainer
 
 func update() -> void:
 	var instantiated_items := GlobalUI.inventory.inventory_items
@@ -17,7 +19,10 @@ func update() -> void:
 					return _item.num > 0
 		)
 	
-	draw_slots(len(items))
+	for item in items:
+		var new_slot: Panel = SLOT.instantiate()
+		SLOT_CONTAINER.add_child(new_slot)
+		
 	
 	instantiated_items
 
@@ -35,7 +40,8 @@ func draw_slots(slot_num: int):
 			col_node.name = "InventoryColumn" + str(col_index)
 			
 			# Add slot to each InventoryColumn
-			
+			var new_slot: Panel = SLOT.instantiate()
+			col_node.add_child(new_slot)
 			
 			row_node.add_child(col_node)
 			slot_num -= 1
@@ -45,7 +51,6 @@ func draw_slots(slot_num: int):
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	draw_slots(28)
 	pass # Replace with function body.
 
 

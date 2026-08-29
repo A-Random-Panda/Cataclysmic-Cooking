@@ -4,25 +4,68 @@
 [ext_resource type="Script" uid="uid://bcb32xi4e8xot" path="res://scenes/cooking/scripts/inventory_box.gd" id="2_s83yu"]
 [ext_resource type="Texture2D" uid="uid://bmro43n2ctad" path="res://ui/assets/pda_inventory.png" id="3_lep46"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_hh1gf"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ucnnj"]
 size = Vector2(267.15, 678.6)
 
 [node name="InventoryUI" type="Control" unique_id=1670197735]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_t68fq")
 
-[node name="InventoryArea" type="Area2D" parent="." unique_id=1872086560]
-script = ExtResource("2_s83yu")
+[node name="RightPanel" type="VBoxContainer" parent="." unique_id=1594340306]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
 
-[node name="Hitbox" type="CollisionShape2D" parent="InventoryArea" unique_id=71690266]
-shape = SubResource("RectangleShape2D_hh1gf")
-debug_color = Color(0.97429806, 0, 0.43122897, 0.41960785)
-
-[node name="Background" type="Sprite2D" parent="." unique_id=583822669]
+[node name="Background" type="Sprite2D" parent="RightPanel" unique_id=1781809274]
 self_modulate = Color(1, 1, 1, 0.5019608)
+position = Vector2(125, 324)
 scale = Vector2(0.15, 0.2)
 texture = ExtResource("3_lep46")
 
-[connection signal="body_entered" from="InventoryArea" to="InventoryArea" method="_on_body_entered"]
-[connection signal="body_exited" from="InventoryArea" to="InventoryArea" method="_on_body_exited"]
+[node name="InventoryArea" type="Area2D" parent="RightPanel" unique_id=741097894]
+script = ExtResource("2_s83yu")
+
+[node name="Hitbox" type="CollisionShape2D" parent="RightPanel/InventoryArea" unique_id=380802248]
+position = Vector2(125, 324)
+shape = SubResource("RectangleShape2D_ucnnj")
+debug_color = Color(0.97429806, 0, 0.43122897, 0.41960785)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="RightPanel" unique_id=328042362]
+custom_minimum_size = Vector2(0, 150)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="ColorRect" type="ColorRect" parent="RightPanel/HBoxContainer" unique_id=2089935862]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0.35686275, 1, 1, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="RightPanel" unique_id=1476275945]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_top = 20
+
+[node name="ScrollContainer" type="ScrollContainer" parent="RightPanel/MarginContainer" unique_id=1682395830]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="GridContainer" type="GridContainer" parent="RightPanel/MarginContainer/ScrollContainer" unique_id=297145308]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 3
+theme_override_constants/h_separation = 12
+theme_override_constants/v_separation = 20
+columns = 4
+
+[connection signal="body_entered" from="RightPanel/InventoryArea" to="RightPanel/InventoryArea" method="_on_body_entered"]
+[connection signal="body_exited" from="RightPanel/InventoryArea" to="RightPanel/InventoryArea" method="_on_body_exited"]

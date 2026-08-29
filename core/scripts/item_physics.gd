@@ -49,10 +49,10 @@ func _physics_process(delta: float) -> void:
 		freeze = false
 		dragging = false
 		
-		if in_inventory:
-			INVENTORY_AREA_2D._on_body_entered(self)
+		# if in_inventory:
+		# 	INVENTORY_AREA_2D._on_body_entered(self)
 		
-		allow_inventory_detection()
+		# allow_inventory_detection()
 		
 		# Apply velocity
 		var unscaled_velocity = (get_global_mouse_position() - last_mouse_position) / delta
