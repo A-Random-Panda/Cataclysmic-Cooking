@@ -16,6 +16,7 @@ func _init() -> void:
 		
 		inventory_items.append(item)
 
+signal update_inventory()
 
 func add_node(item: Node2D):
 	var display_name = item.DISPLAY_NAME
@@ -29,4 +30,4 @@ func add_node(item: Node2D):
 		var inventory_item := InventoryItem.new(display_name, load(item.scene_file_path), 1)
 		inventory_items.append(inventory_item)
 		push_warning("Unregistered item ", inventory_item.DISPLAY_NAME, " added to inventory - will not have a texture!")
-	
+	update_inventory.emit()

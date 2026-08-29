@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://xhlmxpypw5jh"]
+[gd_scene format=3 uid="uid://cti3crpg03pby"]
 
 [ext_resource type="PackedScene" uid="uid://b21l736r1j6na" path="res://core/physics_item.tscn" id="1_uagui"]
-[ext_resource type="Texture2D" uid="uid://dynump5svy2j6" path="res://Scenes/cooking/assets/carrot.png" id="2_hxgep"]
+[ext_resource type="Texture2D" uid="uid://dynump5svy2j6" path="res://scenes/cooking/assets/carrot.png" id="2_hxgep"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hxgep"]
 size = Vector2(52, 61)

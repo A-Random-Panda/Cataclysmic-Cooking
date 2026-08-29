@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://bgo0te2tvrk08"]
 
 [ext_resource type="PackedScene" uid="uid://b21l736r1j6na" path="res://core/physics_item.tscn" id="1_vvu0c"]
-[ext_resource type="Texture2D" uid="uid://bjsvy5uxkkq7d" path="res://Scenes/cooking/assets/pepper_sprite.png" id="2_wjlr0"]
+[ext_resource type="Texture2D" uid="uid://bjsvy5uxkkq7d" path="res://scenes/cooking/assets/pepper_sprite.png" id="2_wjlr0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ywbx"]
 size = Vector2(21, 34)
 
 [node name="PepperItem" unique_id=542592762 instance=ExtResource("1_vvu0c")]
-DISPLAY_NAME = "PepperItem"
+DISPLAY_NAME = "Pepper"
 
 [node name="Sprite" parent="." index="0" unique_id=778355898]
 texture = ExtResource("2_wjlr0")

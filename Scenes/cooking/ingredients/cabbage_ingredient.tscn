@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://bef2nuahm14gc"]
 
 [ext_resource type="PackedScene" uid="uid://b21l736r1j6na" path="res://core/physics_item.tscn" id="1_ubtux"]
-[ext_resource type="Texture2D" uid="uid://i5yvk5kof55o" path="res://Scenes/cooking/assets/cabbage_sprite.png" id="2_14s64"]
+[ext_resource type="Texture2D" uid="uid://i5yvk5kof55o" path="res://scenes/cooking/assets/cabbage_sprite.png" id="2_14s64"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mu8mp"]
 size = Vector2(26, 25)
 
 [node name="CabbageItem" unique_id=542592762 instance=ExtResource("1_ubtux")]
-DISPLAY_NAME = "CabbageItem"
+DISPLAY_NAME = "Cabbage"
 
 [node name="Sprite" parent="." index="0" unique_id=778355898]
 texture = ExtResource("2_14s64")

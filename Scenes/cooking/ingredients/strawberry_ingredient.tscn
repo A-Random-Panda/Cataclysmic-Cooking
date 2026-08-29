@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://buod885jm51kr"]
 
 [ext_resource type="PackedScene" uid="uid://b21l736r1j6na" path="res://core/physics_item.tscn" id="1_in3pj"]
-[ext_resource type="Texture2D" uid="uid://e6pyaq7fv3bm" path="res://Scenes/cooking/assets/strawberry_sprite.png" id="2_inib8"]
+[ext_resource type="Texture2D" uid="uid://e6pyaq7fv3bm" path="res://scenes/cooking/assets/strawberry_sprite.png" id="2_inib8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fc6m5"]
 size = Vector2(13, 17)
 
 [node name="StrawberryItem" unique_id=542592762 instance=ExtResource("1_in3pj")]
-DISPLAY_NAME = "StrawberryItem"
+DISPLAY_NAME = "Strawberry"
 
 [node name="Sprite" parent="." index="0" unique_id=778355898]
 texture = ExtResource("2_inib8")

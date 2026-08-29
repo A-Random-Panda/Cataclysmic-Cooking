@@ -23,7 +23,6 @@ func update() -> void:
 		func(a: InventoryItem, b: InventoryItem) -> bool: 
 			return a.DISPLAY_NAME < b.DISPLAY_NAME
 	)
-	
 	for item in items:
 		var new_slot: InventorySlot = SLOT.instantiate()
 		SLOT_CONTAINER.add_child(new_slot)
@@ -42,10 +41,5 @@ func _on_gui_input(event: InputEvent, slot: InventorySlot) -> void:
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	GlobalUI.inventory.update_inventory.connect(update)
 	update()
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass

@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://dsdip44wuyubc"]
 
 [ext_resource type="PackedScene" uid="uid://b21l736r1j6na" path="res://core/physics_item.tscn" id="1_g5f1v"]
-[ext_resource type="Texture2D" uid="uid://d38pntonqk33r" path="res://Scenes/cooking/assets/leek_sprite.png" id="2_j82nr"]
+[ext_resource type="Texture2D" uid="uid://d38pntonqk33r" path="res://scenes/cooking/assets/leek_sprite.png" id="2_j82nr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rum2u"]
 size = Vector2(11, 38)
 
 [node name="LeekItem" unique_id=542592762 instance=ExtResource("1_g5f1v")]
-DISPLAY_NAME = "LeekItem"
+DISPLAY_NAME = "Leek"
 
 [node name="Sprite" parent="." index="0" unique_id=778355898]
 texture = ExtResource("2_j82nr")

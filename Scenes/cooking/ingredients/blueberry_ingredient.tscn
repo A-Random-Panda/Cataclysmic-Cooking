@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://bx6kjl5rqo61e"]
 
 [ext_resource type="PackedScene" uid="uid://b21l736r1j6na" path="res://core/physics_item.tscn" id="1_6od3m"]
-[ext_resource type="Texture2D" uid="uid://c710r8aycliql" path="res://Scenes/cooking/assets/blueberry_sprite.png" id="2_5hlu6"]
+[ext_resource type="Texture2D" uid="uid://c710r8aycliql" path="res://scenes/cooking/assets/blueberry_sprite.png" id="2_5hlu6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tatuo"]
 size = Vector2(6, 6)
 
 [node name="BlueberryItem" unique_id=542592762 instance=ExtResource("1_6od3m")]
-DISPLAY_NAME = "BlueberryItem"
+DISPLAY_NAME = "Blueberry"
 
 [node name="Sprite" parent="." index="0" unique_id=778355898]
 texture = ExtResource("2_5hlu6")

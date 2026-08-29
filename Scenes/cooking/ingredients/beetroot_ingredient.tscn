@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://qucr160g4q2j"]
 
 [ext_resource type="PackedScene" uid="uid://b21l736r1j6na" path="res://core/physics_item.tscn" id="1_oy2yu"]
-[ext_resource type="Texture2D" uid="uid://m8qiyxiqtxae" path="res://Scenes/cooking/assets/beetroot_sprite.png" id="2_lhbbs"]
+[ext_resource type="Texture2D" uid="uid://m8qiyxiqtxae" path="res://scenes/cooking/assets/beetroot_sprite.png" id="2_lhbbs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iiga5"]
 size = Vector2(20, 32)
 
 [node name="BeetrootItem" unique_id=542592762 instance=ExtResource("1_oy2yu")]
-DISPLAY_NAME = "BeetrootItem"
+DISPLAY_NAME = "Beetroot"
 
 [node name="Sprite" parent="." index="0" unique_id=778355898]
 texture = ExtResource("2_lhbbs")

@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://bjlhd3pkadk1e"]
 
 [ext_resource type="PackedScene" uid="uid://b21l736r1j6na" path="res://core/physics_item.tscn" id="1_gdeaj"]
-[ext_resource type="Texture2D" uid="uid://iuiv662ccpx1" path="res://Scenes/cooking/assets/cauliflower_sprite.png" id="2_ufab7"]
+[ext_resource type="Texture2D" uid="uid://iuiv662ccpx1" path="res://scenes/cooking/assets/cauliflower_sprite.png" id="2_ufab7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dmcx3"]
 size = Vector2(20, 21)
 
-[node name="PhysicsItem" unique_id=542592762 instance=ExtResource("1_gdeaj")]
+[node name="CauliflowerItem" unique_id=542592762 instance=ExtResource("1_gdeaj")]
+DISPLAY_NAME = "Cauliflower"
 
 [node name="Sprite" parent="." index="0" unique_id=778355898]
 texture = ExtResource("2_ufab7")

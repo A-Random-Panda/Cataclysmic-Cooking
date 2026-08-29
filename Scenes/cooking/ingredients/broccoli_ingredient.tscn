@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://dgnk4na00rxeu"]
 
 [ext_resource type="PackedScene" uid="uid://b21l736r1j6na" path="res://core/physics_item.tscn" id="1_mi7iu"]
-[ext_resource type="Texture2D" uid="uid://8cm2cjccgfx4" path="res://Scenes/cooking/assets/broccoli_sprite.png" id="2_fbf45"]
+[ext_resource type="Texture2D" uid="uid://8cm2cjccgfx4" path="res://scenes/cooking/assets/broccoli_sprite.png" id="2_fbf45"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ikrl6"]
 size = Vector2(23, 25)
 
 [node name="BroccoliItem" unique_id=542592762 instance=ExtResource("1_mi7iu")]
-DISPLAY_NAME = "BroccoliItem"
+DISPLAY_NAME = "Broccoli"
 
 [node name="Sprite" parent="." index="0" unique_id=778355898]
 texture = ExtResource("2_fbf45")
