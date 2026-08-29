@@ -12,5 +12,5 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D):
 	if body is Item:
-		GlobalUI.inventory.add(body)
+		#GlobalUI.inventory.add(body)
 		body.queue_free()

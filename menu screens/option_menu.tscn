@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bjep32otfq42q"]
 
-[ext_resource type="Script" uid="uid://b8v7ifkqwb4ou" path="res://option_menu.gd" id="1_ggsak"]
+[ext_resource type="Script" uid="uid://b8v7ifkqwb4ou" path="res://menu screens/option_menu.gd" id="1_1tcl8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_el25l"]
 bg_color = Color(0.18000486, 0.1800049, 0.1800048, 1)
@@ -28,7 +28,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_ggsak")
+script = ExtResource("1_1tcl8")
 
 [node name="Button" type="Button" parent="." unique_id=4444302]
 layout_mode = 1

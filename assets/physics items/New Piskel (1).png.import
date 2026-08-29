@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddcbx03nowuat"
-path="res://.godot/imported/cooking_pot_back.png-418ff55fba4ea4fbf433c66de9502fc5.ctex"
+uid="uid://b7ufskt4wjg7c"
+path="res://.godot/imported/New Piskel (1).png-eb8e82774428cccac0a988af46f306ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/cooking/assets/cooking_pot_back.png"
-dest_files=["res://.godot/imported/cooking_pot_back.png-418ff55fba4ea4fbf433c66de9502fc5.ctex"]
+source_file="res://assets/physics items/New Piskel (1).png"
+dest_files=["res://.godot/imported/New Piskel (1).png-eb8e82774428cccac0a988af46f306ae.ctex"]
 
 [params]
 

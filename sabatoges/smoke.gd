@@ -1,0 +1,2 @@
+class_name extinguisher_smoke
+extends Area2D

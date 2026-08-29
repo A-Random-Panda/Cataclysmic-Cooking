@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://b20g05u1fh7g8"]
+
+[ext_resource type="Texture2D" uid="uid://cx4ml2becquv0" path="res://assets/physics items/New Piskel (2).png" id="1_4mp6u"]
+[ext_resource type="Script" uid="uid://c3edpdslbu06c" path="res://sabatoges/area_2d.gd" id="2_mk5gg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mk5gg"]
+atlas = ExtResource("1_4mp6u")
+region = Rect2(0, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8w152"]
+atlas = ExtResource("1_4mp6u")
+region = Rect2(500, 0, 500, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iof65"]
+atlas = ExtResource("1_4mp6u")
+region = Rect2(0, 500, 500, 500)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rp8fi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mk5gg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8w152")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iof65")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vemod"]
+size = Vector2(353.3333, 399.99997)
+
+[node name="Fire" type="Node2D" unique_id=1864746985]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=579043075]
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_rp8fi")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1563463556]
+position = Vector2(25, 27.000002)
+scale = Vector2(0.15, 0.15)
+script = ExtResource("2_mk5gg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=275778024]
+position = Vector2(-189.99997, -160.00005)
+shape = SubResource("RectangleShape2D_vemod")
+
+[connection signal="area_entered" from="Area2D" to="Area2D" method="_on_area_entered"]
+[connection signal="area_exited" from="Area2D" to="Area2D" method="_on_area_exited"]

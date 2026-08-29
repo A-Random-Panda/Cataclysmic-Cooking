@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dwgdp44jtwlba"]
 
-[ext_resource type="PackedScene" uid="uid://xhlmxpypw5jh" path="res://scenes/cooking/carrot_ingredient.tscn" id="3_gqu6d"]
-[ext_resource type="Script" uid="uid://bcb32xi4e8xot" path="res://scenes/cooking/scripts/inventory_box.gd" id="3_noq73"]
-[ext_resource type="PackedScene" uid="uid://bmm1lelw7khd1" path="res://scenes/cooking/pot.tscn" id="4_noq73"]
+[ext_resource type="PackedScene" uid="uid://xhlmxpypw5jh" path="res://Scenes/cooking/carrot_ingredient.tscn" id="3_gqu6d"]
+[ext_resource type="Script" uid="uid://bcb32xi4e8xot" path="res://Scenes/cooking/scripts/inventory_box.gd" id="3_noq73"]
+[ext_resource type="PackedScene" uid="uid://bmm1lelw7khd1" path="res://Scenes/cooking/pot.tscn" id="4_noq73"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hh1gf"]
 size = Vector2(1151, 39)
