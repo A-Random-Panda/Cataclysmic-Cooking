@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://qdudcsygcbqa"]
 
-[ext_resource type="Script" uid="uid://b1sggjrnlyrfo" path="res://Scenes/farming/crop.gd" id="1_5ycy1"]
-[ext_resource type="Script" uid="uid://cocj6powq7ff0" path="res://Scenes/farming/crop_growth.gd" id="1_mkxf4"]
-[ext_resource type="PackedScene" uid="uid://xhlmxpypw5jh" path="res://Scenes/cooking/carrot_ingredient.tscn" id="2_jswpq"]
-[ext_resource type="Texture2D" uid="uid://cmx20as2cnpce" path="res://Scenes/farming/image-removebg-preview(1).png" id="3_jswpq"]
+[ext_resource type="Script" uid="uid://b1sggjrnlyrfo" path="res://scenes/farming/crop.gd" id="1_5ycy1"]
+[ext_resource type="Script" uid="uid://cocj6powq7ff0" path="res://scenes/farming/crop_growth.gd" id="1_mkxf4"]
+[ext_resource type="PackedScene" uid="uid://xhlmxpypw5jh" path="res://scenes/cooking/ingredients/carrot_ingredient.tscn" id="2_jswpq"]
+[ext_resource type="Texture2D" uid="uid://cmx20as2cnpce" path="res://scenes/farming/image-removebg-preview(1).png" id="3_jswpq"]
 
 [node name="Crop" type="Node2D" unique_id=207928349]
 script = ExtResource("1_5ycy1")
