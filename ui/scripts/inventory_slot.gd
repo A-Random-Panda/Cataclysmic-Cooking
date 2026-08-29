@@ -23,9 +23,9 @@ func set_properties(item: InventoryItem) -> void:
 
 func _on_mouse_entered() -> void:
 	mouse_on = true
-	self.modulate = Color(1.0, 1.0, 1.0, 0.5)
+	self.modulate = Color(1.0, 1.0, 1.0, 1.0)
 
 
 func _on_mouse_exited() -> void:
 	mouse_on = false
-	self.modulate = Color(1.0, 1.0, 1.0, 1.0)
+	self.modulate = Color(1.0, 1.0, 1.0, 0.5)

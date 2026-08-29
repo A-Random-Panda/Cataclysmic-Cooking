@@ -2,9 +2,9 @@
 
 [ext_resource type="Script" uid="uid://t8b8f35dp4op" path="res://ui/scripts/inventory_slot.gd" id="1_hwg0l"]
 [ext_resource type="Texture2D" uid="uid://bqb4pgokku5qx" path="res://ui/assets/slot_background.png" id="1_nktrt"]
-[ext_resource type="Texture2D" uid="uid://bv60vf40bf45o" path="res://scenes/cooking/farming/tomato_sprite.png" id="2_hwg0l"]
 
 [node name="InventorySlot" type="Panel" unique_id=1379160107]
+modulate = Color(1, 1, 1, 0.5019608)
 self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(50, 50)
 anchors_preset = -1
@@ -37,7 +37,6 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_hwg0l")
 expand_mode = 1
 stretch_mode = 5
 

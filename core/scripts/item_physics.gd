@@ -5,6 +5,7 @@ extends RigidBody2D
 
 @export var X_THROW_STRENGTH: float = 1
 @export var Y_THROW_STRENGTH: float = 1
+@export var MAX_VELOCITY: float = 10000
 
 @export var CLAMP_CIRCLE_SHAVE: float = 0.8
 
@@ -59,8 +60,10 @@ func _physics_process(delta: float) -> void:
 			InventoryArea.add_to_inventory(self)
 		
 		# Apply velocity
-		var unscaled_velocity = (get_global_mouse_position() - last_mouse_position) / delta
-		linear_velocity = Vector2(X_THROW_STRENGTH * unscaled_velocity.x, Y_THROW_STRENGTH * unscaled_velocity.y)
+		var unscaled_velocity := (get_global_mouse_position() - last_mouse_position) / delta
+		var scaled_velocity := Vector2(X_THROW_STRENGTH * unscaled_velocity.x, Y_THROW_STRENGTH * unscaled_velocity.y)
+		linear_velocity = scaled_velocity.limit_length(MAX_VELOCITY)
+		print(linear_velocity)
 
 func _on_select_box_mouse_entered() -> void:
 	mouse_on = true
