@@ -15,7 +15,7 @@ scale = Vector2(0.017999938, 0.017999938)
 
 [node name="SelectBox" type="Area2D" parent="." unique_id=1745033056]
 
-[node name="SelectBoxCollision" type="CollisionShape2D" parent="SelectBox" unique_id=549529629]
+[node name="Hitbox" type="CollisionPolygon2D" parent="SelectBox" unique_id=295932353]
 
 [node name="Hitbox" type="CollisionPolygon2D" parent="." unique_id=2025160295]
 

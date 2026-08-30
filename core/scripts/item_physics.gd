@@ -7,9 +7,13 @@ extends RigidBody2D
 @export var Y_THROW_STRENGTH: float = 1
 @export var MAX_VELOCITY: float = 10000
 
-@export var CLAMP_CIRCLE_SHAVE: float = 0.8
+@export var CLAMP_CIRCLE_SHAVE := 0.8
+@export var RESPAWN_POS := Vector2(200, 200)
 
 const SINGLE_PICKUP := true
+
+@onready var SCREEN_SIZE := get_viewport_rect().size
+const PADDING := 100
 
 var in_inventory := false
 
@@ -27,10 +31,18 @@ func _ready() -> void:
 	for vector: Vector2 in $Hitbox.polygon:
 		clamp_radius = max(clamp_radius, vector.distance_to(Vector2.ZERO)) * CLAMP_CIRCLE_SHAVE
 	CLAMP_VECTOR = Vector2(clamp_radius, clamp_radius)
+	
+	# Check if item is in the backrooms every 2 seconds
+	var timer := Timer.new()
+	timer.wait_time = 2
+	timer.autostart = true
+	add_child(timer)
+	timer.timeout.connect(_check_respawn)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
+	
 	if !dragging and mouse_on and Input.is_action_pressed("left_click"):
 		# Single drag logic
 		if SINGLE_PICKUP:
@@ -38,9 +50,17 @@ func _physics_process(delta: float) -> void:
 				drag_offset = global_position - get_global_mouse_position()
 				dragging = true
 				GlobalUI.is_dragging = true
+				
+				# Cooking UI
+				if GlobalUI.hovered_item != self:
+					GlobalUI.hovered_on_item.emit(self)
 		else:
 			drag_offset = global_position - get_global_mouse_position()
 			dragging = true
+			
+			# Cooking UI
+			if GlobalUI.hovered_item != self:
+				GlobalUI.hovered_on_item.emit(self)
 
 	if dragging and Input.is_action_pressed("left_click"):
 		last_mouse_position = get_global_mouse_position()
@@ -54,7 +74,12 @@ func _physics_process(delta: float) -> void:
 	elif dragging:
 		freeze = false
 		dragging = false
+		
+		# Single drag
 		GlobalUI.is_dragging = false
+		
+		# Cooking UI
+		GlobalUI.hovered_off_item.emit(self)
 		
 		if in_inventory:
 			InventoryArea.add_to_inventory(self)
@@ -64,8 +89,21 @@ func _physics_process(delta: float) -> void:
 		var scaled_velocity := Vector2(X_THROW_STRENGTH * unscaled_velocity.x, Y_THROW_STRENGTH * unscaled_velocity.y)
 		linear_velocity = scaled_velocity.limit_length(MAX_VELOCITY)
 
+
+# Check if item is in the backrooms
+func _check_respawn() -> void:
+	if position.x < -PADDING or position.x > SCREEN_SIZE.x + PADDING or position.y < -PADDING or position.y > SCREEN_SIZE.y + PADDING:
+		freeze = true
+		position = RESPAWN_POS
+		freeze = false
+
+
 func _on_select_box_mouse_entered() -> void:
 	mouse_on = true
+	if !GlobalUI.is_dragging and GlobalUI.hovered_item != self:
+		GlobalUI.hovered_on_item.emit(self)
 
 func _on_select_box_mouse_exited() -> void:
 	mouse_on = false
+	if !dragging and GlobalUI.hovered_item == self:
+		GlobalUI.hovered_off_item.emit(self)

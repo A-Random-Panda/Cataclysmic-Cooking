@@ -1,0 +1,197 @@
+[gd_scene format=3 uid="uid://cfgpscveehwn6"]
+
+[ext_resource type="Script" uid="uid://c45x76opc1xhm" path="res://scenes/cooking/scripts/pot_stats.gd" id="1_cs7pv"]
+[ext_resource type="Texture2D" uid="uid://dynump5svy2j6" path="res://scenes/cooking/assets/carrot.png" id="1_dr2sn"]
+[ext_resource type="Texture2D" uid="uid://jqbif7s4161c" path="res://ui/assets/paper_background.png" id="2_wo2jy"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_act4w"]
+load_path = "res://.godot/imported/pda_inventory.png-2dbe258c3497c5e48f32391f346b3b22.ctex"
+
+[node name="PotStats" type="CanvasLayer" unique_id=772380090]
+
+[node name="PotStatsUI" type="Control" parent="." unique_id=1364878036]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+mouse_filter = 1
+script = ExtResource("1_cs7pv")
+
+[node name="RightPanel" type="MarginContainer" parent="PotStatsUI" unique_id=1304914713]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 280.0
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PotStatsUI/RightPanel" unique_id=21094298]
+layout_mode = 2
+
+[node name="Background" type="TextureRect" parent="PotStatsUI/RightPanel/VBoxContainer" unique_id=1952566023]
+custom_minimum_size = Vector2(250, 450)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 3
+texture = ExtResource("2_wo2jy")
+expand_mode = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PotStatsUI/RightPanel/VBoxContainer/Background" unique_id=1324978307]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PotStatsUI/RightPanel/VBoxContainer/Background/VBoxContainer" unique_id=2026086201]
+custom_minimum_size = Vector2(0, 85)
+layout_mode = 2
+theme_override_colors/default_color = Color(0.2520276, 0.25202766, 0.25202763, 1)
+theme_override_font_sizes/normal_font_size = 60
+bbcode_enabled = true
+text = "[center]Pot[/center]"
+vertical_alignment = 2
+
+[node name="Flavors" type="VBoxContainer" parent="PotStatsUI/RightPanel/VBoxContainer/Background/VBoxContainer" unique_id=229694934]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="FlavorContainer1" type="VBoxContainer" parent="PotStatsUI/RightPanel/VBoxContainer/Background/VBoxContainer/Flavors" unique_id=2025635536]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PotStatsUI/RightPanel/VBoxContainer/Background/VBoxContainer/Flavors/FlavorContainer1" unique_id=1942777489]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+theme_override_colors/default_color = Color(0.2520276, 0.25202766, 0.25202763, 1)
+bbcode_enabled = true
+text = "[center]Saltiness[/center]"
+
+[node name="ProgressBar" type="ProgressBar" parent="PotStatsUI/RightPanel/VBoxContainer/Background/VBoxContainer/Flavors/FlavorContainer1" unique_id=1638989665]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="FlavorContainer2" type="VBoxContainer" parent="PotStatsUI/RightPanel/VBoxContainer/Background/VBoxContainer/Flavors" unique_id=1424516995]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PotStatsUI/RightPanel/VBoxContainer/Background/VBoxContainer/Flavors/FlavorContainer2" unique_id=186858960]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+theme_override_colors/default_color = Color(0.2520276, 0.25202766, 0.25202763, 1)
+bbcode_enabled = true
+text = "[center]Sweetness[/center]"
+
+[node name="ProgressBar" type="ProgressBar" parent="PotStatsUI/RightPanel/VBoxContainer/Background/VBoxContainer/Flavors/FlavorContainer2" unique_id=1952227745]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="FlavorContainer3" type="VBoxContainer" parent="PotStatsUI/RightPanel/VBoxContainer/Background/VBoxContainer/Flavors" unique_id=1783088977]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PotStatsUI/RightPanel/VBoxContainer/Background/VBoxContainer/Flavors/FlavorContainer3" unique_id=1827362983]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+theme_override_colors/default_color = Color(0.2520276, 0.25202766, 0.25202763, 1)
+bbcode_enabled = true
+text = "[center]Sourness[/center]"
+
+[node name="ProgressBar" type="ProgressBar" parent="PotStatsUI/RightPanel/VBoxContainer/Background/VBoxContainer/Flavors/FlavorContainer3" unique_id=143513916]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="FlavorContainer4" type="VBoxContainer" parent="PotStatsUI/RightPanel/VBoxContainer/Background/VBoxContainer/Flavors" unique_id=1764045688]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PotStatsUI/RightPanel/VBoxContainer/Background/VBoxContainer/Flavors/FlavorContainer4" unique_id=531832175]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+theme_override_colors/default_color = Color(0.2520276, 0.25202766, 0.25202763, 1)
+bbcode_enabled = true
+text = "[center]Bitterness[/center]"
+
+[node name="ProgressBar" type="ProgressBar" parent="PotStatsUI/RightPanel/VBoxContainer/Background/VBoxContainer/Flavors/FlavorContainer4" unique_id=974614481]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="FlavorContainer5" type="VBoxContainer" parent="PotStatsUI/RightPanel/VBoxContainer/Background/VBoxContainer/Flavors" unique_id=528662897]
+layout_mode = 2
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PotStatsUI/RightPanel/VBoxContainer/Background/VBoxContainer/Flavors/FlavorContainer5" unique_id=1530580078]
+custom_minimum_size = Vector2(0, 25)
+layout_mode = 2
+theme_override_colors/default_color = Color(0.2520276, 0.25202766, 0.25202763, 1)
+bbcode_enabled = true
+text = "[center]Savoriness[/center]"
+
+[node name="ProgressBar" type="ProgressBar" parent="PotStatsUI/RightPanel/VBoxContainer/Background/VBoxContainer/Flavors/FlavorContainer5" unique_id=1628508445]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="IngredientStats" type="MarginContainer" parent="PotStatsUI/RightPanel/VBoxContainer" unique_id=429970054]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_top = 12
+
+[node name="Background" type="TextureRect" parent="PotStatsUI/RightPanel/VBoxContainer/IngredientStats" unique_id=1825093045]
+self_modulate = Color(1, 1, 1, 0.5019608)
+layout_mode = 2
+size_flags_vertical = 3
+texture = SubResource("CompressedTexture2D_act4w")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PotStatsUI/RightPanel/VBoxContainer/IngredientStats" unique_id=83239193]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PotStatsUI/RightPanel/VBoxContainer/IngredientStats/HBoxContainer" unique_id=946190394]
+custom_minimum_size = Vector2(125, 0)
+layout_mode = 2
+
+[node name="Texture" type="TextureRect" parent="PotStatsUI/RightPanel/VBoxContainer/IngredientStats/HBoxContainer/VBoxContainer" unique_id=1150330461]
+custom_minimum_size = Vector2(0, 110)
+layout_mode = 2
+size_flags_vertical = 0
+texture = ExtResource("1_dr2sn")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Name" type="RichTextLabel" parent="PotStatsUI/RightPanel/VBoxContainer/IngredientStats/HBoxContainer/VBoxContainer" unique_id=891114182]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+bbcode_enabled = true
+text = "[center]Carrot[/center]"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="PotStatsUI/RightPanel/VBoxContainer/IngredientStats/HBoxContainer" unique_id=6095951]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="IngredientSlots" type="RichTextLabel" parent="PotStatsUI/RightPanel/VBoxContainer/IngredientStats/HBoxContainer/VBoxContainer2" unique_id=1698714699]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+mouse_filter = 1
+theme_override_font_sizes/normal_font_size = 80
+bbcode_enabled = true
+text = "[center]0[/center]"
+scroll_active = false
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="PotStatsUI/RightPanel/VBoxContainer/IngredientStats/HBoxContainer/VBoxContainer2" unique_id=1982469903]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+bbcode_enabled = true
+text = "[center]Ingredient Slots[/center]"
+scroll_active = false

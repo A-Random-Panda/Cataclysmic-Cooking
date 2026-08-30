@@ -57,3 +57,10 @@ ingredient combos (WIP):
 negating traits?
 bad traits cancel out?
 from specific cooking methods
+
+Flavours:
+Sweet
+Sour
+Saltiness
+Bitterness
+Savouriness

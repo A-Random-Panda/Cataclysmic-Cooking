@@ -20,14 +20,21 @@ signal update_inventory()
 
 func add_node(item: Node2D):
 	var display_name = item.DISPLAY_NAME
+	var inventory_item := get_item(display_name)
+	if inventory_item:
+		inventory_item.add()
+	else:
+		inventory_item = InventoryItem.new(display_name, load(item.scene_file_path), 1)
+		inventory_items.append(inventory_item)
+		push_warning("Unregistered item ", inventory_item.DISPLAY_NAME, " added to inventory - will not have a texture!")
+	update_inventory.emit()
+
+func get_item(display_name: String) -> InventoryItem:
 	if InventoryItem.is_instantiated(display_name):
 		var item_index := inventory_items.find_custom(
 			func(_item: InventoryItem) -> bool: 
 				return _item.DISPLAY_NAME == display_name
 		)
-		inventory_items[item_index].add()
+		return inventory_items[item_index]
 	else:
-		var inventory_item := InventoryItem.new(display_name, load(item.scene_file_path), 1)
-		inventory_items.append(inventory_item)
-		push_warning("Unregistered item ", inventory_item.DISPLAY_NAME, " added to inventory - will not have a texture!")
-	update_inventory.emit()
+		return null

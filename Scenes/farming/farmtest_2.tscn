@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://caxh1yq6rs2k4"]
+
+[ext_resource type="PackedScene" uid="uid://cl5p67dnk3df6" path="res://Scenes/farming/planting_spot.tscn" id="1_rfa44"]
+[ext_resource type="PackedScene" uid="uid://dsdip44wuyubc" path="res://Scenes/cooking/ingredients/leek_ingredient.tscn" id="2_1cjji"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1dkr0"]
+size = Vector2(1151, 945)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2a7p7"]
+size = Vector2(1045, 1865)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rfa44"]
+size = Vector2(596, 1747)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1cjji"]
+size = Vector2(1151, 331.5)
+
+[node name="farmtest2" type="Node2D" unique_id=1121342745]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=224653618]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=73518377]
+position = Vector2(576.5, 1102.5)
+shape = SubResource("RectangleShape2D_1dkr0")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1322935863]
+position = Vector2(-505.5, 523.5)
+shape = SubResource("RectangleShape2D_2a7p7")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1527148979]
+position = Vector2(1449, 551.5)
+shape = SubResource("RectangleShape2D_rfa44")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1925100775]
+position = Vector2(581, -152.25)
+shape = SubResource("RectangleShape2D_1cjji")
+
+[node name="Planting spot" parent="." unique_id=1513827625 instance=ExtResource("1_rfa44")]
+position = Vector2(419, 309)
+
+[node name="LeekItem" parent="." unique_id=542592762 instance=ExtResource("2_1cjji")]
+position = Vector2(165, 217)

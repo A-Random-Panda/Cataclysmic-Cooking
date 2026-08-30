@@ -3,17 +3,15 @@
 [ext_resource type="PackedScene" uid="uid://b21l736r1j6na" path="res://core/physics_item.tscn" id="1_of3c2"]
 [ext_resource type="Texture2D" uid="uid://b4ls5p4ejr0s3" path="res://scenes/cooking/assets/onion_sprite.png" id="2_7ssq4"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nvl5v"]
-size = Vector2(20, 30)
-
 [node name="OnionItem" unique_id=542592762 instance=ExtResource("1_of3c2")]
 DISPLAY_NAME = "Onion"
 
 [node name="Sprite" parent="." index="0" unique_id=778355898]
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_7ssq4")
 
-[node name="SelectBoxCollision" parent="SelectBox" parent_id_path=PackedInt32Array(1745033056) index="0" unique_id=549529629]
-shape = SubResource("RectangleShape2D_nvl5v")
+[node name="Hitbox" parent="SelectBox" parent_id_path=PackedInt32Array(1745033056) index="0" unique_id=295932353]
+polygon = PackedVector2Array(3, -18, 39, 0, 47, 24, 39, 56, 18, 72, -8, 75, -39, 55, -51, 35, -43, 11, -18, -12)
 
 [node name="Hitbox" parent="." index="2" unique_id=2025160295]
-polygon = PackedVector2Array(-3, -2, -9, 3, -9, 8, -1, 14, 1, 14, 8, 8, 8, 2, 1, -2, 1, -7, 0, -14, -2, -10)
+polygon = PackedVector2Array(3, -18, 39, 0, 47, 24, 39, 56, 18, 72, -8, 75, -39, 55, -51, 35, -43, 11, -18, -12)

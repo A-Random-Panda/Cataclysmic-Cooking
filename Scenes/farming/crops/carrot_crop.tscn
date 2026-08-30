@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://qdudcsygcbqa"]
+
+[ext_resource type="Script" uid="uid://b1sggjrnlyrfo" path="res://Scenes/farming/crops/crop.gd" id="1_5ycy1"]
+[ext_resource type="Texture2D" uid="uid://dju3ub4qhv33f" path="res://Scenes/farming/pot_sprite.png" id="2_5ycy1"]
+[ext_resource type="Script" uid="uid://cocj6powq7ff0" path="res://Scenes/farming/crops/crop_growth.gd" id="3_x5a71"]
+[ext_resource type="PackedScene" uid="uid://cti3crpg03pby" path="res://Scenes/cooking/ingredients/carrot_ingredient.tscn" id="3_xko0b"]
+
+[node name="CarrotCrop" type="Node2D" unique_id=207928349]
+script = ExtResource("1_5ycy1")
+
+[node name="PotSprite" type="Sprite2D" parent="." unique_id=10613760]
+position = Vector2(0.7075043, 25.930008)
+scale = Vector2(0.305, 0.305)
+texture = ExtResource("2_5ycy1")
+
+[node name="GrowthNode" type="Node2D" parent="." unique_id=127525429]
+position = Vector2(-0.29249573, -52.069992)
+rotation = -0.46425757
+script = ExtResource("3_x5a71")
+growing_crop = ExtResource("3_xko0b")
+
+[node name="CarrotItem" parent="GrowthNode" unique_id=542592762 instance=ExtResource("3_xko0b")]
+position = Vector2(-16.792831, 47.587822)
+rotation = 1.1205014
+
+[node name="PotSpriteFront" type="Sprite2D" parent="." unique_id=494915515]
+position = Vector2(0.7075043, 41.132553)
+scale = Vector2(0.305, 0.305)
+texture = ExtResource("2_5ycy1")
+region_enabled = true
+region_rect = Rect2(201.5, 170, 500, 612)

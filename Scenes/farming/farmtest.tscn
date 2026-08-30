@@ -1,10 +1,9 @@
 [gd_scene format=3 uid="uid://bfik6ljsgaa5q"]
 
-[ext_resource type="PackedScene" uid="uid://qdudcsygcbqa" path="res://Scenes/farming/crop.tscn" id="1_hsha5"]
-[ext_resource type="Script" uid="uid://bcb32xi4e8xot" path="res://Scenes/cooking/scripts/inventory_box.gd" id="2_rwwjx"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_t36pt"]
-size = Vector2(199.5, 672)
+[ext_resource type="PackedScene" uid="uid://qdudcsygcbqa" path="res://Scenes/farming/crops/carrot_crop.tscn" id="1_hsha5"]
+[ext_resource type="PackedScene" uid="uid://bywox12shwlmo" path="res://Scenes/farming/crops/onion_crop.tscn" id="2_rwwjx"]
+[ext_resource type="PackedScene" uid="uid://c35cdflymhltw" path="res://Scenes/farming/crops/tomato_crop.tscn" id="3_xa5ga"]
+[ext_resource type="PackedScene" uid="uid://phxcv0tcqpuc" path="res://ui/inventory/inventory.tscn" id="4_2tlc6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rwwjx"]
 size = Vector2(1151, 945)
@@ -19,20 +18,6 @@ size = Vector2(596, 1747)
 size = Vector2(1151, 331.5)
 
 [node name="farmtest" type="Node2D" unique_id=166008072]
-
-[node name="InventoryBox" type="Area2D" parent="." unique_id=1893740609]
-script = ExtResource("2_rwwjx")
-
-[node name="Hitbox" type="CollisionShape2D" parent="InventoryBox" unique_id=746460305]
-position = Vector2(1068.75, 328)
-shape = SubResource("RectangleShape2D_t36pt")
-debug_color = Color(0.9592579, 0.05681254, 0.4922163, 0.41960785)
-
-[node name="Button" type="Button" parent="InventoryBox" unique_id=1478501385]
-offset_left = 1034.0
-offset_top = 42.0
-offset_right = 1107.0
-offset_bottom = 74.0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1323973937]
 
@@ -52,9 +37,13 @@ shape = SubResource("RectangleShape2D_2tlc6")
 position = Vector2(581, -152.25)
 shape = SubResource("RectangleShape2D_inwb8")
 
-[node name="Crop" parent="." unique_id=207928349 instance=ExtResource("1_hsha5")]
-position = Vector2(280, 476)
+[node name="CarrotCrop" parent="." unique_id=207928349 instance=ExtResource("1_hsha5")]
+position = Vector2(158, 472)
 
-[connection signal="area_entered" from="InventoryBox" to="InventoryBox" method="_on_area_entered"]
-[connection signal="area_exited" from="InventoryBox" to="InventoryBox" method="_on_area_exited"]
-[connection signal="pressed" from="InventoryBox/Button" to="InventoryBox" method="_on_button_pressed"]
+[node name="OnionCrop" parent="." unique_id=1934761023 instance=ExtResource("2_rwwjx")]
+position = Vector2(371, 473)
+
+[node name="TomatoCrop" parent="." unique_id=4008182 instance=ExtResource("3_xa5ga")]
+position = Vector2(586, 485)
+
+[node name="Inventory" parent="." unique_id=845775253 instance=ExtResource("4_2tlc6")]
