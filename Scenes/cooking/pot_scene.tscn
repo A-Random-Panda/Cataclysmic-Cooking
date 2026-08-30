@@ -1,49 +1,59 @@
 [gd_scene format=3 uid="uid://dwgdp44jtwlba"]
 
-[ext_resource type="PackedScene" uid="uid://cti3crpg03pby" path="res://scenes/cooking/ingredients/carrot_ingredient.tscn" id="3_gqu6d"]
-[ext_resource type="PackedScene" uid="uid://phxcv0tcqpuc" path="res://ui/inventory/inventory.tscn" id="3_noq73"]
-[ext_resource type="PackedScene" uid="uid://cfgpscveehwn6" path="res://scenes/cooking/pot_stats.tscn" id="4_d54eu"]
+[ext_resource type="Texture2D" uid="uid://d2v4xtxr0pfol" path="res://scenes/cooking/assets/counter_background.png" id="2_le6la"]
 [ext_resource type="PackedScene" uid="uid://bmm1lelw7khd1" path="res://scenes/cooking/pot.tscn" id="4_noq73"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hh1gf"]
-size = Vector2(1151, 39)
+size = Vector2(1151, 646)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q67r1"]
-size = Vector2(27, 671)
+size = Vector2(601, 1920)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5man4"]
-size = Vector2(21, 674)
+size = Vector2(700, 1934)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t4ru5"]
-size = Vector2(1151, 39)
+size = Vector2(1151, 662.5)
 
-[node name="CookTest" type="Node2D" unique_id=113342332]
+[node name="PotScene" type="Control" unique_id=412743526]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=936899213]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=947951676]
-position = Vector2(576.5, 649.5)
+position = Vector2(576.5, 953)
 shape = SubResource("RectangleShape2D_hh1gf")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1839630568]
-position = Vector2(3.5, 325.5)
+position = Vector2(-283.5, 302)
 shape = SubResource("RectangleShape2D_q67r1")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=793205368]
-position = Vector2(1161.5, 327)
+position = Vector2(1501, 346)
 shape = SubResource("RectangleShape2D_5man4")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=822549176]
-position = Vector2(581, -6)
+position = Vector2(581, -317.75)
 shape = SubResource("RectangleShape2D_t4ru5")
 
 [node name="Pot" parent="." unique_id=188086898 instance=ExtResource("4_noq73")]
 z_index = 1
-position = Vector2(588, 266)
+position = Vector2(576, 324)
 
-[node name="CarrotIngredient" parent="." unique_id=542592762 instance=ExtResource("3_gqu6d")]
-position = Vector2(133, 264)
-
-[node name="PotStats" parent="." unique_id=772380090 instance=ExtResource("4_d54eu")]
-
-[node name="Inventory" parent="." unique_id=845775253 instance=ExtResource("3_noq73")]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=58865492]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_le6la")
+expand_mode = 1
