@@ -131,6 +131,14 @@ position = Vector2(1037.0001, 156.00002)
 scale = Vector2(0.19062512, 0.10374999)
 texture = ExtResource("7_x0sno")
 
+[node name="Label" type="Label" parent="." unique_id=695742714]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 599.0
+offset_right = 64.0
+offset_bottom = 622.0
+text = "Timer:"
+
 [connection signal="pressed" from="TextureButton" to="." method="_on_character_button_pressed"]
 [connection signal="pressed" from="yes" to="." method="_on_yes_pressed"]
 [connection signal="pressed" from="no" to="." method="_on_no_3_pressed"]

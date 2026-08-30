@@ -48,3 +48,10 @@ position = Vector2(481, 340)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=813585809]
 stream = ExtResource("3_lcu63")
+
+[node name="Label" type="Label" parent="." unique_id=2056458602]
+offset_left = 470.0
+offset_top = 593.0
+offset_right = 731.0
+offset_bottom = 678.0
+text = "a and d to rotate fire extinguisher"

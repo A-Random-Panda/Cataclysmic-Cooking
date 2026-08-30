@@ -113,5 +113,13 @@ text = "Cataclysmic Cooking"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Label2" type="Label" parent="." unique_id=569563016]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 128.0
+offset_right = 772.0
+offset_bottom = 151.0
+text = "left and right arrow keys to move between rooms"
+
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_escape_pressed"]
