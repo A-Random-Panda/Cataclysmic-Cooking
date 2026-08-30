@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://1c22ldt2srhh"]
 
-[ext_resource type="PackedScene" uid="uid://b21l736r1j6na" path="res://core/physics_item.tscn" id="1_q5dj8"]
 [ext_resource type="Texture2D" uid="uid://shqri63524gl" path="res://assets/physics items/FireExtinguisher.png" id="2_no7v0"]
 [ext_resource type="Script" uid="uid://kabuy0m6rd2u" path="res://sabatoges/fire_extengiusher.gd" id="2_tamae"]
 [ext_resource type="Texture2D" uid="uid://b7ufskt4wjg7c" path="res://assets/physics items/New Piskel (1).png" id="3_tamae"]
 [ext_resource type="Script" uid="uid://dceagjq56ak0" path="res://sabatoges/smoke.gd" id="5_tamae"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_uh3a7"]
+bounce = 0.2
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ythis"]
 atlas = ExtResource("3_tamae")
@@ -35,23 +37,19 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ytu0"]
-size = Vector2(36, 93)
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_vemod"]
 radius = 29.017237
 
-[node name="FireExtinguisher" unique_id=542592762 instance=ExtResource("1_q5dj8")]
+[node name="FireExtinguisher" type="RigidBody2D" unique_id=542592762]
+physics_material_override = SubResource("PhysicsMaterial_uh3a7")
+continuous_cd = 1
 script = ExtResource("2_tamae")
-X_THROW_STRENGTH = 0.5
-Y_THROW_STRENGTH = 0.5
-CLAMP_CIRCLE_SHAVE = 1.0
 
-[node name="Sprite" parent="." index="0" unique_id=778355898]
+[node name="Sprite" type="Sprite2D" parent="." unique_id=778355898]
 scale = Vector2(0.2525897, 0.2448974)
 texture = ExtResource("2_no7v0")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite" index="0" unique_id=934359231]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Sprite" unique_id=934359231]
 position = Vector2(170.23656, -53.08345)
 rotation = -1.4573499
 scale = Vector2(0.23271677, 0.2944969)
@@ -59,16 +57,20 @@ skew = 0.004304886
 sprite_frames = SubResource("SpriteFrames_4ytu0")
 autoplay = "default"
 
-[node name="SelectBoxCollision" parent="SelectBox" parent_id_path=PackedInt32Array(1745033056) index="0" unique_id=549529629]
-position = Vector2(-1, 1.5)
-shape = SubResource("RectangleShape2D_4ytu0")
+[node name="SelectBox" type="Area2D" parent="." unique_id=1745033056]
 
-[node name="Hitbox" parent="." index="2" unique_id=2025160295]
+[node name="Hitbox" type="CollisionPolygon2D" parent="SelectBox" unique_id=295932353]
 polygon = PackedVector2Array(0, -43, -4, -42, 0, -38, -4, -37, -4, -34, -3, -34, -11, -30, -15, -22, -15, -6, -13, 1, -13, 25, -9, 25, -8, 38, -7, 40, -1, 42, 6, 42, 12, 40, 12, -23, 9, -25, 5, -26, 5, -29, 18, -26, 20, -30, 9, -33, 9, -35, 14, -35, 18, -39, 3, -38, 2, -41)
 
-[node name="Area2D" type="Area2D" parent="." index="3" unique_id=631999926]
+[node name="Hitbox" type="CollisionPolygon2D" parent="." unique_id=2025160295]
+polygon = PackedVector2Array(0, -43, -4, -42, 0, -38, -4, -37, -4, -34, -3, -34, -11, -30, -15, -22, -15, -6, -13, 1, -13, 25, -9, 25, -8, 38, -7, 40, -1, 42, 6, 42, 12, 40, 12, -23, 9, -25, 5, -26, 5, -29, 18, -26, 20, -30, 9, -33, 9, -35, 14, -35, 18, -39, 3, -38, 2, -41)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=631999926]
 script = ExtResource("5_tamae")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0" unique_id=2017929265]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2017929265]
 position = Vector2(42, -19)
 shape = SubResource("CircleShape2D_vemod")
+
+[connection signal="mouse_entered" from="SelectBox" to="." method="_on_select_box_mouse_entered"]
+[connection signal="mouse_exited" from="SelectBox" to="." method="_on_select_box_mouse_exited"]
