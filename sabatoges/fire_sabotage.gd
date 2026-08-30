@@ -59,9 +59,12 @@ func _process(delta: float) -> void:
 			
 	if len(Hyvariables.fire_list) == 0:
 		Hyvariables.in_sabo = false
-		get_tree().change_scene_to_file("res://Scenes/entrance/entrance.tscn")
 		Hyvariables.insta_fire = 0
-
+		Hyvariables.fire_sabo = false
+		Hyvariables.x = false
+		Hyvariables.sabotimer = 0
+		get_tree().change_scene_to_file("res://Scenes/entrance/entrance.tscn")
+		
 
 	if smoke_timer > 1.4:
 		cur_fire.queue_free()
