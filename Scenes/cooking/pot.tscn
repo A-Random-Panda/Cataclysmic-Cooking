@@ -22,7 +22,7 @@ polygon = PackedVector2Array(-138, -107, -143, -51, -193, 72, -183, 177, 179, 17
 [node name="DetectBox" type="Area2D" parent="." unique_id=115942504]
 
 [node name="Hitbox" type="CollisionPolygon2D" parent="DetectBox" unique_id=161661145]
-polygon = PackedVector2Array(128, -109, 136, -47, 176, 81, 165, 160, -167, 160, -174, 74, -129, -44, -122, -110)
+polygon = PackedVector2Array(136, -47, 176, 81, 165, 160, -167, 160, -174, 74, -129, -44)
 
 [connection signal="area_entered" from="DetectBox" to="." method="_on_area_entered"]
 [connection signal="area_exited" from="DetectBox" to="." method="_on_area_exited"]

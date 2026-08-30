@@ -35,7 +35,7 @@ func update() -> void:
 func _on_gui_input(event: InputEvent, slot: InventorySlot) -> void:
 	if event is InputEventMouseButton and event.is_pressed():
 		var node: Item = slot.ITEM.spawn(get_global_mouse_position())
-		add_sibling(node)
+		get_parent().add_sibling(node)
 		update()
 
 

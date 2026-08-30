@@ -11,7 +11,7 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_7ssq4")
 
 [node name="Hitbox" parent="SelectBox" parent_id_path=PackedInt32Array(1745033056) index="0" unique_id=295932353]
-polygon = PackedVector2Array(3, -18, 16, -7, 39, 0, 47, 24, 39, 56, 18, 72, -8, 75, -39, 55, -51, 35, -43, 11, -18, -12, -22, -41, -41, -69, -18, -56, -1, -80, 1, -51, 22, -65, 7, -40, 23, -39)
+polygon = PackedVector2Array(3, -18, 39, 0, 47, 24, 39, 56, 18, 72, -8, 75, -39, 55, -51, 35, -43, 11, -18, -12)
 
 [node name="Hitbox" parent="." index="2" unique_id=2025160295]
-polygon = PackedVector2Array(3, -18, 16, -7, 39, 0, 47, 24, 39, 56, 18, 72, -8, 75, -39, 55, -51, 35, -43, 11, -18, -12, -22, -41, -41, -69, -18, -56, -1, -80, 1, -51, 22, -65, 7, -40, 23, -39)
+polygon = PackedVector2Array(3, -18, 39, 0, 47, 24, 39, 56, 18, 72, -8, 75, -39, 55, -51, 35, -43, 11, -18, -12)

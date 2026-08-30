@@ -2,7 +2,6 @@ extends Node
 
 var inventory: Inventory = preload("res://ui/inventory/inventory.tres")
 var is_dragging := false
-var on_emergy
 
 var hovered_item: Item
 

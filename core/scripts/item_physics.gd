@@ -13,7 +13,7 @@ extends RigidBody2D
 const SINGLE_PICKUP := true
 
 @onready var SCREEN_SIZE := get_viewport_rect().size
-const PADDING := 200
+const PADDING := 100
 
 var in_inventory := false
 

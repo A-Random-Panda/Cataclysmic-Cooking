@@ -8,7 +8,7 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	INGREDIENT_STAT_NODE.hide()
+	INGREDIENT_STAT_NODE.modulate = Color(1.0, 1.0, 1.0, 0.0)
 	GlobalUI.hovered_on_item.connect(item_hovered)
 	GlobalUI.hovered_off_item.connect(item_unhovered)
 
@@ -23,7 +23,7 @@ func item_hovered(physics_item: Item) -> void:
 	TEXTURE_NODE.texture = item.ITEM_TEXTURE
 	NAME_NODE.text = "[center]" + display_name + "[/center]"
 	INGREDIENT_SLOTS_NODE.text = "[center]" + str(item.INGREDIENT_SLOTS) + "[/center]"
-	INGREDIENT_STAT_NODE.show()
+	INGREDIENT_STAT_NODE.modulate = Color(1.0, 1.0, 1.0, 1.0)
 	
 func item_unhovered(item: Item) -> void:
-	INGREDIENT_STAT_NODE.hide()
+	INGREDIENT_STAT_NODE.modulate = Color(1.0, 1.0, 1.0, 0.0)
