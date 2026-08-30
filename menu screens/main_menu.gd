@@ -12,16 +12,10 @@ func _process(delta: float) -> void:
 
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("res://main.tscn")
+	get_tree().change_scene_to_file("res://Scenes/entrance/entrance.tscn")
+	Hyvariables.x = false
 
 
 func _on_escape_pressed() -> void:
 	get_tree().quit()
-	print("???")
-
-
-
-func _on_option_pressed() -> void:
-	print("option button")
-	get_tree().change_scene_to_file("res://option_menu.tscn")
-	pass # Replace with function body.
+	

@@ -31,6 +31,12 @@ func _process(delta: float) -> void:
 		$TextureButton.disabled = false
 		Hyvariables.vistor_time = 0
 	
+	if not Hyvariables.fire_sabo:
+		$Vent.disabled = true
+		$ExclamtionMark.visible = false
+	elif Hyvariables.fire_sabo:
+		$Vent.disabled = false
+		$ExclamtionMark.visible = true
 
 func _on_character_button_pressed() -> void:
 	enable_ui(true)
@@ -39,6 +45,7 @@ func _on_character_button_pressed() -> void:
 func _on_yes_pressed() -> void:
 	enable_ui(false)
 	print("accepted")
+	Hyvariables.workers += 1
 	Hyvariables.vistor_here = false
 
 func _on_no_3_pressed() -> void:

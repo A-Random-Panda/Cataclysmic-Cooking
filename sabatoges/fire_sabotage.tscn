@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://ct52v5esiylx3" path="res://sabatoges/fire_sabotage.gd" id="1_77t7o"]
 [ext_resource type="PackedScene" uid="uid://1c22ldt2srhh" path="res://sabatoges/fire_extengiusher.tscn" id="1_yvamj"]
+[ext_resource type="Texture2D" uid="uid://hxpec7y5coq8" path="res://assets/backgrounds/inside_vent.png" id="2_ythis"]
 [ext_resource type="AudioStream" uid="uid://dgkj7274bslpb" path="res://assets/sounds/fire_extenguisher.mp3" id="3_lcu63"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hh1gf"]
@@ -18,6 +19,11 @@ size = Vector2(1151, 39)
 
 [node name="fire_sabotage" type="Node2D" unique_id=113342332]
 script = ExtResource("1_77t7o")
+
+[node name="InsideVent" type="Sprite2D" parent="." unique_id=558482773]
+position = Vector2(575.49994, 323.5)
+scale = Vector2(0.6005208, 0.6027778)
+texture = ExtResource("2_ythis")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=936899213]
 

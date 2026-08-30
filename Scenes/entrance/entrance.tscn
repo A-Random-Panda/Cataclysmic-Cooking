@@ -6,6 +6,7 @@
 [ext_resource type="BitMap" uid="uid://ci362jwl1t30e" path="res://assets/characters/C_bitmap.png" id="3_lptng"]
 [ext_resource type="Texture2D" uid="uid://ca1j5rhgvgwk1" path="res://assets/backgrounds/vent.png" id="4_lnnjp"]
 [ext_resource type="BitMap" uid="uid://dd645jsahschc" path="res://assets/backgrounds/vent_bitmap.png" id="5_lnnjp"]
+[ext_resource type="Texture2D" uid="uid://bo4d68n667eku" path="res://assets/backgrounds/exclamtion_mark.png" id="7_x0sno"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x0sno"]
 texture = ExtResource("2_3b4fj")
@@ -124,6 +125,11 @@ texture_normal = ExtResource("4_lnnjp")
 texture_click_mask = ExtResource("5_lnnjp")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="ExclamtionMark" type="Sprite2D" parent="." unique_id=1676777423]
+position = Vector2(1037.0001, 156.00002)
+scale = Vector2(0.19062512, 0.10374999)
+texture = ExtResource("7_x0sno")
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_character_button_pressed"]
 [connection signal="pressed" from="yes" to="." method="_on_yes_pressed"]
