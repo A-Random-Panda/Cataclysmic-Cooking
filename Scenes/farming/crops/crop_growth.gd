@@ -6,7 +6,7 @@ var crops = []
 var init_pos
 @export var growing_crop : PackedScene 
 var harvestable : bool = false
-var offset = Vector2.ZERO
+var offset = Vector2(0,0)
 var ingredient : Item
 var sprite
 var selectbox
@@ -34,8 +34,8 @@ func grow(delta):
 		growth += delta/GROWTH_TIME
 		sprite.scale.x = scale_init[0] * growth
 		sprite.scale.y = scale_init[0] * growth
-		selectbox.scale = Vector2.ZERO
-		hitbox.scale = Vector2.ZERO
+		selectbox.scale = Vector2(0,0)
+		hitbox.scale = Vector2(0,0)
 		ingredient.position = offset * growth
 		ingredient.freeze = true
 		
@@ -47,6 +47,7 @@ func grow(delta):
 			crop.freeze = true
 			crop.name = "GrownCrop"
 			add_child(crop)
+
 			grown = true
 		if is_harvested(crop):
 			growth = 0

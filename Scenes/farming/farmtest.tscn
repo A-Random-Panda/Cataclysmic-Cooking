@@ -3,7 +3,6 @@
 [ext_resource type="PackedScene" uid="uid://qdudcsygcbqa" path="res://Scenes/farming/crops/carrot_crop.tscn" id="1_hsha5"]
 [ext_resource type="PackedScene" uid="uid://bywox12shwlmo" path="res://Scenes/farming/crops/onion_crop.tscn" id="2_rwwjx"]
 [ext_resource type="PackedScene" uid="uid://c35cdflymhltw" path="res://Scenes/farming/crops/tomato_crop.tscn" id="3_xa5ga"]
-[ext_resource type="PackedScene" uid="uid://phxcv0tcqpuc" path="res://ui/inventory/inventory.tscn" id="4_2tlc6"]
 [ext_resource type="PackedScene" uid="uid://bw7equxoc7s42" path="res://Scenes/farming/human_harvesters.tscn" id="5_inwb8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rwwjx"]
@@ -46,8 +45,6 @@ position = Vector2(371, 473)
 
 [node name="TomatoCrop" parent="." unique_id=4008182 instance=ExtResource("3_xa5ga")]
 position = Vector2(586, 485)
-
-[node name="Inventory" parent="." unique_id=845775253 instance=ExtResource("4_2tlc6")]
 
 [node name="human_harvesters" parent="." unique_id=1406293436 instance=ExtResource("5_inwb8")]
 position = Vector2(161, 298)
