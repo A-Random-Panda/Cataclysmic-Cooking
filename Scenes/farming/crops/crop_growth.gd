@@ -45,7 +45,7 @@ func grow(delta):
 			crop.position = offset
 			crop.rotation = ingredient.rotation
 			crop.freeze = true
-			
+			crop.name = "GrownCrop"
 			add_child(crop)
 			grown = true
 		if is_harvested(crop):
