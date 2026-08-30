@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dju3ub4qhv33f"
-path="res://.godot/imported/pot_sprite.png-ee39b18862055ffacb6e9fdb2cb257b7.ctex"
+path="res://.godot/imported/pot_sprite.png-cc1288461fb74b1ce51370fc13e1706b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/farming/pot_sprite.png"
-dest_files=["res://.godot/imported/pot_sprite.png-ee39b18862055ffacb6e9fdb2cb257b7.ctex"]
+source_file="res://Scenes/farming/pot_sprite.png"
+dest_files=["res://.godot/imported/pot_sprite.png-cc1288461fb74b1ce51370fc13e1706b.ctex"]
 
 [params]
 
