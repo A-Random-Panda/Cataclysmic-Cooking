@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cti3crpg03pby" path="res://scenes/cooking/ingredients/carrot_ingredient.tscn" id="3_gqu6d"]
 [ext_resource type="PackedScene" uid="uid://phxcv0tcqpuc" path="res://ui/inventory/inventory.tscn" id="3_noq73"]
+[ext_resource type="PackedScene" uid="uid://cfgpscveehwn6" path="res://scenes/cooking/pot_stats.tscn" id="4_d54eu"]
 [ext_resource type="PackedScene" uid="uid://bmm1lelw7khd1" path="res://scenes/cooking/pot.tscn" id="4_noq73"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hh1gf"]
@@ -42,5 +43,7 @@ position = Vector2(588, 266)
 
 [node name="CarrotIngredient" parent="." unique_id=542592762 instance=ExtResource("3_gqu6d")]
 position = Vector2(133, 264)
+
+[node name="PotStats" parent="." unique_id=772380090 instance=ExtResource("4_d54eu")]
 
 [node name="Inventory" parent="." unique_id=845775253 instance=ExtResource("3_noq73")]

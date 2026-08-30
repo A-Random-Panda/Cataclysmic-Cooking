@@ -32,15 +32,24 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	if !dragging and mouse_on and Input.is_action_pressed("left_click"):
+			
 		# Single drag logic
 		if SINGLE_PICKUP:
 			if !GlobalUI.is_dragging:
 				drag_offset = global_position - get_global_mouse_position()
 				dragging = true
 				GlobalUI.is_dragging = true
+				
+				# Cooking UI
+				if GlobalUI.hovered_item != self:
+					GlobalUI.hovered_on_item.emit(self)
 		else:
 			drag_offset = global_position - get_global_mouse_position()
 			dragging = true
+			
+			# Cooking UI
+			if GlobalUI.hovered_item != self:
+				GlobalUI.hovered_on_item.emit(self)
 
 	if dragging and Input.is_action_pressed("left_click"):
 		last_mouse_position = get_global_mouse_position()
@@ -54,7 +63,12 @@ func _physics_process(delta: float) -> void:
 	elif dragging:
 		freeze = false
 		dragging = false
+		
+		# Single drag
 		GlobalUI.is_dragging = false
+		
+		# Cooking UI
+		GlobalUI.hovered_off_item.emit(self)
 		
 		if in_inventory:
 			InventoryArea.add_to_inventory(self)
@@ -66,6 +80,10 @@ func _physics_process(delta: float) -> void:
 
 func _on_select_box_mouse_entered() -> void:
 	mouse_on = true
+	if !GlobalUI.is_dragging and GlobalUI.hovered_item != self:
+		GlobalUI.hovered_on_item.emit(self)
 
 func _on_select_box_mouse_exited() -> void:
 	mouse_on = false
+	if !dragging and GlobalUI.hovered_item == self:
+		GlobalUI.hovered_off_item.emit(self)

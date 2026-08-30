@@ -6,6 +6,7 @@ static var instantiated_items: Array[String] = []
 @export var ITEM_TEXTURE: Texture2D
 @export var ITEM_OBJECT: PackedScene
 @export var START_COUNT: int
+@export var INGREDIENT_SLOTS: int = 1
 
 var num: int
 
