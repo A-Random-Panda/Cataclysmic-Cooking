@@ -15,9 +15,10 @@ func _process(delta: float) -> void:
 		worker.position = Vector2(500+randi_range(0,50),300-randi_range(0,50))
 		add_child(worker)
 		worker_num += 1
-		
+	if Input.is_action_just_pressed("ui_left"):	
+		get_tree().change_scene_to_file("res://Scenes/entrance/entrance.tscn")
+	if Input.is_action_just_pressed("ui_right"):
+		get_tree().change_scene_to_file("res://Scenes/cooking/cook_main.tscn")
 
-
-func _on_button_button_down() -> void:
+func _on_texture_button_button_down() -> void:
 	Hyvariables.workers += 1
-	
