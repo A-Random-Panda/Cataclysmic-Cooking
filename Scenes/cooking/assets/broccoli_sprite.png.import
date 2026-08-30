@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://8cm2cjccgfx4"
-path="res://.godot/imported/broccoli_sprite.png-c279f150419487a4f800357f1a2c7605.ctex"
+path="res://.godot/imported/broccoli_sprite.png-b80b3533773b7b2e9732a84946ceca24.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/cooking/assets/broccoli_sprite.png"
-dest_files=["res://.godot/imported/broccoli_sprite.png-c279f150419487a4f800357f1a2c7605.ctex"]
+source_file="res://scenes/cooking/assets/broccoli_sprite.png"
+dest_files=["res://.godot/imported/broccoli_sprite.png-b80b3533773b7b2e9732a84946ceca24.ctex"]
 
 [params]
 

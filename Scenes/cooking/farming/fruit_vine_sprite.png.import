@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://13glkhijcm4y"
-path="res://.godot/imported/fruit_vine_sprite.png-3015e2bb80bab6fbed5dd62d54d414ef.ctex"
+path="res://.godot/imported/fruit_vine_sprite.png-7db390b8d6f01717e88537d01a4e5813.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/cooking/farming/fruit_vine_sprite.png"
-dest_files=["res://.godot/imported/fruit_vine_sprite.png-3015e2bb80bab6fbed5dd62d54d414ef.ctex"]
+source_file="res://scenes/cooking/farming/fruit_vine_sprite.png"
+dest_files=["res://.godot/imported/fruit_vine_sprite.png-7db390b8d6f01717e88537d01a4e5813.ctex"]
 
 [params]
 
