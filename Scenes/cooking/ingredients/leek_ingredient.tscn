@@ -1,20 +1,21 @@
 [gd_scene format=3 uid="uid://dsdip44wuyubc"]
 
 [ext_resource type="PackedScene" uid="uid://b21l736r1j6na" path="res://core/physics_item.tscn" id="1_g5f1v"]
-[ext_resource type="Texture2D" uid="uid://d38pntonqk33r" path="res://scenes/cooking/assets/leek_sprite.png" id="2_j82nr"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rum2u"]
-size = Vector2(11, 38)
+[ext_resource type="Texture2D" uid="uid://d38pntonqk33r" path="res://Scenes/cooking/assets/leek_sprite.png" id="2_j82nr"]
 
 [node name="LeekItem" unique_id=542592762 instance=ExtResource("1_g5f1v")]
 DISPLAY_NAME = "Leek"
 
 [node name="Sprite" parent="." index="0" unique_id=778355898]
+scale = Vector2(0.098, 0.098)
 texture = ExtResource("2_j82nr")
 
-[node name="SelectBoxCollision" parent="SelectBox" parent_id_path=PackedInt32Array(1745033056) index="0" unique_id=549529629]
-position = Vector2(-0.5, 1)
-shape = SubResource("RectangleShape2D_rum2u")
+[node name="SelectBox" parent="." index="1" unique_id=1745033056]
+scale = Vector2(5.44, 5.44)
+
+[node name="Hitbox" parent="SelectBox" index="0" unique_id=295932353]
+polygon = PackedVector2Array(1, 19, -3, 19, -3, -2, -6, -10, -2, -18, 0, -18, 4, -10, 1, 1, 1, 5, 2, 10)
 
 [node name="Hitbox" parent="." index="2" unique_id=2025160295]
+scale = Vector2(5.44, 5.44)
 polygon = PackedVector2Array(1, 19, -3, 19, -3, -2, -6, -10, -2, -18, 0, -18, 4, -10, 1, 1, 1, 5, 2, 10)

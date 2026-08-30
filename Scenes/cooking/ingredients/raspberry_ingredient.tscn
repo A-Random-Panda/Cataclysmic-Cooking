@@ -1,10 +1,7 @@
 [gd_scene format=3 uid="uid://dqq3h53djdokc"]
 
 [ext_resource type="PackedScene" uid="uid://b21l736r1j6na" path="res://core/physics_item.tscn" id="1_hq4dq"]
-[ext_resource type="Texture2D" uid="uid://brrmhxf43lqm0" path="res://scenes/cooking/assets/raspberry_sprite.png" id="2_64vdd"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_q0hls"]
-size = Vector2(10, 11)
+[ext_resource type="Texture2D" uid="uid://brrmhxf43lqm0" path="res://Scenes/cooking/assets/raspberry_sprite.png" id="2_64vdd"]
 
 [node name="RaspberryItem" unique_id=542592762 instance=ExtResource("1_hq4dq")]
 DISPLAY_NAME = "Raspberry"
@@ -12,9 +9,8 @@ DISPLAY_NAME = "Raspberry"
 [node name="Sprite" parent="." index="0" unique_id=778355898]
 texture = ExtResource("2_64vdd")
 
-[node name="SelectBoxCollision" parent="SelectBox" parent_id_path=PackedInt32Array(1745033056) index="0" unique_id=549529629]
-position = Vector2(0, -0.5)
-shape = SubResource("RectangleShape2D_q0hls")
+[node name="Hitbox" parent="SelectBox" parent_id_path=PackedInt32Array(1745033056) index="0" unique_id=295932353]
+polygon = PackedVector2Array(1, -5, -3, -4, -4, 0, 0, 4, 1, 4, 4, -2)
 
 [node name="Hitbox" parent="." index="2" unique_id=2025160295]
 polygon = PackedVector2Array(1, -5, -3, -4, -4, 0, 0, 4, 1, 4, 4, -2)

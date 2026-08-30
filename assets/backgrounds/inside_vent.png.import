@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bv60vf40bf45o"
-path="res://.godot/imported/tomato_sprite.png-eab0c901df813e5499bc55184b4a4e51.ctex"
+uid="uid://hxpec7y5coq8"
+path="res://.godot/imported/inside_vent.png-db69b9641f166ca43bc0ce6ed7af402f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/farming/tomato_sprite.png"
-dest_files=["res://.godot/imported/tomato_sprite.png-eab0c901df813e5499bc55184b4a4e51.ctex"]
+source_file="res://assets/backgrounds/inside_vent.png"
+dest_files=["res://.godot/imported/inside_vent.png-db69b9641f166ca43bc0ce6ed7af402f.ctex"]
 
 [params]
 

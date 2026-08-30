@@ -12,18 +12,16 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if harvest_time(delta):
 		harvest()
-	
 func harvest():
-	children = get_parent().find_children("*GrownCrop")
-	print(children)
-	'''
+	children = get_parent().find_children("*GrownCrop","",true,false)
+	for child in children:
+		print(child.position)
 	if len(children) >0:
 		var harvested_crop = children[randi_range(0,len(children))-1]
+		position = Vector2(harvested_crop.get_parent().position) + Vector2(harvested_crop.get_parent().get_parent().position)
 		harvested_crop.freeze = false
-		print(harvested_crop)
 	else:
-		print(children)
-	'''
+		pass
 func harvest_time(delta):
 	if harvest_timer <= 0:
 		harvest_timer = HARVEST_TIME

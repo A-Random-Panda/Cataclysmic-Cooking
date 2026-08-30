@@ -1,10 +1,7 @@
 [gd_scene format=3 uid="uid://ba7vcqoblhd8c"]
 
 [ext_resource type="PackedScene" uid="uid://b21l736r1j6na" path="res://core/physics_item.tscn" id="1_ecf8x"]
-[ext_resource type="Texture2D" uid="uid://d2uq4vdgpa32y" path="res://scenes/farming/potato_sprite.png" id="2_owy7x"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bv317"]
-size = Vector2(34, 42)
+[ext_resource type="Texture2D" uid="uid://d2uq4vdgpa32y" path="res://Scenes/farming/potato_sprite.png" id="2_owy7x"]
 
 [node name="PotatoItem" unique_id=542592762 instance=ExtResource("1_ecf8x")]
 DISPLAY_NAME = "Potato"
@@ -12,8 +9,8 @@ DISPLAY_NAME = "Potato"
 [node name="Sprite" parent="." index="0" unique_id=778355898]
 texture = ExtResource("2_owy7x")
 
-[node name="SelectBoxCollision" parent="SelectBox" parent_id_path=PackedInt32Array(1745033056) index="0" unique_id=549529629]
-shape = SubResource("RectangleShape2D_bv317")
+[node name="Hitbox" parent="SelectBox" parent_id_path=PackedInt32Array(1745033056) index="0" unique_id=295932353]
+polygon = PackedVector2Array(-7, -20, -11, -17, -15, -10, -15, -1, -13, 11, -3, 19, 6, 19, 14, 11, 15, 2, 12, -8, 6, -14, 1, -19)
 
 [node name="Hitbox" parent="." index="2" unique_id=2025160295]
 polygon = PackedVector2Array(-7, -20, -11, -17, -15, -10, -15, -1, -13, 11, -3, 19, 6, 19, 14, 11, 15, 2, 12, -8, 6, -14, 1, -19)

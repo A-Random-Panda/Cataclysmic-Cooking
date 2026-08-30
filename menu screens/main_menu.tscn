@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://crev2inf1u6xe"]
 
-[ext_resource type="Texture2D" uid="uid://dw7aki86l0rsf" path="res://tests/main_menu.png" id="1_06t4h"]
 [ext_resource type="Script" uid="uid://dn12u7ocbrg15" path="res://menu screens/main_menu.gd" id="1_7vrkn"]
+[ext_resource type="Texture2D" uid="uid://j02fwu5ttfi7" path="res://assets/backgrounds/menu_screen_real.png" id="2_klfv2"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vemod"]
-texture = ExtResource("1_06t4h")
+texture = ExtResource("2_klfv2")
 modulate_color = Color(0.30692276, 0.30692267, 0.3069227, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vemod"]
@@ -61,10 +61,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -252.0
-offset_top = -170.0
-offset_right = 252.0
-offset_bottom = 170.0
+offset_left = -132.0
+offset_top = -74.0
+offset_right = 132.0
+offset_bottom = 74.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 10
@@ -95,19 +95,6 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_06t4h")
 theme_override_styles/hover = SubResource("StyleBoxFlat_7vrkn")
 text = "Exit"
 
-[node name="Button3" type="Button" parent="VBoxContainer" unique_id=1021296793]
-layout_mode = 2
-size_flags_vertical = 3
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 50
-theme_override_styles/normal = SubResource("StyleBoxFlat_vemod")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_06t4h")
-theme_override_styles/hover = SubResource("StyleBoxFlat_7vrkn")
-text = "Options"
-
 [node name="Label" type="Label" parent="." unique_id=866250062]
 layout_mode = 1
 anchors_preset = 8
@@ -126,6 +113,13 @@ text = "Cataclysmic Cooking"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Label2" type="Label" parent="." unique_id=569563016]
+layout_mode = 0
+offset_left = 390.0
+offset_top = 128.0
+offset_right = 772.0
+offset_bottom = 151.0
+text = "left and right arrow keys to move between rooms"
+
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_escape_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button3" to="." method="_on_option_pressed"]

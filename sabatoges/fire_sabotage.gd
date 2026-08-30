@@ -43,26 +43,32 @@ func _ready() -> void:
 	for pos in Hyvariables.fire_list:
 		spawn_fire_at(pos)
 
-	for i in range(5):
+	for i in range(5 + Hyvariables.insta_fire):
 		spawn_fire()
 
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if Input.is_action_just_pressed("ui_right"):
-		print("next scene?")
-		get_tree().change_scene_to_file("res://Scenes/farm.tscn") #replace the path with actually path
+	
+	Hyvariables.in_sabo = true
 	if Hyvariables.fire_sabo:
-		if Hyvariables.timer > 3 and len(Hyvariables.fire_list) > 0 and len(Hyvariables.fire_list) < 40:
+		if Hyvariables.timer > 6 and len(Hyvariables.fire_list) > 0 and len(Hyvariables.fire_list) < 40:
 			spawn_fire()
 			Hyvariables.timer = 0
-
+			
+	if len(Hyvariables.fire_list) == 0:
+		Hyvariables.in_sabo = false
+		Hyvariables.insta_fire = 0
+		Hyvariables.fire_sabo = false
+		Hyvariables.x = false
+		Hyvariables.sabotimer = 0
+		get_tree().change_scene_to_file("res://Scenes/entrance/entrance.tscn")
+		
 
 	if smoke_timer > 1.4:
-		print("hi")
 		cur_fire.queue_free()
-		Hyvariables.fire_list.erase(cur_fire)
+		Hyvariables.fire_list.erase(cur_fire.position)
 		smoke_timer = 0
 	
 	if smoke_inside:
