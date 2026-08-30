@@ -1,3 +1,13 @@
 [gd_scene format=3 uid="uid://ikfx0kyuq14h"]
 
+[ext_resource type="Script" uid="uid://cfwlojjiwgvm5" path="res://Scenes/farm.gd" id="1_1bveb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vemod"]
+size = Vector2(691, 223)
+
 [node name="Farm" type="Node2D" unique_id=668732267]
+script = ExtResource("1_1bveb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2108293740]
+position = Vector2(588, 300.5)
+shape = SubResource("RectangleShape2D_vemod")

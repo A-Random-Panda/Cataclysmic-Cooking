@@ -1,9 +1,7 @@
 extends Node2D
 
 var cur_fire: Node2D
-var timer: float = 0.0
 var smoke_timer: float = 0.0
-var fire_list: Array[Node2D] = []
 @export var point_1: Vector2 = Vector2(100,100)
 @export var point_2: Vector2 = Vector2 (1050, 550)
 @onready var fire_png: PackedScene = preload("res://sabatoges/fire.tscn")
@@ -21,7 +19,14 @@ func spawn_fire():
 	add_child(fire_instance)
 	var spawn_location: Vector2 = gen_rand_point(point_1,point_2)
 	fire_instance.set_position(spawn_location)
-	fire_list.append(fire_instance)
+	Hyvariables.fire_list.append(fire_instance.position)
+	var fire_area: Fire_Area = fire_instance.get_node("Area2D")
+	fire_area.Entered_Area.connect(_on_fire_area_changed)
+	
+func spawn_fire_at(position: Vector2):
+	var fire_instance: Node2D = fire_png.instantiate()
+	add_child(fire_instance)
+	fire_instance.position = position
 	var fire_area: Fire_Area = fire_instance.get_node("Area2D")
 	fire_area.Entered_Area.connect(_on_fire_area_changed)
 	
@@ -35,22 +40,29 @@ func _on_fire_area_changed(fire: Node2D, status: String) -> void:
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	for pos in Hyvariables.fire_list:
+		spawn_fire_at(pos)
+
 	for i in range(5):
 		spawn_fire()
 
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	timer += delta
-	if timer > 3 and len(fire_list) > 0 and len(fire_list) < 40:
-		spawn_fire()
-		timer = 0
+	if Input.is_action_just_pressed("ui_right"):
+		print("next scene?")
+		get_tree().change_scene_to_file("res://Scenes/farm.tscn") #replace the path with actually path
+	if Hyvariables.fire_sabo:
+		if Hyvariables.timer > 3 and len(Hyvariables.fire_list) > 0 and len(Hyvariables.fire_list) < 40:
+			spawn_fire()
+			Hyvariables.timer = 0
 
 
 	if smoke_timer > 1.4:
 		print("hi")
 		cur_fire.queue_free()
-		fire_list.erase(cur_fire)
+		Hyvariables.fire_list.erase(cur_fire)
 		smoke_timer = 0
 	
 	if smoke_inside:
