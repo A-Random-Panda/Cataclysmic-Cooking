@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://cnn08uyldgodu"]
+
+[ext_resource type="Script" uid="uid://b17wv4y4cguld" path="res://Scenes/farming/farm_scene.gd" id="1_eijym"]
+[ext_resource type="Texture2D" uid="uid://bwkgabaj6y6rm" path="res://Scenes/farming/Untitled137_20260830004909.png" id="2_2ymhn"]
+[ext_resource type="PackedScene" uid="uid://bw7equxoc7s42" path="res://Scenes/farming/human_harvesters.tscn" id="2_peni1"]
+[ext_resource type="PackedScene" uid="uid://qdudcsygcbqa" path="res://Scenes/farming/crops/carrot_crop.tscn" id="3_peni1"]
+[ext_resource type="PackedScene" uid="uid://bywox12shwlmo" path="res://Scenes/farming/crops/onion_crop.tscn" id="4_c2e2q"]
+[ext_resource type="PackedScene" uid="uid://c35cdflymhltw" path="res://Scenes/farming/crops/tomato_crop.tscn" id="5_rxf0m"]
+[ext_resource type="Texture2D" uid="uid://bx1yoy3wpamsq" path="res://Scenes/farming/vegetable_leaves_sprite.png" id="7_peni1"]
+[ext_resource type="PackedScene" uid="uid://phxcv0tcqpuc" path="res://ui/inventory/inventory.tscn" id="8_c2e2q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yuwmk"]
+size = Vector2(1151, 945)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sasaf"]
+size = Vector2(1045, 1865)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p0dk7"]
+size = Vector2(596, 1747)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fxr1y"]
+size = Vector2(1151, 331.5)
+
+[node name="farm_scene" type="Node2D" unique_id=1723128482]
+script = ExtResource("1_eijym")
+worker_scenes = ExtResource("2_peni1")
+
+[node name="Untitled13720260830004909" type="Sprite2D" parent="." unique_id=224549249]
+position = Vector2(577, 359)
+scale = Vector2(0.27406543, 0.245)
+texture = ExtResource("2_2ymhn")
+
+[node name="CarrotCrop" parent="." unique_id=207928349 instance=ExtResource("3_peni1")]
+position = Vector2(624, 359)
+
+[node name="OnionCrop" parent="." unique_id=797975330 instance=ExtResource("4_c2e2q")]
+position = Vector2(726, 522)
+
+[node name="TomatoCrop" parent="." unique_id=680738627 instance=ExtResource("5_rxf0m")]
+position = Vector2(352, 356)
+
+[node name="CarrotCrop2" parent="." unique_id=400007826 instance=ExtResource("3_peni1")]
+position = Vector2(141, 502)
+
+[node name="OnionCrop2" parent="." unique_id=1233865673 instance=ExtResource("4_c2e2q")]
+position = Vector2(448, 517)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1428573841]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=793865473]
+position = Vector2(576.5, 1102.5)
+shape = SubResource("RectangleShape2D_yuwmk")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1523527302]
+position = Vector2(-505.5, 523.5)
+shape = SubResource("RectangleShape2D_sasaf")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=325860444]
+position = Vector2(1449, 551.5)
+shape = SubResource("RectangleShape2D_p0dk7")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=519202302]
+position = Vector2(581, -152.25)
+shape = SubResource("RectangleShape2D_fxr1y")
+
+[node name="Button" type="TextureButton" parent="." unique_id=716776739]
+offset_left = 9.0
+offset_top = 35.0
+offset_right = 230.0
+offset_bottom = 227.0
+texture_normal = ExtResource("7_peni1")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Inventory" parent="." unique_id=845775253 instance=ExtResource("8_c2e2q")]
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
