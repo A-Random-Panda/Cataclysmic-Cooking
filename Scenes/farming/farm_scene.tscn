@@ -72,7 +72,6 @@ ignore_texture_size = true
 stretch_mode = 0
 
 [node name="Inventory" parent="." unique_id=845775253 instance=ExtResource("8_c2e2q")]
-visible = false
 
 [node name="LeekItem" parent="." unique_id=542592762 instance=ExtResource("9_rxf0m")]
 position = Vector2(901, 372)
