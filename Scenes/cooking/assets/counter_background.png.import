@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d2v4xtxr0pfol"
-path="res://.godot/imported/counter_background.png-f92f87a2d638573d212736b1180f15f0.ctex"
+path="res://.godot/imported/counter_background.png-c3da3fb6fe9e12d6cf4655cb6499eec8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/cooking/assets/counter_background.png"
-dest_files=["res://.godot/imported/counter_background.png-f92f87a2d638573d212736b1180f15f0.ctex"]
+source_file="res://Scenes/cooking/assets/counter_background.png"
+dest_files=["res://.godot/imported/counter_background.png-c3da3fb6fe9e12d6cf4655cb6499eec8.ctex"]
 
 [params]
 
