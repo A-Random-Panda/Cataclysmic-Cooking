@@ -5,7 +5,7 @@ extends RigidBody2D
 
 @export var X_THROW_STRENGTH: float = 1
 @export var Y_THROW_STRENGTH: float = 1
-@export var MAX_VELOCITY: float = 10000
+@export var MAX_VELOCITY: float = 1000
 
 @export var CLAMP_CIRCLE_SHAVE: float = 0.8
 

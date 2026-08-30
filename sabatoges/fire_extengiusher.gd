@@ -54,7 +54,6 @@ func _physics_process(delta: float) -> void:
 		target_position = target_position.clamp(Vector2.ZERO + clamp_vector, get_viewport_rect().size - clamp_vector)
 		set_global_position(target_position)
 
-
 	elif dragging:
 		freeze = false
 		dragging = false
