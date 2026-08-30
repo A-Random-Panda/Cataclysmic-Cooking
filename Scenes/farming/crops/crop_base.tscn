@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cs3e06cmmmado"]
+
+[ext_resource type="Script" uid="uid://b1sggjrnlyrfo" path="res://Scenes/farming/crops/crop.gd" id="1_oakpe"]
+[ext_resource type="Texture2D" uid="uid://dju3ub4qhv33f" path="res://Scenes/farming/pot_sprite.png" id="2_wng04"]
+[ext_resource type="Script" uid="uid://cocj6powq7ff0" path="res://Scenes/farming/crops/crop_growth.gd" id="3_otltd"]
+
+[node name="crop_base" type="Node2D" unique_id=207928349]
+script = ExtResource("1_oakpe")
+
+[node name="PotSprite" type="Sprite2D" parent="." unique_id=10613760]
+position = Vector2(0.7075043, 25.930008)
+scale = Vector2(0.305, 0.305)
+texture = ExtResource("2_wng04")
+
+[node name="GrowthNode" type="Node2D" parent="." unique_id=127525429]
+position = Vector2(-0.29249573, -52.069992)
+rotation = -0.46425757
+script = ExtResource("3_otltd")
+
+[node name="PotSpriteFront" type="Sprite2D" parent="." unique_id=494915515]
+position = Vector2(0.7075043, 41.132553)
+scale = Vector2(0.305, 0.305)
+texture = ExtResource("2_wng04")
+region_enabled = true
+region_rect = Rect2(201.5, 170, 500, 612)
