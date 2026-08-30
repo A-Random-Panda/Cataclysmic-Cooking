@@ -39,7 +39,6 @@ shape = SubResource("RectangleShape2D_t4ru5")
 
 [node name="FireExtinguisher" parent="." unique_id=542592762 instance=ExtResource("1_yvamj")]
 position = Vector2(481, 340)
-DISPLAY_NAME = "Item"
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=813585809]
 stream = ExtResource("3_lcu63")

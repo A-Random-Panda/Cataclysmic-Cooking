@@ -1,3 +1,14 @@
 [gd_scene format=3 uid="uid://g2e4bm3q8h0r"]
 
+[ext_resource type="Script" uid="uid://c6tpt6eael8d4" path="res://Scenes/kitchen.gd" id="1_7u47w"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_r63mg"]
+radius = 165.0
+height = 428.0
+
 [node name="Kitchen" type="Node2D" unique_id=1516583746]
+position = Vector2(586, 257)
+script = ExtResource("1_7u47w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1708385958]
+shape = SubResource("CapsuleShape2D_r63mg")

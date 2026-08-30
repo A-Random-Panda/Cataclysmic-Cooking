@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 GlobalUI="*uid://g6wc2ymbkccw"
+Hyvariables="*uid://cqcaq8x2afo5"
 
 [display]
 

@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://bupu6wdi6b8ii"]
+
+[ext_resource type="Script" uid="uid://dtt4pkfrbn8n2" path="res://Scenes/entrance/entrance.gd" id="1_ds3dw"]
+[ext_resource type="Texture2D" uid="uid://sv1mty001f66" path="res://assets/characters/C1.png" id="2_lptng"]
+[ext_resource type="BitMap" uid="uid://ci362jwl1t30e" path="res://assets/characters/C_bitmap.png" id="3_lptng"]
+[ext_resource type="Texture2D" uid="uid://ca1j5rhgvgwk1" path="res://assets/backgrounds/vent.png" id="4_lnnjp"]
+[ext_resource type="BitMap" uid="uid://dd645jsahschc" path="res://assets/backgrounds/vent_bitmap.png" id="5_lnnjp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lptng"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s502i"]
+bg_color = Color(0.6378435, 0.6378431, 0.6378431, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lnnjp"]
+bg_color = Color(0.8047426, 0.80474263, 0.8047425, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_offset = Vector2(0, 2)
+
+[node name="Entrance" type="Control" unique_id=1975588065]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+script = ExtResource("1_ds3dw")
+
+[node name="TextureButton" type="TextureButton" parent="." unique_id=1151029722]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 60.0
+offset_right = 254.0
+offset_bottom = 249.0
+texture_normal = ExtResource("2_lptng")
+texture_click_mask = ExtResource("3_lptng")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="yes" type="Button" parent="." unique_id=877277050]
+layout_mode = 0
+offset_left = 230.0
+offset_top = 71.0
+offset_right = 386.0
+offset_bottom = 140.0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.24424863, 0.8319765, 3.85046e-07, 1)
+theme_override_colors/font_pressed_color = Color(0.24313726, 0.83137256, 0, 1)
+theme_override_colors/font_hover_color = Color(0.24313726, 0.83137256, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.24313726, 0.83137256, 0, 1)
+theme_override_colors/font_outline_color = Color(0.24313726, 0.83137256, 0, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_lptng")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s502i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lnnjp")
+text = "Yes"
+
+[node name="no" type="Button" parent="." unique_id=1832497672]
+layout_mode = 0
+offset_left = 405.0
+offset_top = 71.0
+offset_right = 561.0
+offset_bottom = 140.0
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.88951993, 0, 0.23173359, 1)
+theme_override_colors/font_focus_color = Color(0.8901961, 0, 0.23137255, 1)
+theme_override_colors/font_pressed_color = Color(0.8901961, 0, 0.23137255, 1)
+theme_override_colors/font_hover_color = Color(0.8901961, 0, 0.23137255, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.8901961, 0, 0.23137255, 1)
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxFlat_lptng")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_s502i")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lnnjp")
+text = "No"
+
+[node name="accept?" type="Label" parent="." unique_id=672819363]
+layout_mode = 0
+offset_left = 238.0
+offset_top = 7.0
+offset_right = 557.0
+offset_bottom = 67.0
+theme_override_font_sizes/font_size = 40
+text = "Accept Survivor?"
+
+[node name="Vent" type="TextureButton" parent="." unique_id=1727407204]
+layout_mode = 0
+offset_left = 921.0
+offset_top = 431.0
+offset_right = 1143.0
+offset_bottom = 644.0
+texture_normal = ExtResource("4_lnnjp")
+texture_click_mask = ExtResource("5_lnnjp")
+ignore_texture_size = true
+stretch_mode = 0
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_character_button_pressed"]
+[connection signal="pressed" from="yes" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="no" to="." method="_on_no_3_pressed"]
+[connection signal="pressed" from="Vent" to="." method="_on_vent_pressed"]

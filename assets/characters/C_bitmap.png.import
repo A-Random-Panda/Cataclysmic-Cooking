@@ -1,0 +1,16 @@
+[remap]
+
+importer="bitmap"
+type="BitMap"
+uid="uid://ci362jwl1t30e"
+path="res://.godot/imported/C_bitmap.png-94a8eafccdffb3039142e6c3b70d8db4.res"
+
+[deps]
+
+source_file="res://assets/characters/C_bitmap.png"
+dest_files=["res://.godot/imported/C_bitmap.png-94a8eafccdffb3039142e6c3b70d8db4.res"]
+
+[params]
+
+create_from=0
+threshold=0.5
