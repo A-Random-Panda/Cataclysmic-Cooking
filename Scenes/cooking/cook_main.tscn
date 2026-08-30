@@ -1,7 +1,20 @@
 [gd_scene format=3 uid="uid://dp5u37adf0bdx"]
 
 [ext_resource type="Texture2D" uid="uid://bg77hektjy1cs" path="res://scenes/cooking/assets/kitchen_background.png" id="1_u1oaf"]
+[ext_resource type="Script" uid="uid://bd0ecua8qp5g1" path="res://scenes/cooking/scripts/cook_main.gd" id="1_vnvxi"]
 [ext_resource type="PackedScene" uid="uid://phxcv0tcqpuc" path="res://ui/inventory/inventory.tscn" id="2_yfxtg"]
+[ext_resource type="PackedScene" uid="uid://dwgdp44jtwlba" path="res://scenes/cooking/pot_scene.tscn" id="3_u6cpc"]
+[ext_resource type="PackedScene" uid="uid://cfgpscveehwn6" path="res://scenes/cooking/pot_stats.tscn" id="4_lpmxj"]
+
+[sub_resource type="Gradient" id="Gradient_yfxtg"]
+offsets = PackedFloat32Array(0, 0.43373495)
+colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2apqw"]
+gradient = SubResource("Gradient_yfxtg")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ckcd"]
+size = Vector2(227, 168.5)
 
 [node name="CookMain" type="Control" unique_id=1028049208]
 layout_mode = 3
@@ -10,11 +23,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_vnvxi")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=2105560752]
+[node name="Background" type="TextureRect" parent="." unique_id=2105560752]
+z_index = -2
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
+offset_right = 929.1711
 grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -22,4 +39,30 @@ texture = ExtResource("1_u1oaf")
 expand_mode = 3
 stretch_mode = 5
 
+[node name="TextureRect2" type="TextureRect" parent="Background" unique_id=923280781]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -171.17108
+offset_right = 222.82892
+grow_horizontal = 0
+grow_vertical = 2
+texture = SubResource("GradientTexture2D_2apqw")
+
+[node name="PotScene" parent="." unique_id=113342332 instance=ExtResource("3_u6cpc")]
+layout_mode = 1
+
+[node name="Area2D" type="Area2D" parent="." unique_id=2070687194]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=25536525]
+position = Vector2(254.5, 422.75)
+shape = SubResource("RectangleShape2D_6ckcd")
+
+[node name="PotStats" parent="." unique_id=772380090 instance=ExtResource("4_lpmxj")]
+
 [node name="Inventory" parent="." unique_id=845775253 instance=ExtResource("2_yfxtg")]
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

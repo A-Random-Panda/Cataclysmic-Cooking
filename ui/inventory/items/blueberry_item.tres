@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="InventoryItem" format=3 uid="uid://pk6pf5tmw5m2"]
+
+[ext_resource type="PackedScene" uid="uid://bx6kjl5rqo61e" path="res://scenes/cooking/ingredients/blueberry_ingredient.tscn" id="1_1ujqr"]
+[ext_resource type="Texture2D" uid="uid://c710r8aycliql" path="res://scenes/cooking/assets/blueberry_sprite.png" id="2_rxyq2"]
+[ext_resource type="Script" uid="uid://bp1c3qi27sobr" path="res://ui/scripts/inventory_item.gd" id="3_qvns2"]
+
+[resource]
+script = ExtResource("3_qvns2")
+DISPLAY_NAME = "Blueberry"
+ITEM_TEXTURE = ExtResource("2_rxyq2")
+ITEM_OBJECT = ExtResource("1_1ujqr")
+metadata/_custom_type_script = "uid://bp1c3qi27sobr"

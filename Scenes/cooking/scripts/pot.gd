@@ -43,7 +43,7 @@ class Ingredient:
 		return str(count) + " " + display_name
 
 
-func calculate_flavor():
+func calculate_flavor() -> void:
 	# Reset and recalculate total_flavor
 	total_flavor = {
 		"Saltiness": 0, 
@@ -56,6 +56,9 @@ func calculate_flavor():
 		for flavour_name in ingredient.flavor:
 			total_flavor[flavour_name] += ingredient.count * ingredient.flavor[flavour_name]
 	GlobalUI.display_flavor.emit(total_flavor)
+
+func cook() -> void:
+	pass
 
 
 func _on_area_entered(area: Area2D) -> void:
@@ -82,3 +85,7 @@ func _on_area_exited(area: Area2D) -> void:
 			ingredients.erase(display_name)
 	
 		calculate_flavor()
+
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("c_key"):
+		cook()

@@ -11,10 +11,10 @@ ITEM_TEXTURE = ExtResource("2_ml8is")
 ITEM_OBJECT = ExtResource("1_ml8is")
 START_COUNT = 26
 FLAVOUR = Dictionary[String, int]({
-"Bitterness": 0,
-"Saltiness": 0,
-"Savoriness": 0,
-"Sourness": 8,
-"Sweetness": 24
+"Bitterness": 25,
+"Saltiness": 25,
+"Savoriness": 25,
+"Sourness": 25,
+"Sweetness": 25
 })
 metadata/_custom_type_script = "uid://bp1c3qi27sobr"
