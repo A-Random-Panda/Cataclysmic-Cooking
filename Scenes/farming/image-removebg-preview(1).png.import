@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cmx20as2cnpce"
-path="res://.godot/imported/image-removebg-preview(1).png-706fe86149b26d722f16cfc737914327.ctex"
+path="res://.godot/imported/image-removebg-preview(1).png-92a577355ccf5ab875ea5e1f1d2b47b4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Scenes/farming/image-removebg-preview(1).png"
-dest_files=["res://.godot/imported/image-removebg-preview(1).png-706fe86149b26d722f16cfc737914327.ctex"]
+source_file="res://scenes/farming/image-removebg-preview(1).png"
+dest_files=["res://.godot/imported/image-removebg-preview(1).png-92a577355ccf5ab875ea5e1f1d2b47b4.ctex"]
 
 [params]
 

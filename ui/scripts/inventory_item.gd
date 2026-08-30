@@ -6,7 +6,14 @@ static var instantiated_items: Array[String] = []
 @export var ITEM_TEXTURE: Texture2D
 @export var ITEM_OBJECT: PackedScene
 @export var START_COUNT: int
-@export var INGREDIENT_SLOTS: int = 1
+
+@export var FLAVOUR: Dictionary[String, int] = {
+	"Saltiness": 0, 
+	"Sweetness": 0,
+	"Sourness": 0,
+	"Bitterness": 0,
+	"Savoriness": 0
+}
 
 var num: int
 

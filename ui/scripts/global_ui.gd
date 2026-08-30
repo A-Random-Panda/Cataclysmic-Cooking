@@ -14,6 +14,8 @@ func _item_hovered(item: Item):
 func _item_unhovered(item: Item):
 	hovered_item = null
 
+signal display_flavor(flavor: Dictionary)
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	hovered_on_item.connect(_item_hovered)
