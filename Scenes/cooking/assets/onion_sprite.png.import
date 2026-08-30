@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b4ls5p4ejr0s3"
-path="res://.godot/imported/onion_sprite.png-664b5d1e02c43defc9cc52a32904e920.ctex"
+path="res://.godot/imported/onion_sprite.png-b52a6f9c58fc389b127a95e3fdfb4c00.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/cooking/assets/onion_sprite.png"
-dest_files=["res://.godot/imported/onion_sprite.png-664b5d1e02c43defc9cc52a32904e920.ctex"]
+source_file="res://Scenes/cooking/assets/onion_sprite.png"
+dest_files=["res://.godot/imported/onion_sprite.png-b52a6f9c58fc389b127a95e3fdfb4c00.ctex"]
 
 [params]
 

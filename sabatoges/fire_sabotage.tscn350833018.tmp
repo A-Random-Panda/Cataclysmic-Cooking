@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://do8iy1hvtaf4k"]
+
+[ext_resource type="Script" uid="uid://ct52v5esiylx3" path="res://sabatoges/fire_sabotage.gd" id="1_77t7o"]
+[ext_resource type="PackedScene" uid="uid://1c22ldt2srhh" path="res://sabatoges/fire_extengiusher.tscn" id="1_yvamj"]
+[ext_resource type="AudioStream" uid="uid://dgkj7274bslpb" path="res://assets/sounds/fire_extenguisher.mp3" id="3_lcu63"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hh1gf"]
+size = Vector2(1151, 39)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q67r1"]
+size = Vector2(27, 671)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5man4"]
+size = Vector2(31, 674)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t4ru5"]
+size = Vector2(1151, 39)
+
+[node name="fire_sabotage" type="Node2D" unique_id=113342332]
+script = ExtResource("1_77t7o")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=936899213]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=947951676]
+position = Vector2(576.5, 649.5)
+shape = SubResource("RectangleShape2D_hh1gf")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1839630568]
+position = Vector2(3.5, 325.5)
+shape = SubResource("RectangleShape2D_q67r1")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=793205368]
+position = Vector2(1156.5, 327)
+shape = SubResource("RectangleShape2D_5man4")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=822549176]
+position = Vector2(581, -6)
+shape = SubResource("RectangleShape2D_t4ru5")
+
+[node name="FireExtinguisher" parent="." unique_id=542592762 instance=ExtResource("1_yvamj")]
+position = Vector2(481, 340)
+DISPLAY_NAME = "Item"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=813585809]
+stream = ExtResource("3_lcu63")
