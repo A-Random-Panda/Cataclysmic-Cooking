@@ -31,7 +31,7 @@ func _process(delta: float) -> void:
 
 
 
-	if Hyvariables.vistor_time > 10 and Hyvariables.vistor_here == false:
+	if Hyvariables.vistor_time > 50 and Hyvariables.vistor_here == false:
 		Hyvariables.vistor_here = true
 		$TextureButton.visible = true
 		$TextureButton.disabled = false
