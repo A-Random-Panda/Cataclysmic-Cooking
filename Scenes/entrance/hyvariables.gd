@@ -12,9 +12,12 @@ var workers: int = 0
 var sabotimer: float = 48
 var audio: AudioStreamPlayer
 var fire_sound: AudioStream = preload("res://assets/sounds/vents_on_fire.mp3")
+var win: AudioStream = preload("res://assets/sounds/win.mp3")
 var x: bool = true
 var game_time: float = 0.0
 var timer_running: bool = false
+var game_over: bool = true
+
 
 
 
@@ -45,6 +48,9 @@ func _process(delta: float) -> void:
 		play_sound(fire_sound)
 		fire_sabo = true
 		
+	if game_time > 10 and game_over:
+		play_sound(fire_sound)
+		game_over = false
 			
 
 	if not vistor_here:
