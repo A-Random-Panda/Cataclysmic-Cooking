@@ -1,6 +1,6 @@
 extends Node
 
-var vistor_time: float = 0.0
+var vistor_time: float = 48.0
 var vistor_here: bool = false
 var fire_list: Array[Vector2] = []
 var timer: float = 0.0
