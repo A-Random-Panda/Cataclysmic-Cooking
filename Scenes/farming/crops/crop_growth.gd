@@ -15,8 +15,9 @@ var crop
 var grown = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	GROWTH_TIME = find_parent("Crop").growth_time
-	ingredient = find_child("*Ingredient") 
+	crop = growing_crop.instantiate()
+	GROWTH_TIME = find_parent("*Crop").growth_time
+	ingredient = find_child("*Item") 
 	ingredient.freeze = true
 	init_pos = position
 	sprite = find_child("*Sprite")
@@ -37,17 +38,20 @@ func grow(delta):
 		hitbox.scale = Vector2.ZERO
 		ingredient.position = offset * growth
 		ingredient.freeze = true
+		
 	elif growth >= 1:
 		if grown != true:
 			crop = growing_crop.instantiate()
 			crop.position = offset
 			crop.rotation = ingredient.rotation
 			crop.freeze = true
+			
 			add_child(crop)
 			grown = true
 		if is_harvested(crop):
 			growth = 0
 			grown = false
+			crop.reparent(get_parent().get_parent())
 		
 		
 	

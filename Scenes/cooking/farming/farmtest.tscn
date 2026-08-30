@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bfik6ljsgaa5q"]
 
-[ext_resource type="PackedScene" uid="uid://qdudcsygcbqa" path="res://scenes/farming/crop.tscn" id="1_hsha5"]
+[ext_resource type="PackedScene" uid="uid://qdudcsygcbqa" path="res://Scenes/farming/crops/carrot_crop.tscn" id="1_hsha5"]
 [ext_resource type="Script" uid="uid://bcb32xi4e8xot" path="res://ui/scripts/inventory_area.gd" id="2_rwwjx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t36pt"]

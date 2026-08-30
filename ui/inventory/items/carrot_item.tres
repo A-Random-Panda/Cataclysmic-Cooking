@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="InventoryItem" format=3 uid="uid://dkjud8p3su8rs"]
 
-[ext_resource type="PackedScene" uid="uid://cti3crpg03pby" path="res://scenes/cooking/ingredients/carrot_ingredient.tscn" id="1_ml8is"]
-[ext_resource type="Texture2D" uid="uid://bk77ooih2huc5" path="res://scenes/cooking/assets/carrot_sprite.png" id="2_ml8is"]
+[ext_resource type="PackedScene" uid="uid://cti3crpg03pby" path="res://Scenes/cooking/ingredients/carrot_ingredient.tscn" id="1_ml8is"]
+[ext_resource type="Texture2D" uid="uid://bk77ooih2huc5" path="res://Scenes/cooking/assets/carrot_sprite.png" id="2_ml8is"]
 [ext_resource type="Script" uid="uid://bp1c3qi27sobr" path="res://ui/scripts/inventory_item.gd" id="3_xgmvu"]
 
 [resource]

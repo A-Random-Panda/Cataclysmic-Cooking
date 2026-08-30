@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://c35cdflymhltw"]
+
+[ext_resource type="Script" uid="uid://b1sggjrnlyrfo" path="res://Scenes/farming/crops/crop.gd" id="1_pp241"]
+[ext_resource type="Texture2D" uid="uid://dju3ub4qhv33f" path="res://Scenes/farming/pot_sprite.png" id="2_0xo4h"]
+[ext_resource type="Texture2D" uid="uid://bs8f0g4w2h43m" path="res://Scenes/farming/fruit_vine_sprite.png" id="3_ij0bi"]
+[ext_resource type="Script" uid="uid://cocj6powq7ff0" path="res://Scenes/farming/crops/crop_growth.gd" id="3_mq422"]
+[ext_resource type="PackedScene" uid="uid://bpufbwe0w24o0" path="res://Scenes/cooking/ingredients/tomato_ingredient.tscn" id="5_xtn3v"]
+
+[node name="TomatoCrop" type="Node2D" unique_id=207928349]
+script = ExtResource("1_pp241")
+
+[node name="PotSprite" type="Sprite2D" parent="." unique_id=10613760]
+position = Vector2(0.7075043, 25.930008)
+scale = Vector2(0.305, 0.305)
+texture = ExtResource("2_0xo4h")
+
+[node name="FruitVineSprite" type="Sprite2D" parent="." unique_id=1877339390]
+position = Vector2(-7, -197.00002)
+scale = Vector2(0.14684422, 0.12396247)
+texture = ExtResource("3_ij0bi")
+
+[node name="GrowthNode" type="Node2D" parent="." unique_id=127525429]
+position = Vector2(53.000004, -202)
+rotation = -0.46425757
+script = ExtResource("3_mq422")
+growing_crop = ExtResource("5_xtn3v")
+
+[node name="TomatoItem" parent="GrowthNode" unique_id=542592762 instance=ExtResource("5_xtn3v")]
+position = Vector2(-33.576473, 58.11729)
+rotation = 0.46425754
+
+[node name="GrowthNode2" type="Node2D" parent="." unique_id=1862513876]
+position = Vector2(-74, -252.00006)
+rotation = -0.46425754
+script = ExtResource("3_mq422")
+growing_crop = ExtResource("5_xtn3v")
+
+[node name="TomatoItem" parent="GrowthNode2" unique_id=862901649 instance=ExtResource("5_xtn3v")]
+position = Vector2(-33.576473, 58.11729)
+rotation = 0.46425754
+
+[node name="PotSpriteFront" type="Sprite2D" parent="." unique_id=494915515]
+position = Vector2(0.7075043, 41.132553)
+scale = Vector2(0.305, 0.305)
+texture = ExtResource("2_0xo4h")
+region_enabled = true
+region_rect = Rect2(201.5, 170, 500, 612)
