@@ -19,7 +19,6 @@ func harvest():
 	if len(children) >0:
 		var harvested_crop = children[randi_range(0,len(children))-1]
 		position = Vector2(harvested_crop.get_parent().position) + Vector2(harvested_crop.get_parent().get_parent().position)
-		await get_tree().create_timer(5).timeout
 		harvested_crop.freeze = false
 	else:
 		pass
