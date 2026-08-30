@@ -16,7 +16,7 @@ var grown = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	crop = growing_crop.instantiate()
-	GROWTH_TIME = find_parent("*Crop").growth_time
+	GROWTH_TIME = find_parent("*Crop*").growth_time
 	ingredient = find_child("*Item") 
 	ingredient.freeze = true
 	init_pos = position
