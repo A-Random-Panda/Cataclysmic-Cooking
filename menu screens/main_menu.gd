@@ -14,6 +14,7 @@ func _process(delta: float) -> void:
 func _on_start_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scenes/entrance/entrance.tscn")
 	Hyvariables.x = false
+	Hyvariables.timer_running = true
 
 
 func _on_escape_pressed() -> void:
