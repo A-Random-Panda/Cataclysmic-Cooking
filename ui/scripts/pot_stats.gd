@@ -8,6 +8,8 @@ extends Control
 
 @onready var FLAVORS_CONTAINER_NODE = $RightPanel/VBoxContainer/Background/VBoxContainer/Flavors
 
+var tween: Tween
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	INGREDIENT_SLOTS_BACKGROUND.modulate = Color(1.0, 1.0, 1.0, 0.0)
@@ -20,6 +22,9 @@ func _ready() -> void:
 	
 	# Connect display_flavor from pot
 	GlobalUI.display_flavor.connect(display_flavor)
+	
+	# Connect visibility to global signal
+	GlobalUI.pot_stats_visible.connect(visibility)
 
 
 func display_flavor(flavor_dict: Dictionary) -> void:
@@ -30,7 +35,9 @@ func display_flavor(flavor_dict: Dictionary) -> void:
 		flavor_container.get_child(1).value = flavor_dict[flavor_name]
 
 func show_progress() -> void:
-	var tween := create_tween()
+	if tween and tween.is_valid():
+		tween.kill()
+	tween = create_tween()
 	tween.set_parallel(true)
 	
 	for flavor_container in FLAVORS_CONTAINER_NODE.get_children():
@@ -54,6 +61,12 @@ func item_hovered(physics_item: Item) -> void:
 	
 func item_unhovered(item: Item) -> void:
 	INGREDIENT_SLOTS_BACKGROUND.modulate = Color(1.0, 1.0, 1.0, 0.0)
+
+func visibility(state: bool) -> void:
+	if state:
+		show()
+	else:
+		hide()
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("t_key"):

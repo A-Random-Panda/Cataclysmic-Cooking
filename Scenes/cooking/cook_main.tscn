@@ -1,10 +1,7 @@
 [gd_scene format=3 uid="uid://dp5u37adf0bdx"]
 
 [ext_resource type="Texture2D" uid="uid://bg77hektjy1cs" path="res://scenes/cooking/assets/kitchen_background.png" id="1_u1oaf"]
-[ext_resource type="Script" uid="uid://bd0ecua8qp5g1" path="res://scenes/cooking/scripts/cook_main.gd" id="1_vnvxi"]
-[ext_resource type="PackedScene" uid="uid://phxcv0tcqpuc" path="res://ui/inventory/inventory.tscn" id="2_yfxtg"]
-[ext_resource type="PackedScene" uid="uid://dwgdp44jtwlba" path="res://scenes/cooking/pot_scene.tscn" id="3_u6cpc"]
-[ext_resource type="PackedScene" uid="uid://cfgpscveehwn6" path="res://scenes/cooking/pot_stats.tscn" id="4_lpmxj"]
+[ext_resource type="Script" uid="uid://bd0ecua8qp5g1" path="res://scenes/cooking/scripts/kitchen_scene.gd" id="1_vnvxi"]
 
 [sub_resource type="Gradient" id="Gradient_yfxtg"]
 offsets = PackedFloat32Array(0, 0.43373495)
@@ -13,10 +10,20 @@ colors = PackedColorArray(0, 0, 0, 0, 0, 0, 0, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_2apqw"]
 gradient = SubResource("Gradient_yfxtg")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ckcd"]
-size = Vector2(227, 168.5)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yfxtg"]
+size = Vector2(1151, 646)
 
-[node name="CookMain" type="Control" unique_id=1028049208]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u6cpc"]
+size = Vector2(601, 1920)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lpmxj"]
+size = Vector2(700, 1934)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vnvxi"]
+size = Vector2(1151, 662.5)
+
+[node name="KitchenScene" type="Control" unique_id=1028049208]
+custom_minimum_size = Vector2(1152, 648)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -37,9 +44,9 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 texture = ExtResource("1_u1oaf")
 expand_mode = 3
-stretch_mode = 5
+stretch_mode = 4
 
-[node name="TextureRect2" type="TextureRect" parent="Background" unique_id=923280781]
+[node name="Gradient" type="TextureRect" parent="Background" unique_id=923280781]
 layout_mode = 1
 anchors_preset = 11
 anchor_left = 1.0
@@ -51,18 +58,20 @@ grow_horizontal = 0
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_2apqw")
 
-[node name="PotScene" parent="." unique_id=113342332 instance=ExtResource("3_u6cpc")]
-layout_mode = 1
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1757223394]
 
-[node name="Area2D" type="Area2D" parent="." unique_id=2070687194]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=173274476]
+position = Vector2(576.5, 953)
+shape = SubResource("RectangleShape2D_yfxtg")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=25536525]
-position = Vector2(254.5, 422.75)
-shape = SubResource("RectangleShape2D_6ckcd")
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=710200636]
+position = Vector2(-283.5, 302)
+shape = SubResource("RectangleShape2D_u6cpc")
 
-[node name="PotStats" parent="." unique_id=772380090 instance=ExtResource("4_lpmxj")]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1678481340]
+position = Vector2(1501, 346)
+shape = SubResource("RectangleShape2D_lpmxj")
 
-[node name="Inventory" parent="." unique_id=845775253 instance=ExtResource("2_yfxtg")]
-
-[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
-[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=82825738]
+position = Vector2(581, -317.75)
+shape = SubResource("RectangleShape2D_vnvxi")

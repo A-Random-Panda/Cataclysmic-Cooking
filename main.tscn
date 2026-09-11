@@ -1,3 +1,53 @@
 [gd_scene format=3 uid="uid://cqow47bch5ocs"]
 
-[node name="main" type="Node2D" unique_id=471767555]
+[ext_resource type="Script" uid="uid://bi53d6hlufn47" path="res://camera.gd" id="1_5vw27"]
+[ext_resource type="PackedScene" uid="uid://dp5u37adf0bdx" path="res://scenes/cooking/cook_main.tscn" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://dwgdp44jtwlba" path="res://scenes/cooking/pot_scene.tscn" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://do8iy1hvtaf4k" path="res://sabatoges/fire_sabotage.tscn" id="2_lquwl"]
+[ext_resource type="PackedScene" uid="uid://cnn08uyldgodu" path="res://scenes/farming/farm_scene.tscn" id="3_lquwl"]
+[ext_resource type="PackedScene" uid="uid://cfgpscveehwn6" path="res://ui/pot_stats.tscn" id="6_272bh"]
+[ext_resource type="PackedScene" uid="uid://phxcv0tcqpuc" path="res://ui/inventory/inventory.tscn" id="7_5vw27"]
+[ext_resource type="PackedScene" uid="uid://crev2inf1u6xe" path="res://scenes/menu/main_menu.tscn" id="7_272bh"]
+[ext_resource type="PackedScene" uid="uid://bupu6wdi6b8ii" path="res://scenes/entrance/entrance.tscn" id="7_kek77"]
+
+[node name="Main" type="Node2D" unique_id=471767555]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=199926777]
+anchor_mode = 0
+script = ExtResource("1_5vw27")
+
+[node name="MainMenu" parent="." unique_id=999771846 instance=ExtResource("7_272bh")]
+offset_right = 1152.0
+offset_bottom = 648.0
+
+[node name="fire_sabotage" parent="." unique_id=113342332 instance=ExtResource("2_lquwl")]
+position = Vector2(2000, 0)
+
+[node name="Entrance" parent="." unique_id=1975588065 instance=ExtResource("7_kek77")]
+offset_left = 4000.0
+offset_top = 0.0
+offset_right = 5152.0
+offset_bottom = 648.0
+
+[node name="farm_scene" parent="." unique_id=1723128482 instance=ExtResource("3_lquwl")]
+position = Vector2(6000, 0)
+
+[node name="KitchenScene" parent="." unique_id=1028049208 instance=ExtResource("1_h2yge")]
+offset_left = 8000.0
+offset_right = 9152.0
+offset_bottom = 648.0
+
+[node name="PotScene" parent="." unique_id=412743526 instance=ExtResource("2_1bvp3")]
+offset_left = 10000.0
+offset_right = 11152.0
+offset_bottom = 648.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1384221069]
+
+[node name="PotStats" parent="CanvasLayer" unique_id=985607411 instance=ExtResource("6_272bh")]
+visible = false
+mouse_filter = 1
+
+[node name="Inventory" parent="CanvasLayer" unique_id=751327466 instance=ExtResource("7_5vw27")]
+visible = false
+mouse_filter = 1

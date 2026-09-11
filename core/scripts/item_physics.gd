@@ -24,6 +24,8 @@ var last_mouse_position := Vector2.ZERO
 
 var CLAMP_VECTOR := Vector2.ZERO
 
+var mouse_pos: Vector2
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# Calculate the clamping radius
@@ -31,44 +33,40 @@ func _ready() -> void:
 	for vector: Vector2 in $Hitbox.polygon:
 		clamp_radius = max(clamp_radius, vector.distance_to(Vector2.ZERO)) * CLAMP_CIRCLE_SHAVE
 	CLAMP_VECTOR = Vector2(clamp_radius, clamp_radius)
-	
-	# Check if item is in the backrooms every 2 seconds
-	var timer := Timer.new()
-	timer.wait_time = 2
-	timer.autostart = true
-	add_child(timer)
-	timer.timeout.connect(_check_respawn)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
-	
+	var vector_zero: Vector2 = GlobalUI.get_vector_zero()
+	var vector_max: Vector2 = vector_zero + get_viewport_rect().size
+	mouse_pos = vector_zero + get_global_mouse_position()
+
 	if !dragging and mouse_on and Input.is_action_pressed("left_click"):
 		# Single drag logic
 		if SINGLE_PICKUP:
 			if !GlobalUI.is_dragging:
-				drag_offset = global_position - get_global_mouse_position()
+				drag_offset = global_position - mouse_pos
 				dragging = true
 				GlobalUI.is_dragging = true
-				
+
 				# Cooking UI
 				if GlobalUI.hovered_item != self:
 					GlobalUI.hovered_on_item.emit(self)
 		else:
-			drag_offset = global_position - get_global_mouse_position()
+			drag_offset = global_position - mouse_pos
 			dragging = true
-			
+
 			# Cooking UI
 			if GlobalUI.hovered_item != self:
 				GlobalUI.hovered_on_item.emit(self)
 
 	if dragging and Input.is_action_pressed("left_click"):
-		last_mouse_position = get_global_mouse_position()
+		last_mouse_position = mouse_pos
 		freeze = true
-		
+
 		# Position clamping
-		var target_position: Vector2 = get_global_mouse_position() + drag_offset
-		target_position = target_position.clamp(Vector2.ZERO + CLAMP_VECTOR, get_viewport_rect().size - CLAMP_VECTOR)
+		var target_position: Vector2 = mouse_pos + drag_offset
+		target_position = target_position.clamp(vector_zero + CLAMP_VECTOR, vector_max - CLAMP_VECTOR)
 		set_global_position(target_position)
 
 	elif dragging:
@@ -81,21 +79,15 @@ func _physics_process(delta: float) -> void:
 		# Cooking UI
 		GlobalUI.hovered_off_item.emit(self)
 		
-		if in_inventory:
-			InventoryArea.add_to_inventory(self)
+		# Detect if mouse released in inventory area
+		if GlobalUI.inventory_rect.has_point(get_viewport().get_mouse_position()):
+			GlobalUI.inventory.add_node(self)
+			queue_free()
 		
 		# Apply velocity
-		var unscaled_velocity := (get_global_mouse_position() - last_mouse_position) / delta
+		var unscaled_velocity := (mouse_pos - last_mouse_position) / delta
 		var scaled_velocity := Vector2(X_THROW_STRENGTH * unscaled_velocity.x, Y_THROW_STRENGTH * unscaled_velocity.y)
 		linear_velocity = scaled_velocity.limit_length(MAX_VELOCITY)
-
-
-# Check if item is in the backrooms
-func _check_respawn() -> void:
-	if position.x < -PADDING or position.x > SCREEN_SIZE.x + PADDING or position.y < -PADDING or position.y > SCREEN_SIZE.y + PADDING:
-		freeze = true
-		position = RESPAWN_POS
-		freeze = false
 
 
 func _on_select_box_mouse_entered() -> void:

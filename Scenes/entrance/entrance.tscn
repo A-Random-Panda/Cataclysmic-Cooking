@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bupu6wdi6b8ii"]
 
-[ext_resource type="Script" uid="uid://dtt4pkfrbn8n2" path="res://Scenes/entrance/entrance.gd" id="1_ds3dw"]
+[ext_resource type="Script" uid="uid://dtt4pkfrbn8n2" path="res://scenes/entrance/entrance.gd" id="1_ds3dw"]
 [ext_resource type="Texture2D" uid="uid://gm1hsunmy3lf" path="res://assets/backgrounds/entrance_scene.png" id="2_3b4fj"]
 [ext_resource type="Texture2D" uid="uid://sv1mty001f66" path="res://assets/characters/C1.png" id="2_lptng"]
 [ext_resource type="BitMap" uid="uid://ci362jwl1t30e" path="res://assets/characters/C_bitmap.png" id="3_lptng"]
@@ -37,6 +37,7 @@ corner_radius_bottom_left = 16
 shadow_offset = Vector2(0, 2)
 
 [node name="Entrance" type="Control" unique_id=1975588065]
+custom_minimum_size = Vector2(1152, 648)
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

@@ -22,21 +22,20 @@ func spawn_fire():
 	Hyvariables.fire_list.append(fire_instance.position)
 	var fire_area: Fire_Area = fire_instance.get_node("Area2D")
 	fire_area.Entered_Area.connect(_on_fire_area_changed)
-	
+
 func spawn_fire_at(position: Vector2):
 	var fire_instance: Node2D = fire_png.instantiate()
 	add_child(fire_instance)
 	fire_instance.position = position
 	var fire_area: Fire_Area = fire_instance.get_node("Area2D")
 	fire_area.Entered_Area.connect(_on_fire_area_changed)
-	
+
 func _on_fire_area_changed(fire: Node2D, status: String) -> void:
 	if status == "inside":
 		smoke_inside = true
 		cur_fire = fire
 	elif status == "outside":
 		smoke_inside = false
-
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -63,7 +62,9 @@ func _process(delta: float) -> void:
 		Hyvariables.fire_sabo = false
 		Hyvariables.x = false
 		Hyvariables.sabotimer = 0
-		get_tree().change_scene_to_file("res://Scenes/entrance/entrance.tscn")
+		
+		GlobalUI.scene_locked = false
+		GlobalUI.current_scene()
 		
 
 	if smoke_timer > 1.4:
@@ -73,7 +74,7 @@ func _process(delta: float) -> void:
 	
 	if smoke_inside:
 		smoke_timer += delta
-		if not audio.playing:
+		if not audio.playing and GlobalUI.on_vents_scene:
 			audio.play()
 	elif !smoke_inside:
 		smoke_timer = 0
