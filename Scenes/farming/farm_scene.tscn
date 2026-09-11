@@ -1,13 +1,11 @@
 [gd_scene format=3 uid="uid://cnn08uyldgodu"]
 
-[ext_resource type="Script" uid="uid://b17wv4y4cguld" path="res://scenes/farming/farm_scene.gd" id="1_eijym"]
-[ext_resource type="Texture2D" uid="uid://bwkgabaj6y6rm" path="res://scenes/farming/Untitled137_20260830004909.png" id="2_2ymhn"]
-[ext_resource type="PackedScene" uid="uid://bw7equxoc7s42" path="res://scenes/farming/human_harvesters.tscn" id="2_peni1"]
-[ext_resource type="PackedScene" uid="uid://qdudcsygcbqa" path="res://scenes/farming/crops/carrot_crop.tscn" id="3_peni1"]
-[ext_resource type="PackedScene" uid="uid://bywox12shwlmo" path="res://scenes/farming/crops/onion_crop.tscn" id="4_c2e2q"]
-[ext_resource type="PackedScene" uid="uid://c35cdflymhltw" path="res://scenes/farming/crops/tomato_crop.tscn" id="5_rxf0m"]
-[ext_resource type="Texture2D" uid="uid://bx1yoy3wpamsq" path="res://scenes/farming/vegetable_leaves_sprite.png" id="7_peni1"]
-[ext_resource type="PackedScene" uid="uid://dsdip44wuyubc" path="res://scenes/cooking/ingredients/leek_ingredient.tscn" id="9_rxf0m"]
+[ext_resource type="Script" uid="uid://b17wv4y4cguld" path="res://Scenes/farming/farm_scene.gd" id="1_eijym"]
+[ext_resource type="Texture2D" uid="uid://bwkgabaj6y6rm" path="res://Scenes/farming/Untitled137_20260830004909.png" id="2_2ymhn"]
+[ext_resource type="PackedScene" uid="uid://bw7equxoc7s42" path="res://Scenes/farming/human_harvesters.tscn" id="2_peni1"]
+[ext_resource type="PackedScene" uid="uid://qdudcsygcbqa" path="res://Scenes/farming/crops/carrot_crop.tscn" id="3_peni1"]
+[ext_resource type="PackedScene" uid="uid://bywox12shwlmo" path="res://Scenes/farming/crops/onion_crop.tscn" id="4_c2e2q"]
+[ext_resource type="PackedScene" uid="uid://c35cdflymhltw" path="res://Scenes/farming/crops/tomato_crop.tscn" id="5_rxf0m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yuwmk"]
 size = Vector2(1151, 945)
@@ -62,15 +60,3 @@ shape = SubResource("RectangleShape2D_p0dk7")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=519202302]
 position = Vector2(581, -152.25)
 shape = SubResource("RectangleShape2D_fxr1y")
-
-[node name="TextureButton" type="TextureButton" parent="." unique_id=1989565301]
-offset_right = 199.0
-offset_bottom = 175.0
-texture_normal = ExtResource("7_peni1")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="LeekItem" parent="." unique_id=542592762 instance=ExtResource("9_rxf0m")]
-position = Vector2(901, 372)
-
-[connection signal="button_down" from="TextureButton" to="." method="_on_texture_button_button_down"]

@@ -14,8 +14,6 @@ func _process(delta: float) -> void:
 		harvest()
 func harvest():
 	children = get_parent().find_children("*GrownCrop","",true,false)
-	for child in children:
-		print(child.position)
 	if len(children) >0:
 		var harvested_crop = children[randi_range(0,len(children))-1]
 		position = Vector2(harvested_crop.get_parent().position) + Vector2(harvested_crop.get_parent().get_parent().position)

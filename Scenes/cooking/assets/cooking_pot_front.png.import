@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://byawq6k0j7tr2"
-path="res://.godot/imported/cooking_pot_front.png-1a1f7cd76c6866b2dcaf5e94b8377f05.ctex"
+path="res://.godot/imported/cooking_pot_front.png-d267df029f38beaf870830d555b131e7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/cooking/assets/cooking_pot_front.png"
-dest_files=["res://.godot/imported/cooking_pot_front.png-1a1f7cd76c6866b2dcaf5e94b8377f05.ctex"]
+source_file="res://Scenes/cooking/assets/cooking_pot_front.png"
+dest_files=["res://.godot/imported/cooking_pot_front.png-d267df029f38beaf870830d555b131e7.ctex"]
 
 [params]
 
