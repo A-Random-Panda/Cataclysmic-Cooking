@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://sv1mty001f66" path="res://assets/characters/C1.png" id="2_lptng"]
 [ext_resource type="BitMap" uid="uid://ci362jwl1t30e" path="res://assets/characters/C_bitmap.png" id="3_lptng"]
 [ext_resource type="Texture2D" uid="uid://ca1j5rhgvgwk1" path="res://assets/backgrounds/vent.png" id="4_lnnjp"]
+[ext_resource type="FontFile" uid="uid://blta25kqx3jl3" path="res://ui/assets/augiepixel.ttf" id="5_7eqwk"]
 [ext_resource type="BitMap" uid="uid://dd645jsahschc" path="res://assets/backgrounds/vent_bitmap.png" id="5_lnnjp"]
 [ext_resource type="Texture2D" uid="uid://bo4d68n667eku" path="res://assets/backgrounds/exclamtion_mark.png" id="7_x0sno"]
 
@@ -83,6 +84,7 @@ theme_override_colors/font_pressed_color = Color(0.24313726, 0.83137256, 0, 1)
 theme_override_colors/font_hover_color = Color(0.24313726, 0.83137256, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.24313726, 0.83137256, 0, 1)
 theme_override_colors/font_outline_color = Color(0.24313726, 0.83137256, 0, 1)
+theme_override_fonts/font = ExtResource("5_7eqwk")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_lptng")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_s502i")
@@ -101,6 +103,7 @@ theme_override_colors/font_focus_color = Color(0.8901961, 0, 0.23137255, 1)
 theme_override_colors/font_pressed_color = Color(0.8901961, 0, 0.23137255, 1)
 theme_override_colors/font_hover_color = Color(0.8901961, 0, 0.23137255, 1)
 theme_override_colors/font_hover_pressed_color = Color(0.8901961, 0, 0.23137255, 1)
+theme_override_fonts/font = ExtResource("5_7eqwk")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_lptng")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_s502i")
@@ -113,7 +116,8 @@ offset_left = 414.0
 offset_top = 178.0
 offset_right = 733.0
 offset_bottom = 238.0
-theme_override_font_sizes/font_size = 40
+theme_override_fonts/font = ExtResource("5_7eqwk")
+theme_override_font_sizes/font_size = 48
 text = "Accept Survivor?"
 
 [node name="Vent" type="TextureButton" parent="." unique_id=1727407204]

@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://1c22ldt2srhh" path="res://sabatoges/fire_extengiusher.tscn" id="1_yvamj"]
 [ext_resource type="Texture2D" uid="uid://hxpec7y5coq8" path="res://assets/backgrounds/inside_vent.png" id="2_ythis"]
 [ext_resource type="AudioStream" uid="uid://dgkj7274bslpb" path="res://assets/sounds/fire_extenguisher.mp3" id="3_lcu63"]
+[ext_resource type="FontFile" uid="uid://blta25kqx3jl3" path="res://ui/assets/augiepixel.ttf" id="5_uhbif"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hh1gf"]
 size = Vector2(1151, 39)
@@ -50,8 +51,10 @@ position = Vector2(481, 340)
 stream = ExtResource("3_lcu63")
 
 [node name="Label" type="Label" parent="." unique_id=2056458602]
-offset_left = 470.0
-offset_top = 593.0
-offset_right = 731.0
-offset_bottom = 678.0
+offset_left = 514.0
+offset_top = 600.0
+offset_right = 860.0
+offset_bottom = 685.0
+theme_override_fonts/font = ExtResource("5_uhbif")
+theme_override_font_sizes/font_size = 24
 text = "a and d to rotate fire extinguisher"

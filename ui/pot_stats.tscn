@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://jqbif7s4161c" path="res://ui/assets/paper_background.png" id="2_wo2jy"]
 [ext_resource type="FontFile" uid="uid://blta25kqx3jl3" path="res://ui/assets/augiepixel.ttf" id="3_org7q"]
 [ext_resource type="Texture2D" uid="uid://b74mf35nmw02i" path="res://scenes/cooking/assets/ripped_paper_sprite.png" id="3_umgi0"]
-[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="4_38ngx"]
+[ext_resource type="Texture2D" uid="uid://dynump5svy2j6" path="res://scenes/cooking/assets/carrot.png" id="5_org7q"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2apqw"]
 bg_color = Color(0.99607843, 0.64705884, 0, 0.39215687)
@@ -84,6 +84,7 @@ text = "[center]Saltiness[/center]"
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_org7q")
 
 [node name="ProgressBar2" type="ProgressBar" parent="RightPanel/VBoxContainer/Background/VBoxContainer/Flavors/FlavorContainer1/ProgressBar" unique_id=1444758029]
 layout_mode = 1
@@ -113,6 +114,7 @@ text = "[center]Sweetness[/center]"
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_org7q")
 
 [node name="ProgressBar2" type="ProgressBar" parent="RightPanel/VBoxContainer/Background/VBoxContainer/Flavors/FlavorContainer2/ProgressBar" unique_id=1534679887]
 layout_mode = 1
@@ -142,6 +144,7 @@ text = "[center]Sourness[/center]"
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_org7q")
 
 [node name="ProgressBar2" type="ProgressBar" parent="RightPanel/VBoxContainer/Background/VBoxContainer/Flavors/FlavorContainer3/ProgressBar" unique_id=1373992843]
 layout_mode = 1
@@ -171,6 +174,7 @@ text = "[center]Bitterness[/center]"
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_org7q")
 
 [node name="ProgressBar2" type="ProgressBar" parent="RightPanel/VBoxContainer/Background/VBoxContainer/Flavors/FlavorContainer4/ProgressBar" unique_id=754704080]
 layout_mode = 1
@@ -200,6 +204,7 @@ text = "[center]Savoriness[/center]"
 custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_org7q")
 
 [node name="ProgressBar2" type="ProgressBar" parent="RightPanel/VBoxContainer/Background/VBoxContainer/Flavors/FlavorContainer5/ProgressBar" unique_id=351509546]
 layout_mode = 1
@@ -241,7 +246,7 @@ size_flags_horizontal = 3
 custom_minimum_size = Vector2(0, 110)
 layout_mode = 2
 size_flags_vertical = 0
-texture = ExtResource("4_38ngx")
+texture = ExtResource("5_org7q")
 expand_mode = 1
 stretch_mode = 5
 

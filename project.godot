@@ -13,7 +13,7 @@ config_version=5
 config/name="Cataclysmic cooking"
 run/main_scene="uid://cqow47bch5ocs"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://icon.png"
 
 [autoload]
 
@@ -24,6 +24,10 @@ Hyvariables="*uid://cqcaq8x2afo5"
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[editor]
+
+export/convert_text_resources_to_binary=false
 
 [editor_plugins]
 

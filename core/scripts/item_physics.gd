@@ -81,7 +81,9 @@ func _physics_process(delta: float) -> void:
 		
 		# Detect if mouse released in inventory area
 		if GlobalUI.inventory_rect.has_point(get_viewport().get_mouse_position()):
-			GlobalUI.inventory.add_node(self)
+			var inv_ref = GlobalUI.get("inventory")
+			if inv_ref:
+				inv_ref.call("add_node", self)
 			queue_free()
 		
 		# Apply velocity

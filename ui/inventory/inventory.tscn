@@ -56,6 +56,7 @@ layout_mode = 2
 custom_minimum_size = Vector2(0, 80)
 layout_mode = 2
 size_flags_vertical = 0
+theme_override_colors/default_color = Color(0.041386195, 0.37906098, 0.40555763, 1)
 theme_override_fonts/normal_font = ExtResource("4_lep46")
 theme_override_font_sizes/normal_font_size = 50
 bbcode_enabled = true

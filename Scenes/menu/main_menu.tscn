@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dn12u7ocbrg15" path="res://scenes/menu/scripts/main_menu.gd" id="1_tf6sr"]
 [ext_resource type="Texture2D" uid="uid://j02fwu5ttfi7" path="res://assets/backgrounds/menu_screen_real.png" id="2_pjxdy"]
+[ext_resource type="FontFile" uid="uid://blta25kqx3jl3" path="res://ui/assets/augiepixel.ttf" id="3_247la"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vemod"]
 bg_color = Color(1, 1, 1, 1)
@@ -72,6 +73,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_247la")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_vemod")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_06t4h")
@@ -85,6 +87,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
 theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_247la")
 theme_override_font_sizes/font_size = 50
 theme_override_styles/normal = SubResource("StyleBoxFlat_vemod")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_06t4h")
@@ -104,17 +107,24 @@ offset_right = 96.0
 offset_bottom = -196.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 50
+theme_override_fonts/font = ExtResource("3_247la")
+theme_override_font_sizes/font_size = 60
 text = "Cataclysmic Cooking"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Label2" type="Label" parent="." unique_id=569563016]
-layout_mode = 0
-offset_left = 390.0
-offset_top = 128.0
-offset_right = 772.0
-offset_bottom = 151.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -243.5
+offset_top = 135.0
+offset_right = 243.5
+offset_bottom = 159.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_247la")
+theme_override_font_sizes/font_size = 24
 text = "left and right arrow keys to move between rooms"
 
 [connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_start_pressed"]
